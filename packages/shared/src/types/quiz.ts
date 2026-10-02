@@ -36,7 +36,3 @@ export interface QuizScoreUser{
  export interface QuizSettings {
     timerLength: number;
  }
- 
- export interface ScoreConfig {
-    
- }
