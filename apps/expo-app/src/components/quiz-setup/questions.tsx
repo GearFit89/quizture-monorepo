@@ -10,7 +10,7 @@ export function FilteredQuestions() {
   const { data, isQuizValid, setIsQuizVaild, minQuizQuestionLength } =
     useQuizSetup();
 
-  if (!data.questionFilters) return null;
+  
 
   const { questions,  isLoadingError, error } = useFilteredQuestions({
     filterCriteria: data.questionFilters,
