@@ -1,6 +1,5 @@
 import type { ScoreConfig } from "@/types";
 
-
 // TODO; Make labels keys for lanaguage support
 export const defaultScoreConfig: ScoreConfig = {
   id: "default-standard",
@@ -10,33 +9,32 @@ export const defaultScoreConfig: ScoreConfig = {
     offset: 0,
   },
 
-  quizOut: {
-    perfect: {
+  quizOuts: [
+    {
       points: 10, // 10 extra bonus points
       label: "Perfect Quiz Out",
-      
+
       threshold: {
-        
         correct: 5,
-        incorrect: 0
+        incorrect: 0,
       },
     },
-    imperfect: {
+    {
       points: 0,
       label: "Imperfect Quiz Out",
-      
+
       threshold: {
-        correct: 4
+        correct: 4,
       },
     },
-    error: {
+    {
       points: -10,
       label: "Quiz Failed",
       threshold: {
         incorrect: 3,
       },
     },
-  },
+  ],
 
   question: {
     correct: {

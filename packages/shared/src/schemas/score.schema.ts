@@ -1,6 +1,5 @@
 import * as v from "valibot";
 
-
 export const QuizOutSchema = v.union([
   v.literal("perfect"),
   v.literal("imperfect"),
@@ -12,6 +11,8 @@ export const QuestionStateSchema = v.union([
   v.literal("incorrect"),
 ]);
 
+
+
 // ScoreOption Schema
 export const ScoreOptionSchema = v.object({
   points: v.number(),
@@ -19,6 +20,11 @@ export const ScoreOptionSchema = v.object({
 });
 
 
+export const QuestionStateOptionSchema = v.object({
+  correct: ScoreOptionSchema,
+  incorrect: ScoreOptionSchema
+  
+})
 // QuizOutOption Schema
 export const QuizOutOptionSchema = v.object({
   ...ScoreOptionSchema.entries,
@@ -26,6 +32,10 @@ export const QuizOutOptionSchema = v.object({
   threshold: v.record(QuestionStateSchema, v.number()),
 });
 
+export const QuestionScoreOptionSchema = v.union([
+  v.record(v.literal("correct"), ScoreOptionSchema),
+  v.record(v.literal("incorrect"), ScoreOptionSchema),
+]);
 // ScoreConfig Schema
 export const ScoreConfigSchema = v.object({
   id: v.string(),
@@ -37,9 +47,9 @@ export const ScoreConfigSchema = v.object({
     }),
   ),
 
-  quizOut: v.record(QuizOutSchema, QuizOutOptionSchema),
+  quizOuts: v.array(QuizOutOptionSchema),
 
-  question: v.record(QuestionStateSchema, ScoreOptionSchema),
+  question: QuestionStateOptionSchema,
 
-  bonus: v.record(QuestionStateSchema, ScoreOptionSchema),
+  bonus: QuestionStateOptionSchema
 });

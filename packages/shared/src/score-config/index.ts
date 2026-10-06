@@ -1,1 +1,1 @@
-export { scoreConfig as default } from "./default-score-config";
+export { defaultScoreConfig as default } from "./default-score-config";
