@@ -79,14 +79,13 @@ export interface NormalQuestion extends AppQuestion {
 export type Question = NormalQuestion | FTVQuestion | QuoteQuestion
 
 export type QuizQuestionState = "none"|"correct"|"incorrect"|"skipped"
-export interface QuizQuestion extends AppQuestion {
-  state: QuizQuestionState;
-  answerType?: string // TODO: add actual types
-
-  questionType: "text"
-  timestamp:number;
-
-  user: string // The user who answered
-  typedAnswer?: string;
+export interface QuizQuestion  {
+  state?: QuizQuestionState;
+  body: string
+  head: string;
+  answer: string;
+  id: number; // This is the id for the actual question
+  owner?: string // The user who answered
+  typedAnswers?: string[];
 
 }

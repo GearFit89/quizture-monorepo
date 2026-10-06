@@ -1,4 +1,4 @@
-import { QuestionEventState } from '@/machines/types'
+import type { QuestionEventState } from "@/machines/questions/normal";
 
 export interface SpellCheckResult {
   correctedAnswer: string[]; // Array of strings after spell correction
