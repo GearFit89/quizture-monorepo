@@ -1,34 +1,56 @@
-import { QuizScore, QuizSettings, ScoreConfig } from "@/types/quiz";
-import type { QuizQuestion, Question } from "@/types";
+import { QuizScore, QuizSettings } from "@/types";
+import type {
+  QuizQuestion,
+  Question,
+  ScoreConfig,
+  QuestionState,
+  QuizScoreUser,
+  UserState,
+  QuizQuestionState,
+} from "@/types";
 import { createMachine, setup, assign, fromPromise } from "xstate";
 import { questionMachine, QuestionMachineContext } from "../questions/normal";
 import defaultScoreConfig from "@/score-config";
 import { getQuizQuestions } from "@/logic";
-interface QuizLoadInput {
+import { scoreQuestion } from "./actions";
+
+export interface QuizLoadInput {
   quizLength: number;
   questions: Question[];
 }
-interface QuizMachineContext {
+export interface QuizMachineContext {
   score: QuizScore;
+  scoreConfig: ScoreConfig;
   settings: QuizSettings;
 
-  questions: QuizQuestion[];
+  incomingQuesions: QuizQuestion[];
+  completedQuestions: QuizQuestion[];
+
   quizLength: number;
-  currentQuestionIndex: number;
+  
   activeUser: string;
-  scoreConfig: ScoreConfig;
 }
-type LoadEvent = {};
-const defaultUserScore = { points: 0, correct: 0, incorrect: 0, isOut: false };
+export interface QuizNextQuestionEvent<T> {
+  type: T;
+  state: QuizQuestionState;
+  owner: string;
+  typedAnswer: string;
+}
+export interface QuizQuestionEvent<T> {
+  type: T;
+  activeUser: string;
+}
+export type QuizEvent =
+  | { type: "LOAD"; filteredQuestions?: Question[] }
+  | QuizNextQuestionEvent<"NEXT">
+  | QuizQuestionEvent<"CORRECT">
+  | QuizQuestionEvent<"INCORRECT">
+  | (QuizQuestionEvent<"TRY_AGAIN"> & { typedAnswer: string });
 
 export const machine = setup({
   types: {
     context: {} as QuizMachineContext,
-    events: {} as
-      | { filteredQuestions: Question[]; type: "LOAD" }
-      | { type: "NEXT" }
-      | { type: "ANSWER_CORRECT" }
-      | { type: "ANSWER_INCORRECT" },
+    events: {} as QuizEvent,
     input: {} as {
       quizLength: number;
       userId?: string;
@@ -36,61 +58,90 @@ export const machine = setup({
     },
   },
   actions: {
-    scoreIncorrect: assign({
-      score: ({ context }) => {
-        const incorrectScore = context.scoreConfig.incorrect;
-        const currentUserScore =
-          context.score[context.activeUser] ?? defaultUserScore;
+    handleIncorrect: assign({
+      score: ({ context, event }) => {
+        // While dangerous the "as" works,
+        // because the questionMachine calls this event and QuizEvent brings type safety
+        const quizEvent = event as { activeUser: string };
+
         return {
           ...context.score,
-          [context.activeUser]: {
-            ...currentUserScore,
-            points: currentUserScore.points + incorrectScore.points,
-            incorrect: currentUserScore.incorrect + 1,
-            // TODO: add this fro quiz out logic
-            //isOut: currentUserScore.correct === 5
-          },
+          [quizEvent.activeUser]: scoreQuestion(
+            "incorrect",
+            context,
+            quizEvent.activeUser,
+          ),
         };
       },
     }),
-    scoreCorrect: assign({
-      score: ({ context }) => {
-        const correctScore = context.scoreConfig.correct;
-        const currentUserScore =
-          context.score[context.activeUser] ?? defaultUserScore;
+    handleCorrect: assign({
+      score: ({ context, event }) => {
+        const quizEvent = event as { activeUser: string };
+
         return {
           ...context.score,
-          [context.activeUser]: {
-            ...currentUserScore,
-            points: currentUserScore.points + correctScore.points,
-            correct: currentUserScore.correct + 1,
-            // TODO: add this fro quiz out logic
-            //isOut: currentUserScore.correct === 5
-          },
+          [quizEvent.activeUser]: scoreQuestion(
+            "correct",
+            context,
+            quizEvent.activeUser,
+          ),
         };
       },
+    }),
+    handleTryAgain: assign(({ context, event }) => {
+      if (event.type !== "TRY_AGAIN") return {}; // {} Meets the type in `assign`
+      const { incomingQuesions } = context;
+      // Pull the first question from the list. (Basically .pop())
+      const [currentQuestion] = incomingQuesions;
 
-      currentQuestionIndex: ({ context }) => context.currentQuestionIndex + 1,
+      const changedQuestion = {
+        ...currentQuestion,
+        typedAnswer: [
+          ...(currentQuestion.typedAnswers || []),
+          event.typedAnswer,
+        ],
+      } as QuizQuestion;
+
+      return {
+        incomingQuesions: [changedQuestion, ...incomingQuesions],
+      };
+    }),
+    nextQuestion: assign(({ context, event }) => {
+      if (event.type !== "NEXT") return {};
+      const { state, owner, typedAnswer } = event;
+      const [currentQuestion, ...remainingQuestions] = context.incomingQuesions;
+
+      const changedQuestion: QuizQuestion = {
+        ...currentQuestion,
+        state,
+        owner,
+        typedAnswers: [...(currentQuestion.typedAnswers || []), typedAnswer],
+      };
+      return {
+        completedQuestions: [changedQuestion, ...context.completedQuestions],
+        incomingQuesions: remainingQuestions,
+      };
     }),
   },
   actors: {
     loadingQuizActor: fromPromise(
       async ({ input }: { input: QuizLoadInput }) => {
-        await getQuizQuestions(input?.questions, input?.quizLength);
+        return await getQuizQuestions(input?.questions, input?.quizLength);
       },
     ),
     questionActor: questionMachine,
   },
   guards: {
-    "quiz is done": function ({ context, event }) {
-      return true;
+    isQuizDone: function ({ context }) {
+      return context.incomingQuesions.length === 0;
     },
   },
 }).createMachine({
-  /** @xstate-layout N4IgpgJg5mDOIC5QEcCuBLAXggdgewCcBbAQwBsA6MvEidHKAYgjxzAvoDc8Brd62gDlCpMgEUMmANoAGALqJQABzyx0AF3StFIAB6IAzAE4ZFAwBYDAdgsA2K+YCsM4wBoQAT0QBGGbYoygTLejgBMzlbe3gAcAL6x7mhYuCLkFCQAxpqc7Ghwmqz0TACCggDKAOoAogBKAPoAkoIAwgDyNTVVzQAqsgpIICpqBTg6+gjm9hSOtqHm0ZEORg7m7l4Is6aO0QYGMgu+tuZGRvGJkinEaZnZuaj5WjhFjKWVtXVtHV298jpDGo8xohJlZprN5otjis1ohHCEAjsDBEQkjQt4ziAkth8FdKDd0DkODgMoQCGAsoxBFUABo-frKVQA7QDcYgsFzA5LaGeWFWUz7AyhIyOazzGRWDFYy6idJZAnsegkghkilU2lSbz0waMkZAhBGJwUewxMKOKzRULmxwwhDbRwUE4nRzOcx+aInSUXHEy-GEpUq9SUml0v46wEs4FTGYcyHLcyrHkTI7TRHWazCmRGUKe5Le65yv2k8mBtW9TWh4bh0DjA3243RU3my0Nm1iijHR18pzGNGOHPY1KUBp0MhgRgAGVaxQAIn0K0zRhGJkYKBb3XyDDtbJmXDbQgZvBQ0TJQrYG9FM6EZGb4gkQPgIHAdFK82R57qlwBaXz2ixC3y7AsDa7omMTTEEm5WPuYShKe-bSmkAh0Aw75VnoiCfmaZjmP+LiQcBBg2t4aIUJEJ4HvY4SOCC8GvrKtyocy1aGEYNrWPyQTRDhF5Xt4Vh9neL6DvR8oUHksAjEUjGLsxCALK2tj+DYuzmCElonOEtHCb6CrEkWWTSXqtjCgE4LRL40TmaE0S2Da0YOo6FpkUYswCecubaQW7D+sWhlLsZ-gWGmOEGLYjgmNErZYc4gRzJEMxHHEglesJABm9DoLAAAWkB+bJUSzA5JxWOawphQarYLO23iKWFfG7MEfhabiFDDugo55ehSartZLnLJu3hGOme5GIex6nuel7XhKt5AA */
+  /** @xstate-layout N4IgpgJg5mDOIC5QEcCuBLAXggdgewCcBbAQwBsA6ASQnTLAGIAZAeQEEARAbQAYBdRKAAOeWOgAu6PDkEgAHogAsATgoAOAExrlAdh4BmNfoBsPZQYA0IAJ6IN+gIwUNDnhuNqArGrMaennQBfQKs0LFxCUkoyPBJaHCgGCGkwCnQcADc8AGtUmLiAOUjyAEUMTF4BJBARMUlpWQUEfXMKfUV9HXbjHUVPA2UrWwRXYwoeCZ4HTw1+nQcHNWDQ8ojicgoSAGNJDNSyuHqcdMSAYRYAJQuAUVOAFUrZWokpGWqmjS7nKa1tRxNTIohogALQODRtDSKNR6Bw6LqeaHGZYgMLYfDrSjbXb7VCHV4nBhUArnK63B78J6iF4Nd6IOFqCjzHjGOEBBzGPqKYzAhCeUxMtTTZT6FnKTnIkKo1YYqKbHboPYUA6wI6EgrXAAaFKqwmpR0aiB4vJ4KLRazl2MVuPx0nVWoeDl1NX1r0NCGNNkQakZ-Qm0OULmMos6wSl+AgcFk5tl5CpdTddIQYP8bUUGmUrn0hh0XksXuTix0kOh-OUma6rk8ZplxUoNDoYHjNLeoCa3PUWnFukMDhFOkGBYzThcbg83l8-iCUpjdYo+XiUGbBqTIICaeHBhzef0vPBTmZ9g5OlmiJ6NfCsaxCr2y8TbdB0N5IPLnehigH4OMpjMF-Rc6tJUVTVBI71pB8PV5cU-wtDYADN0nQWAAAtIDA1t5HpLQeHGNRjChPofE8ENeWhfQ2h4IwdE8BZFEWLQw0CIA */
   context: ({ input }) => ({
     score: {},
-    questions: [],
+    incomingQuesions: [],
+    completedQuestions: [],
     currentQuestionIndex: 0,
     settings: {
       timerLength: 60,
@@ -122,6 +173,11 @@ export const machine = setup({
 
         onDone: {
           target: "active",
+          actions: assign(({ event }) => ({
+            incomingQuesions: event.output,
+            // Explictly define [] to ensure that it is empty
+            completedQuestions: [],
+          })),
         },
 
         src: "loadingQuizActor",
@@ -129,25 +185,19 @@ export const machine = setup({
     },
 
     active: {
-      initial: "questioning",
+      initial: "Questioning",
       states: {
-        questioning: {
-          on: {
-            ANSWER_INCORRECT: {
-              target: "incorrect",
-            },
-            ANSWER_CORRECT: {
-              target: "correct",
-            },
-          },
+        Questioning: {
           invoke: {
             id: "questionNormalQuiz",
+
             input: ({ context: ctx }) => {
-              const currentQuestion = ctx.questions[
-                ctx.currentQuestionIndex
-              ] as QuizQuestion;
+              const [ currentQuestion ] = ctx.incomingQuesions;
               return {
-                question: currentQuestion.question,
+                question: {
+                  head: currentQuestion.head,
+                  body: currentQuestion.body,
+                },
                 isQuestionTimed: ctx.settings.timerLength !== 0,
                 timerLength: ctx.settings.timerLength,
               } as QuestionMachineContext;
@@ -155,35 +205,28 @@ export const machine = setup({
 
             src: "questionActor",
           },
-        },
-        incorrect: {
+
           on: {
+            // Targetless transitions handle events from the child without re-invoking it
+            CORRECT: {
+              actions: "handleCorrect",
+            },
+            INCORRECT: {
+              actions: "handleIncorrect",
+            },
+            TRY_AGAIN: {
+              actions: "handleTryAgain",
+            },
             NEXT: [
               {
-                target: "questioning",
-                guard: {
-                  type: "quiz is done",
-                },
-              },
-              {
+                guard: "isQuizDone",
+
                 target: "#quiz:normal.finished",
               },
-            ],
-          },
-          entry: "scoreIncorrect",
-        },
-        correct: {
-          entry: "scoreCorrect",
-          on: {
-            NEXT: [
               {
-                target: "questioning",
-                guard: {
-                  type: "quiz is done",
-                },
-              },
-              {
-                target: "#quiz:normal.finished",
+                reenter: true,
+                target: "Questioning",
+                actions: "nextQuestion",
               },
             ],
           },
