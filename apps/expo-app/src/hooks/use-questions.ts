@@ -7,13 +7,23 @@ import { storage } from "@/lib/storage";
 
 // Dynamic import function - fetches/loads the mock JSON on demand
 async function fetchQuestions(): Promise<Question[]> {
-  const module = await import("@bq/shared/mock-data/questions.json");
- const questionArray = Object.entries(module.default).map(([key, value]) => ({
-  id: key,
-  type: 'question' as const,
-  ...value,
-}));
-  return questionArray as unknown as  Question[];
+
+  const response = await fetch('/questions.json');
+  
+  if (!response.ok) {
+    throw new Error(`Failed to load questions: ${response.statusText}`);
+  }
+
+  const data = await response.json();
+
+  
+  const questionArray = Object.entries(data).map(([key, value]) => ({
+    id: key,
+    type: 'question' as const,
+    ...(value as any) // spreads the rest of your question properties
+  }));
+
+  return questionArray;
 }
 
 export function useQuestions() {
