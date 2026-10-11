@@ -1,1 +1,1 @@
-export { fetchTBQNcontent, getTBQNQuestions, defaultTBQNParams } from "./scraper"
+export { fetchTBQNcontent, getTBQNQuestions, defaultTBQNParams } from './scraper'

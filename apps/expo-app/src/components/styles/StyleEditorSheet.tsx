@@ -5,7 +5,7 @@ import React, {
   useImperativeHandle,
   useMemo,
   useState,
-} from "react";
+} from 'react'
 import {
   FlatList,
   Modal,
@@ -14,15 +14,15 @@ import {
   Text,
   TouchableOpacity,
   View,
-} from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
-import { StyleKeySelector } from "./StyleKeySelector";
-import { StyleValueInput } from "@/components/styles/inputs/StyleValueInput";
-import { getStyleKeyMeta } from "@/lib/styles/styleKeyMeta";
-import type { EditorLevel, StyleContent } from "@/lib/styles/types";
-import { useStyles } from "@/hooks"
-import { CopyButton } from "../cpoy-button";
-import { Button } from "../ui/button";
+} from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import { StyleKeySelector } from './StyleKeySelector'
+import { StyleValueInput } from '@/components/styles/inputs/StyleValueInput'
+import { getStyleKeyMeta } from '@/lib/styles/styleKeyMeta'
+import type { EditorLevel, StyleContent } from '@/lib/styles/types'
+import { useStyles } from '@/hooks'
+import { CopyButton } from '../cpoy-button'
+import { Button } from '../ui/button'
 
 export interface StyleEditorSheetRef {
   open: () => void;
@@ -30,7 +30,7 @@ export interface StyleEditorSheetRef {
 }
 
 interface StyleEditorSheetProps {
-  
+
   /** Called whenever any style value changes, with the full updated tree. */
   onStylesChange?: (next: StyleContent) => void;
   /**
@@ -55,88 +55,88 @@ interface StyleEditorSheetProps {
  */
 export const StyleEditorSheet = forwardRef<StyleEditorSheetRef, StyleEditorSheetProps>(
   ({ onStylesChange, onOpenChange }, ref) => {
-    const [visible, setVisible] = useState(false);
+    const [visible, setVisible] = useState(false)
     const { stylesContent, setStyleProperty, removeStyleProperty, exportJSON, resetStyles } =
-      useStyles();
+      useStyles()
 
-    const [level, setLevel] = useState<EditorLevel>("targets");
-    const [activeTarget, setActiveTarget] = useState<string | null>(null);
-    const [activeElement, setActiveElement] = useState<string | null>(null);
+    const [level, setLevel] = useState<EditorLevel>('targets')
+    const [activeTarget, setActiveTarget] = useState<string | null>(null)
+    const [activeElement, setActiveElement] = useState<string | null>(null)
 
     const setOpen = useCallback(
       (next: boolean) => {
-        setVisible(next);
-        onOpenChange?.(next);
+        setVisible(next)
+        onOpenChange?.(next)
       },
       [onOpenChange]
-    );
+    )
 
     useImperativeHandle(ref, () => ({
       open: () => setOpen(true),
       close: () => setOpen(false),
-    }));
+    }))
 
     const emitChange = useCallback(
       (target: string, element: string, key: string, value: unknown) => {
-        setStyleProperty(target, element, key, value as never);
+        setStyleProperty(target, element, key, value as never)
       },
       [setStyleProperty]
-    );
+    )
 
     // Notify the parent with the post-update tree, not a stale pre-update
     // snapshot (state updates are async/batched).
     useEffect(() => {
-      onStylesChange?.(stylesContent);
+      onStylesChange?.(stylesContent)
       // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [stylesContent]);
+    }, [stylesContent])
 
     // ---- Navigation helpers ----
-    function goToTargets() {
-      setLevel("targets");
-      setActiveTarget(null);
-      setActiveElement(null);
+    function goToTargets () {
+      setLevel('targets')
+      setActiveTarget(null)
+      setActiveElement(null)
     }
-    function goToElements(target: string) {
-      setActiveTarget(target);
-      setActiveElement(null);
-      setLevel("elements");
+    function goToElements (target: string) {
+      setActiveTarget(target)
+      setActiveElement(null)
+      setLevel('elements')
     }
-    function goToProperties(element: string) {
-      setActiveElement(element);
-      setLevel("properties");
+    function goToProperties (element: string) {
+      setActiveElement(element)
+      setLevel('properties')
     }
-    function goBack() {
-      if (level === "addProperty") setLevel("properties");
-      else if (level === "properties") setLevel("elements");
-      else if (level === "elements") goToTargets();
+    function goBack () {
+      if (level === 'addProperty') setLevel('properties')
+      else if (level === 'properties') setLevel('elements')
+      else if (level === 'elements') goToTargets()
     }
 
-    const targetNames = useMemo(() => Object.keys(stylesContent), [stylesContent]);
+    const targetNames = useMemo(() => Object.keys(stylesContent), [stylesContent])
     const elementNames = useMemo(
       () => (activeTarget ? Object.keys(stylesContent[activeTarget] ?? {}) : []),
       [stylesContent, activeTarget]
-    );
+    )
     const activeStyleObject =
-      activeTarget && activeElement ? stylesContent[activeTarget]?.[activeElement] ?? {} : {};
+      activeTarget && activeElement ? stylesContent[activeTarget]?.[activeElement] ?? {} : {}
     const propertyEntries = useMemo(
       () => Object.entries(activeStyleObject),
       [activeStyleObject]
-    );
+    )
 
     const headerTitle =
-      level === "targets"
-        ? "Screens"
-        : level === "elements"
-        ? activeTarget ?? ""
-        : level === "properties"
-        ? `${activeTarget} · ${activeElement}`
-        : "Add Style Property";
+      level === 'targets'
+        ? 'Screens'
+        : level === 'elements'
+          ? activeTarget ?? ''
+          : level === 'properties'
+            ? `${activeTarget} · ${activeElement}`
+            : 'Add Style Property'
 
     return (
       <Modal
         visible={visible}
         transparent
-        animationType="slide"
+        animationType='slide'
         onRequestClose={() => setOpen(false)} // Android hardware back button
       >
         {/* Tapping the dimmed backdrop closes the sheet, same as
@@ -148,13 +148,15 @@ export const StyleEditorSheet = forwardRef<StyleEditorSheetRef, StyleEditorSheet
             <SafeAreaView style={styles.container}>
               {/* Header */}
               <View style={styles.header}>
-                {level !== "targets" ? (
-                  <TouchableOpacity onPress={goBack} style={styles.backBtn}>
-                    <Text style={styles.backText}>‹ Back</Text>
-                  </TouchableOpacity>
-                ) : (
-                  <View style={styles.backBtn} />
-                )}
+                {level !== 'targets'
+                  ? (
+                    <TouchableOpacity onPress={goBack} style={styles.backBtn}>
+                      <Text style={styles.backText}>‹ Back</Text>
+                    </TouchableOpacity>
+                    )
+                  : (
+                    <View style={styles.backBtn} />
+                    )}
                 <Text style={styles.headerTitle} numberOfLines={1}>
                   {headerTitle}
                 </Text>
@@ -165,12 +167,9 @@ export const StyleEditorSheet = forwardRef<StyleEditorSheetRef, StyleEditorSheet
 
               <CopyButton textToCopy={exportJSON()} />
               <Button onPress={resetStyles}><Text>Reset Styles</Text></Button>
-          
-
-              
 
               {/* Level 1: Targets */}
-              {level === "targets" && (
+              {level === 'targets' && (
                 <FlatList
                   data={targetNames}
                   keyExtractor={(item) => item}
@@ -187,7 +186,7 @@ export const StyleEditorSheet = forwardRef<StyleEditorSheetRef, StyleEditorSheet
               )}
 
               {/* Level 2: Elements */}
-              {level === "elements" && activeTarget && (
+              {level === 'elements' && activeTarget && (
                 <FlatList
                   data={elementNames}
                   keyExtractor={(item) => item}
@@ -204,11 +203,11 @@ export const StyleEditorSheet = forwardRef<StyleEditorSheetRef, StyleEditorSheet
               )}
 
               {/* Level 3: Properties */}
-              {level === "properties" && activeTarget && activeElement && (
+              {level === 'properties' && activeTarget && activeElement && (
                 <View style={styles.propertiesContainer}>
                   <TouchableOpacity
                     style={styles.addPropertyBtn}
-                    onPress={() => setLevel("addProperty")}
+                    onPress={() => setLevel('addProperty')}
                   >
                     <Text style={styles.addPropertyText}>+ Add Style Property</Text>
                   </TouchableOpacity>
@@ -217,15 +216,14 @@ export const StyleEditorSheet = forwardRef<StyleEditorSheetRef, StyleEditorSheet
                     keyExtractor={([key]) => key}
                     contentContainerStyle={styles.listContent}
                     renderItem={({ item: [key, value] }) => {
-                      const meta = getStyleKeyMeta(key);
+                      const meta = getStyleKeyMeta(key)
                       return (
                         <View style={styles.propertyRow}>
                           <View style={styles.propertyHeader}>
                             <Text style={styles.propertyKey}>{key}</Text>
                             <TouchableOpacity
                               onPress={() =>
-                                removeStyleProperty(activeTarget, activeElement, key)
-                              }
+                                removeStyleProperty(activeTarget, activeElement, key)}
                             >
                               <Text style={styles.removeText}>Remove</Text>
                             </TouchableOpacity>
@@ -234,11 +232,10 @@ export const StyleEditorSheet = forwardRef<StyleEditorSheetRef, StyleEditorSheet
                             meta={meta}
                             value={value}
                             onChange={(next) =>
-                              emitChange(activeTarget, activeElement, key, next)
-                            }
+                              emitChange(activeTarget, activeElement, key, next)}
                           />
                         </View>
-                      );
+                      )
                     }}
                     ListEmptyComponent={
                       <Text style={styles.emptyText}>
@@ -250,23 +247,23 @@ export const StyleEditorSheet = forwardRef<StyleEditorSheetRef, StyleEditorSheet
               )}
 
               {/* Add-property search flow */}
-              {level === "addProperty" && activeTarget && activeElement && (
+              {level === 'addProperty' && activeTarget && activeElement && (
                 <StyleKeySelector
                   existingKeys={Object.keys(activeStyleObject)}
                   onSelect={(key) => {
-                    const meta = getStyleKeyMeta(key);
+                    const meta = getStyleKeyMeta(key)
                     const defaultValue =
-                      meta.type === "boolean"
+                      meta.type === 'boolean'
                         ? false
-                        : meta.type === "number" || meta.type === "dimension"
-                        ? meta.min ?? 0
-                        : meta.type === "enum"
-                        ? meta.options?.[0] ?? ""
-                        : meta.type === "color"
-                        ? "#000000"
-                        : "";
-                    emitChange(activeTarget, activeElement, key, defaultValue);
-                    setLevel("properties");
+                        : meta.type === 'number' || meta.type === 'dimension'
+                          ? meta.min ?? 0
+                          : meta.type === 'enum'
+                            ? meta.options?.[0] ?? ''
+                            : meta.type === 'color'
+                              ? '#000000'
+                              : ''
+                    emitChange(activeTarget, activeElement, key, defaultValue)
+                    setLevel('properties')
                   }}
                 />
               )}
@@ -274,39 +271,39 @@ export const StyleEditorSheet = forwardRef<StyleEditorSheetRef, StyleEditorSheet
           </Pressable>
         </Pressable>
       </Modal>
-    );
+    )
   }
-);
+)
 
-StyleEditorSheet.displayName = "StyleEditorSheet";
+StyleEditorSheet.displayName = 'StyleEditorSheet'
 
 const styles = StyleSheet.create({
   backdrop: {
     flex: 1,
-    backgroundColor: "rgba(0,0,0,0.4)",
-    justifyContent: "flex-end",
+    backgroundColor: 'rgba(0,0,0,0.4)',
+    justifyContent: 'flex-end',
   },
   sheet: {
     // Fixed height stand-in for what snap points used to give you.
     // Bump this or make it a prop if 75% doesn't suit your content.
-    height: "40%",
-    backgroundColor: "#FFFFFF",
+    height: '40%',
+    backgroundColor: '#FFFFFF',
     borderTopLeftRadius: 20,
     borderTopRightRadius: 20,
-    overflow: "hidden",
+    overflow: 'hidden',
   },
   container: {
     flex: 1,
     paddingHorizontal: 16,
   },
   header: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
     paddingTop: 12,
     paddingBottom: 12,
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: "#EEE",
+    borderBottomColor: '#EEE',
     marginBottom: 8,
   },
   backBtn: {
@@ -314,79 +311,79 @@ const styles = StyleSheet.create({
   },
   backText: {
     fontSize: 15,
-    color: "#2196F3",
+    color: '#2196F3',
   },
   closeText: {
     fontSize: 15,
-    color: "#999",
-    textAlign: "right",
+    color: '#999',
+    textAlign: 'right',
   },
   headerTitle: {
     flex: 1,
-    textAlign: "center",
+    textAlign: 'center',
     fontSize: 16,
-    fontWeight: "600",
-    color: "#222",
+    fontWeight: '600',
+    color: '#222',
   },
   listContent: {
     paddingBottom: 32,
     gap: 10,
   },
   card: {
-    backgroundColor: "#F7F7FA",
+    backgroundColor: '#F7F7FA',
     borderRadius: 12,
     paddingVertical: 14,
     paddingHorizontal: 16,
   },
   cardTitle: {
     fontSize: 16,
-    fontWeight: "600",
-    color: "#222",
+    fontWeight: '600',
+    color: '#222',
   },
   cardSubtitle: {
     fontSize: 12,
-    color: "#999",
+    color: '#999',
     marginTop: 2,
   },
   propertiesContainer: {
     flex: 1,
   },
   addPropertyBtn: {
-    backgroundColor: "#2196F3",
+    backgroundColor: '#2196F3',
     borderRadius: 10,
     paddingVertical: 12,
-    alignItems: "center",
+    alignItems: 'center',
     marginBottom: 14,
   },
   addPropertyText: {
-    color: "#FFFFFF",
-    fontWeight: "600",
+    color: '#FFFFFF',
+    fontWeight: '600',
     fontSize: 14,
   },
   propertyRow: {
-    backgroundColor: "#F7F7FA",
+    backgroundColor: '#F7F7FA',
     borderRadius: 12,
     padding: 14,
     marginBottom: 12,
   },
   propertyHeader: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     marginBottom: 10,
   },
   propertyKey: {
     fontSize: 14,
-    fontWeight: "600",
-    color: "#222",
+    fontWeight: '600',
+    color: '#222',
   },
   removeText: {
     fontSize: 12,
-    color: "#F44336",
+    color: '#F44336',
   },
   emptyText: {
-    textAlign: "center",
-    color: "#999",
+    textAlign: 'center',
+    color: '#999',
     marginTop: 24,
   },
-});
+})

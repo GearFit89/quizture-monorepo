@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, TextInput, TouchableOpacity, View, ScrollView } from 'react-native';
-import ColorPicker, { Panel1, HueSlider, OpacitySlider } from 'reanimated-color-picker';
-import { theme } from '@/lib/theme';
+import React, { useState, useEffect } from 'react'
+import { StyleSheet, Text, TextInput, TouchableOpacity, View, ScrollView } from 'react-native'
+import ColorPicker, { Panel1, HueSlider, OpacitySlider } from 'reanimated-color-picker'
+import { theme } from '@/lib/theme'
 
 // Visual fallback mapping for React Native Native (iOS/Android) standard StyleSheet rendering
 const THEME_FALLBACKS: Record<keyof typeof theme.colors, string> = {
+  'primary-blue': theme.colors['primary-blue'],
   primary: '#6366F1',
-  primaryForeground: '#FFFFFF',
+  "primary-foreground": '#FFFFFF',
   secondary: '#EC4899',
-  secondaryForeground: '#FFFFFF',
+  "secondary-foreground": '#FFFFFF',
   accent: '#8B5CF6',
   accentForeground: '#FFFFFF',
   background: '#FFFFFF',
@@ -22,7 +23,7 @@ const THEME_FALLBACKS: Record<keyof typeof theme.colors, string> = {
   destructiveForeground: '#FFFFFF',
   success: '#10B981',
   successForeground: '#FFFFFF',
-};
+}
 
 interface CustomColorPickerProps {
   value?: string;
@@ -34,51 +35,51 @@ interface CustomColorPickerProps {
  * Helper to ensure `reanimated-color-picker` receives a valid parseable color
  * even when passed a CSS variable like `rgb(var(--primary) / <alpha-value>)`
  */
-function resolvePickerSafeColor(colorStr: string): string {
-  if (!colorStr) return '#6366F1';
-  
+function resolvePickerSafeColor (colorStr: string): string {
+  if (!colorStr) return '#6366F1'
+
   // If it's a theme token key (e.g. "primary")
   if (colorStr in THEME_FALLBACKS) {
-    return THEME_FALLBACKS[colorStr as keyof typeof theme.colors];
+    return THEME_FALLBACKS[colorStr as keyof typeof theme.colors]
   }
 
   // If it contains a CSS variable string
   if (colorStr.includes('var(')) {
-    const matchedEntry = Object.entries(theme.colors).find(([_, val]) => val === colorStr);
+    const matchedEntry = Object.entries(theme.colors).find(([_, val]) => val === colorStr)
     if (matchedEntry) {
-      return THEME_FALLBACKS[matchedEntry[0] as keyof typeof theme.colors] ?? '#6366F1';
+      return THEME_FALLBACKS[matchedEntry[0] as keyof typeof theme.colors] ?? '#6366F1'
     }
-    return '#6366F1'; // Default safe color
+    return '#6366F1' // Default safe color
   }
 
-  return colorStr;
+  return colorStr
 }
 
-export function ColorInput({ value = '#6366F1', onChange, label }: CustomColorPickerProps) {
-  const [selectedColor, setSelectedColor] = useState(value);
+export function ColorInput ({ value = '#6366F1', onChange, label }: CustomColorPickerProps) {
+  const [selectedColor, setSelectedColor] = useState(value)
 
   useEffect(() => {
     if (value && value !== selectedColor) {
-      setSelectedColor(value);
+      setSelectedColor(value)
     }
-  }, [value]);
+  }, [value])
 
   const handleColorChange = (nextColor: string) => {
-    setSelectedColor(nextColor);
-    onChange?.(nextColor);
-  };
+    setSelectedColor(nextColor)
+    onChange?.(nextColor)
+  }
 
   // Find if current selected color matches a theme key
   const matchedThemeKey = Object.keys(theme.colors).find(
     (key) => theme.colors[key as keyof typeof theme.colors] === selectedColor
-  );
+  )
 
   // Resolution for the custom <View style={{ backgroundColor }}> block
   const displayColor = matchedThemeKey
     ? THEME_FALLBACKS[matchedThemeKey as keyof typeof theme.colors]
-    : selectedColor;
+    : selectedColor
 
-  const pickerSafeValue = resolvePickerSafeColor(selectedColor);
+  const pickerSafeValue = resolvePickerSafeColor(selectedColor)
 
   return (
     <View style={styles.container}>
@@ -101,9 +102,9 @@ export function ColorInput({ value = '#6366F1', onChange, label }: CustomColorPi
               style={styles.textInput}
               value={selectedColor}
               onChangeText={handleColorChange}
-              placeholder="#RRGGBB or var(...)"
-              placeholderTextColor="#94A3B8"
-              autoCapitalize="none"
+              placeholder='#RRGGBB or var(...)'
+              placeholderTextColor='#94A3B8'
+              autoCapitalize='none'
               autoCorrect={false}
             />
             {matchedThemeKey && (
@@ -118,9 +119,9 @@ export function ColorInput({ value = '#6366F1', onChange, label }: CustomColorPi
       <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.tokenScroll}>
         <View style={styles.tokenRow}>
           {(Object.keys(theme.colors) as Array<keyof typeof theme.colors>).map((key) => {
-            const tokenVal = theme.colors[key];
-            const isSelected = selectedColor === tokenVal;
-            const fallbackHex = THEME_FALLBACKS[key];
+            const tokenVal = theme.colors[key]
+            const isSelected = selectedColor === tokenVal
+            const fallbackHex = THEME_FALLBACKS[key]
 
             return (
               <TouchableOpacity
@@ -131,7 +132,7 @@ export function ColorInput({ value = '#6366F1', onChange, label }: CustomColorPi
                 <View style={[styles.tokenDot, { backgroundColor: fallbackHex }]} />
                 <Text style={styles.tokenText}>{key}</Text>
               </TouchableOpacity>
-            );
+            )
           })}
         </View>
       </ScrollView>
@@ -141,7 +142,7 @@ export function ColorInput({ value = '#6366F1', onChange, label }: CustomColorPi
       <ColorPicker
         style={styles.pickerContainer}
         value={pickerSafeValue}
-        onComplete={({ hex} ) => handleColorChange(hex)}
+        onComplete={({ hex }) => handleColorChange(hex)}
       >
         {/* Color Wheel / Selection Panel */}
         <Panel1 style={styles.panel} />
@@ -153,7 +154,7 @@ export function ColorInput({ value = '#6366F1', onChange, label }: CustomColorPi
         <OpacitySlider style={styles.slider} />
       </ColorPicker>
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -285,4 +286,4 @@ const styles = StyleSheet.create({
     height: 20,
     marginBottom: 12,
   },
-});
+})

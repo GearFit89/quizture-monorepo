@@ -1,7 +1,7 @@
-import { cn } from '@/lib/utils';
-import { Platform, TextInput } from 'react-native';
+import { cn } from '@/lib/utils'
+import { Platform, TextInput } from 'react-native'
 
-function Input({ className, ...props }: React.ComponentProps<typeof TextInput> & React.RefAttributes<TextInput>) {
+function Input ({ className, ...props }: React.ComponentProps<typeof TextInput> & React.RefAttributes<TextInput>) {
   return (
     <TextInput
       className={cn(
@@ -23,7 +23,7 @@ function Input({ className, ...props }: React.ComponentProps<typeof TextInput> &
       )}
       {...props}
     />
-  );
+  )
 }
 
-export { Input };
+export { Input }

@@ -22,14 +22,14 @@ export function BottomNav(props: BottomTabBarProps ) {
   const { styles } = useStyleTarget("bottomNav")
 
   return (
-    <View style={[styles.navContainer as AnyStyle, { paddingBottom: Math.max(insets.bottom, 12) }]}>
+    <View style={[styles.navContainer , { paddingBottom: Math.max(insets.bottom, 12) }]}>
       {navItems.map((item) => {
         const isActive = pathname === item.path || (item.path === '/(tabs)/' && pathname === '/');
 
         return (
           <TouchableOpacity
             key={item.path}
-            style={styles.navItem as AnyStyle}
+            style={styles.navItem }
             activeOpacity={0.7}
             onPress={() => router.replace(item.path as any)}
           >

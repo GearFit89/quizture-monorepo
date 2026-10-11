@@ -1,4 +1,28 @@
 {
+  "quiz": {
+    "timerLabel": "Quiz timer preview",
+    "timerPlaceholder": "—",
+    "microphoneLabel": "PRESS FOR MIC",
+    "progress": "Question {current} of {total}",
+    "points": "Points: {points}",
+    "loading": "Loading quiz…",
+    "finished": "Quiz complete",
+    "complete": "Done",
+    "questionStart": "Question: ",
+    "answerLabel": "Your answer",
+    "answerPlaceholder": "Type your answer…",
+    "submit": "Submit",
+    "next": "Next question",
+    "tryAgain": "Try again. Your answer needs another attempt.",
+    "incorrect": "Time expired. Continue to the next question.",
+    "actorUnavailable": "The active question is unavailable. Please restart the quiz.",
+    "quizUnavailable": "The quiz could not be started. Please return to setup.",
+    "summaryScore": "Total score: {points}",
+    "summaryCorrect": "Correct answers: {correct}",
+    "summaryIncorrect": "Incorrect answers: {incorrect}",
+    "summarySkipped": "Skipped questions: {skipped}",
+    "summaryCompleted": "Completed: {completed} of {total}"
+  },
   "practicePage": {
     "flashCardButton": {
       "title": "Flashcards",
@@ -10,16 +34,24 @@
     }
   },
   "setup": {
+    "difficultyOptions": {
+      "easy": { "title": "Easy", "description": "Build your answer with word blocks." },
+      "medium": { "title": "Medium", "description": "Practice recalling and typing your answer." },
+      "hard": { "title": "Hard", "description": "Challenge yourself with typed answers." },
+      "superHard": { "title": "Super hard", "description": "Take on the highest difficulty." }
+    },
+    "questionCount": "{count} questions available",
+    "questionCountHint": "Your quiz will use {count} questions from this selection.",
     "standard": {
       "modes": {
         "normal": {
           "title": "Normal Mode",
-          "description": "Standard setup",
+          "description": "Practice at your own pace.",
           "icon": "bookmark"
         },
         "timed": {
           "title": "Timed Mode",
-          "description": "Beat the clock",
+          "description": "Answer each question before time runs out.",
           "icon": "timer"
         }
       }
@@ -30,19 +62,43 @@
       "verseSelection": {
         "title": "Verse Selection",
         "options": [
-          { "label": "Random", "value": "random" },
-          { "label": "By Reference", "value": "byReference" },
-          { "label": "Alphabetically", "value": "alphabet" }
+          {
+            "label": "Random",
+            "value": "random"
+          },
+          {
+            "label": "By Reference",
+            "value": "byReference"
+          },
+          {
+            "label": "Alphabetically",
+            "value": "alphabet"
+          }
         ]
       },
       "questionType": {
         "title": "Question Type",
         "options": [
-          { "label": "Quotes", "value": "quote" },
-          { "label": "FTV", "value": "ftv" },
-          { "label": "SQ", "value": "SQ:" },
-          { "label": "According to", "value": "According to" },
-          { "label": "Questions", "value": "question" }
+          {
+            "label": "Quotes",
+            "value": "quote"
+          },
+          {
+            "label": "FTV",
+            "value": "ftv"
+          },
+          {
+            "label": "SQ",
+            "value": "SQ:"
+          },
+          {
+            "label": "According to",
+            "value": "According to"
+          },
+          {
+            "label": "Questions",
+            "value": "question"
+          }
         ]
       },
       "numQuestions": {
@@ -59,19 +115,43 @@
       "questionSelection": {
         "title": "Question Selection",
         "options": [
-          { "label": "By Months", "value": "month" },
-          { "label": "By Chapters", "value": "chapter" }
+          {
+            "label": "By Months",
+            "value": "month"
+          },
+          {
+            "label": "By Chapters",
+            "value": "chapter"
+          }
         ]
       },
       "months": {
         "title": "Select Months",
         "options": [
-          { "label": "October", "value": "october" },
-          { "label": "November", "value": "november" },
-          { "label": "December", "value": "december" },
-          { "label": "January", "value": "january" },
-          { "label": "February", "value": "february" },
-          { "label": "March", "value": "march" }
+          {
+            "label": "October",
+            "value": "october"
+          },
+          {
+            "label": "November",
+            "value": "november"
+          },
+          {
+            "label": "December",
+            "value": "december"
+          },
+          {
+            "label": "January",
+            "value": "january"
+          },
+          {
+            "label": "February",
+            "value": "february"
+          },
+          {
+            "label": "March",
+            "value": "march"
+          }
         ]
       },
       "chapters": {
@@ -82,28 +162,210 @@
       "triggerWords": {
         "title": "Trigger Words",
         "options": [
-          { "label": "Highlight", "value": "highlight" },
-          { "label": "Ignore", "value": "ignore" },
-          { "label": "Stop at Word", "value": "stop" }
+          {
+            "label": "Highlight",
+            "value": "highlight"
+          },
+          {
+            "label": "Ignore",
+            "value": "ignore"
+          },
+          {
+            "label": "Stop at Word",
+            "value": "stop"
+          }
         ]
       },
       "flight": {
         "title": "Flight",
         "options": [
-          { "label": "A", "value": "A" },
-          { "label": "B", "value": "B" },
-          { "label": "C", "value": "C" },
-          { "label": "T", "value": "T" }
+          {
+            "label": "A",
+            "value": "A"
+          },
+          {
+            "label": "B",
+            "value": "B"
+          },
+          {
+            "label": "C",
+            "value": "C"
+          },
+          {
+            "label": "T",
+            "value": "T"
+          }
         ]
       }
-      
-      
-
     },
+    "invalidSetupButton": "Quiz is not valid",
     "setupButton": "Start Quiz",
-      "errorInvalidQuestionLength":{
-        "title": "Quiz Setup Error",
-        "message": "Please select at least 20 questions."
+    "errorInvalidQuestionLength": {
+      "title": "Quiz Setup Error",
+      "message": "Please select at least 20 questions."
+    }
+  },
+  "profileMock": {
+    "eyebrow": "YOUR QUIZZING JOURNEY",
+    "title": "Quizzer profile",
+    "subtitle": "Growing in the Word, one verse at a time.",
+    "preview": "Sample profile · Design preview",
+    "initials": "JM",
+    "name": "Jordan Mitchell",
+    "team": "Grace Bible Quiz Team",
+    "level": "Intermediate quizzer",
+    "season": "2026–2027 SEASON",
+    "stats": [
+      {
+        "value": "128",
+        "label": "Verses learned"
+      },
+      {
+        "value": "92%",
+        "label": "Accuracy"
+      },
+      {
+        "value": "12",
+        "label": "Day streak"
       }
+    ],
+    "progressTitle": "This week’s focus",
+    "progressSubtitle": "A little consistency goes a long way.",
+    "book": "The Gospel of John",
+    "progressLabel": "18 of 24 verses reviewed",
+    "progressPercent": "75%",
+    "goal": "Weekly goal · 6 verses to go",
+    "achievementsTitle": "Milestones",
+    "achievementsSubtitle": "Small steps. Lasting growth.",
+    "achievements": [
+      {
+        "symbol": "✦",
+        "title": "Faithful practice",
+        "description": "Practiced for 7 days in a row"
+      },
+      {
+        "symbol": "✓",
+        "title": "Verse by verse",
+        "description": "Learned your first 100 verses"
+      },
+      {
+        "symbol": "★",
+        "title": "Ready to quiz",
+        "description": "Completed 25 practice rounds"
+      }
+    ],
+    "activityTitle": "Recent practice",
+    "activity": [
+      {
+        "title": "Quote practice",
+        "detail": "John 1:1–18 · 20 questions",
+        "score": "95%"
+      },
+      {
+        "title": "Finish the verse",
+        "detail": "John 3:1–21 · 15 questions",
+        "score": "87%"
+      }
+    ],
+    "encouragement": "Rooted in Scripture. Ready for the next question.",
+    "footer": "Sample statistics and achievements for this preview."
+  },
+  "settingsMock": {
+    "eyebrow": "MAKE ROOM FOR GROWTH",
+    "title": "Settings",
+    "subtitle": "A practice space that feels like yours.",
+    "preview": "Design preview · Settings are not interactive",
+    "accountTitle": "Your quizzer account",
+    "initials": "JM",
+    "name": "Jordan Mitchell",
+    "accountDetail": "Grace Bible Quiz Team · Intermediate",
+    "sections": [
+      {
+        "title": "Practice preferences",
+        "description": "Build a rhythm that works for you.",
+        "rows": [
+          {
+            "symbol": "▤",
+            "label": "Study material",
+            "description": "Your current Scripture collection",
+            "value": "John"
+          },
+          {
+            "symbol": "◷",
+            "label": "Default quiz length",
+            "description": "Questions in each practice round",
+            "value": "20 questions"
+          },
+          {
+            "symbol": "◇",
+            "label": "Difficulty",
+            "description": "A steady balance of challenge and growth",
+            "value": "Intermediate"
+          }
+        ]
+      },
+      {
+        "title": "Appearance & reading",
+        "description": "Stay focused on the Word.",
+        "rows": [
+          {
+            "symbol": "◐",
+            "label": "Theme",
+            "description": "A clean, comfortable reading space",
+            "value": "Light"
+          },
+          {
+            "symbol": "Aa",
+            "label": "Text size",
+            "description": "Scripture and question text",
+            "value": "Standard"
+          },
+          {
+            "symbol": "≋",
+            "label": "Reduced motion",
+            "description": "Keep transitions simple",
+            "value": "Off"
+          }
+        ]
+      },
+      {
+        "title": "Practice reminders",
+        "description": "A gentle nudge to keep going.",
+        "rows": [
+          {
+            "symbol": "◉",
+            "label": "Daily reminder",
+            "description": "Set aside a moment for Scripture",
+            "value": "On"
+          },
+          {
+            "symbol": "◷",
+            "label": "Reminder time",
+            "description": "Your preferred time to practice",
+            "value": "7:00 PM"
+          }
+        ]
+      },
+      {
+        "title": "About Bible Quizzing",
+        "description": "Learn, connect, and keep growing.",
+        "rows": [
+          {
+            "symbol": "?",
+            "label": "Help & support",
+            "description": "Guidance for your quizzing journey",
+            "value": "View"
+          },
+          {
+            "symbol": "◈",
+            "label": "Privacy",
+            "description": "Your account and data preferences",
+            "value": "View"
+          }
+        ]
+      }
+    ],
+    "footerTitle": "Learn the Word. Live the Word.",
+    "footer": "Bible Quizzing · Profile and settings concept"
   }
 }

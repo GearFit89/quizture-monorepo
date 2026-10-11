@@ -1,0 +1,181 @@
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/expo-app/src/app/(tabs)/index.tsx
+  1:10  error  'Button' is defined but never used                     @typescript-eslint/no-unused-vars
+  3:10  error  'QUIZ_REGISTRY' is defined but never used              @typescript-eslint/no-unused-vars
+  4:21  error  'ScrollView' is defined but never used                 @typescript-eslint/no-unused-vars
+  6:10  error  'useEffect' is defined but never used                  @typescript-eslint/no-unused-vars
+  7:10  error  'ElementInspector' is defined but never used           @typescript-eslint/no-unused-vars
+  8:10  error  'FloatingStyleEditorButton' is defined but never used  @typescript-eslint/no-unused-vars
+  9:10  error  'useStyles' is defined but never used                  @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/expo-app/src/app/(tabs)/practice.tsx
+   20:8  error  'Icon' is defined but never used                                       @typescript-eslint/no-unused-vars
+  107:9  error  Expected no line gap between “contentContainerStyle” and “renderItem”  @stylistic/jsx-props-no-multi-spaces
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/expo-app/src/app/setup/[id].tsx
+   3:10  error  'View' is defined but never used                                        @typescript-eslint/no-unused-vars
+  18:34  error  Comments inside children section of tag should be placed inside braces  react/jsx-no-comment-textnodes
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/expo-app/src/components/navigation/bottom-nav-bav.tsx
+  2:40  error  'StyleSheet' is defined but never used  @typescript-eslint/no-unused-vars
+  7:10  error  'AnyStyle' is defined but never used    @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/expo-app/src/components/question-filters/material.tsx
+  12:10  error  'useMemo' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/expo-app/src/components/question-filters/question-filter-option.tsx
+  7:10  error  'AnyStyle' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/expo-app/src/components/question-filters/question-filter-section.tsx
+  79:17  error  Expected no line gap between “variant” and “onChange”  @stylistic/jsx-props-no-multi-spaces
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/expo-app/src/components/quiz-setup/index.tsx
+  1:10  error  'Dialog' is defined but never used           @typescript-eslint/no-unused-vars
+  1:18  error  'DialogContent' is defined but never used    @typescript-eslint/no-unused-vars
+  1:33  error  'DialogTrigger' is defined but never used    @typescript-eslint/no-unused-vars
+  1:48  error  'DialogTitle' is defined but never used      @typescript-eslint/no-unused-vars
+  2:10  error  'Button' is defined but never used           @typescript-eslint/no-unused-vars
+  3:10  error  'Text' is defined but never used             @typescript-eslint/no-unused-vars
+  4:10  error  'DifficultyLevel' is defined but never used  @typescript-eslint/no-unused-vars
+  4:27  error  'QuizMode' is defined but never used         @typescript-eslint/no-unused-vars
+  5:10  error  'View' is defined but never used             @typescript-eslint/no-unused-vars
+  6:10  error  'IconKey' is defined but never used          @typescript-eslint/no-unused-vars
+  7:10  error  'createContext' is defined but never used    @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/expo-app/src/components/quiz-setup/mode-option.tsx
+  7:15  error  'AnyStyle' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/expo-app/src/components/quiz-setup/questions.tsx
+   2:32  error  'useQuestions' is defined but never used             @typescript-eslint/no-unused-vars
+   3:21  error  'useMemo' is defined but never used                  @typescript-eslint/no-unused-vars
+   4:10  error  'Modal' is defined but never used                    @typescript-eslint/no-unused-vars
+  14:22  error  'isLoadingError' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/expo-app/src/components/quiz-setup/quiz-start-button.tsx
+   6:10  error  'View' is defined but never used                  @typescript-eslint/no-unused-vars
+   7:10  error  'AnyStyle' is defined but never used              @typescript-eslint/no-unused-vars
+   8:10  error  'useState' is defined but never used              @typescript-eslint/no-unused-vars
+  16:11  error  'setupButton' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/expo-app/src/components/setups/standard.tsx
+   8:10  error  'Button' is defined but never used               @typescript-eslint/no-unused-vars
+   9:10  error  'ScrollView' is defined but never used           @typescript-eslint/no-unused-vars
+  10:10  error  'useQuestions' is defined but never used         @typescript-eslint/no-unused-vars
+  11:10  error  'multiQuestionFilter' is defined but never used  @typescript-eslint/no-unused-vars
+  12:10  error  'useMemo' is defined but never used              @typescript-eslint/no-unused-vars
+  17:9   error  'actorRef' is assigned a value but never used    @typescript-eslint/no-unused-vars
+  18:9   error  'router' is assigned a value but never used      @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/expo-app/src/components/styles/StyleEditorSheet.tsx
+  90:7  error  Definition for rule 'react-hooks/exhaustive-deps' was not found  react-hooks/exhaustive-deps
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/expo-app/src/components/styles/floating-button.tsx
+  55:9  error  Expected no line gap between “ref” and “onStylesChange”  @stylistic/jsx-props-no-multi-spaces
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/expo-app/src/components/ui/menubar.tsx
+  12:8  error  'StyleProp' is defined but never used  @typescript-eslint/no-unused-vars
+  16:8  error  'ViewStyle' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/expo-app/src/hooks/content.hook.ts
+   1:10  error  'useContext' is defined but never used           @typescript-eslint/no-unused-vars
+   3:10  error  'ContentContext' is defined but never used       @typescript-eslint/no-unused-vars
+  13:19  error  'setContent' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/expo-app/src/hooks/language.hook.ts
+  1:8  error  'content' is defined but never used                      @typescript-eslint/no-unused-vars
+  7:7  error  'LANGUAGES' is assigned a value but only used as a type  @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/expo-app/src/hooks/quiz-setup.hook.ts
+   2:10  error  'BookRange' is defined but never used    @typescript-eslint/no-unused-vars
+  10:10  error  'getChapters' is defined but never used  @typescript-eslint/no-unused-vars
+  10:23  error  'BIBLE_BOOKS' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/expo-app/src/hooks/styles.hook.ts
+  5:10  error  'NavigationRouteContext' is defined but never used  @typescript-eslint/no-unused-vars
+  6:10  error  'NativeEventsManager' is defined but never used     @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/expo-app/src/lib/content/UI-quizzies.content.ts
+  1:10  error  'Button' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/expo-app/src/lib/content/types.ts
+  1:10  error  'BookRange' is defined but never used  @typescript-eslint/no-unused-vars
+  1:21  error  'QuizMode' is defined but never used   @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/expo-app/src/lib/icons.ts
+  31:3  error  'UserCircle2' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/expo-app/src/lib/persist-query.ts
+  3:10  error  'persistQueryClient' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/expo-app/src/providers/content.provider.tsx
+  1:10  error  'useMemo' is defined but never used      @typescript-eslint/no-unused-vars
+  2:10  error  'useContent' is defined but never used   @typescript-eslint/no-unused-vars
+  2:22  error  'useLanguage' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/expo-app/src/providers/quiz-setup.provider.tsx
+  1:30  error  'useQuizSetup' is defined but never used     @typescript-eslint/no-unused-vars
+  2:17  error  'createContext' is defined but never used    @typescript-eslint/no-unused-vars
+  2:32  error  'useContext' is defined but never used       @typescript-eslint/no-unused-vars
+  2:44  error  'useEffect' is defined but never used        @typescript-eslint/no-unused-vars
+  2:55  error  'useId' is defined but never used            @typescript-eslint/no-unused-vars
+  2:62  error  'useRef' is defined but never used           @typescript-eslint/no-unused-vars
+  2:70  error  'useState' is defined but never used         @typescript-eslint/no-unused-vars
+  3:10  error  'QuizMode' is defined but never used         @typescript-eslint/no-unused-vars
+  4:10  error  'useActor' is defined but never used         @typescript-eslint/no-unused-vars
+  4:20  error  'useActorRef' is defined but never used      @typescript-eslint/no-unused-vars
+  5:10  error  'DifficultyLevel' is defined but never used  @typescript-eslint/no-unused-vars
+  7:10  error  'useSetupContent' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/expo-app/src/providers/styles.provider.tsx
+  11:6  error  'r' is defined but never used           @typescript-eslint/no-unused-vars
+  12:7  error  's' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/server/src/services/answer-logic.ts
+   71:115  error  Expected '===' and instead saw '=='      eqeqeq
+  205:7    error  'ii' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/server/test/redis-pino.test.ts
+  3:3   error  'defaultTBQNParams' is defined but never used  @typescript-eslint/no-unused-vars
+  4:3   error  'fetchTBQNcontent' is defined but never used   @typescript-eslint/no-unused-vars
+  5:3   error  'getTBQNQuestions' is defined but never used   @typescript-eslint/no-unused-vars
+  7:10  error  'materialMap' is defined but never used        @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/server/test/redis.test.ts
+  3:3   error  'defaultTBQNParams' is defined but never used  @typescript-eslint/no-unused-vars
+  4:3   error  'fetchTBQNcontent' is defined but never used   @typescript-eslint/no-unused-vars
+  5:3   error  'getTBQNQuestions' is defined but never used   @typescript-eslint/no-unused-vars
+  7:10  error  'materialMap' is defined but never used        @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/server/test/scraper.test.ts
+  1:24  error  'expect' is defined but never used             @typescript-eslint/no-unused-vars
+  2:10  error  'defaultTBQNParams' is defined but never used  @typescript-eslint/no-unused-vars
+  2:29  error  'fetchTBQNcontent' is defined but never used   @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/packages/shared/src/logic/answer-checker.ts
+  103:115  error  Expected '===' and instead saw '=='      eqeqeq
+  245:7    error  'ii' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/packages/shared/src/logic/load-questions.ts
+  2:10  error  'processQuestion' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/packages/shared/src/machines/questions/normal.ts
+  1:29  error  'assign' is defined but never used  @typescript-eslint/no-unused-vars
+  1:37  error  'raise' is defined but never used   @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/packages/shared/src/machines/quizzes/normal.machine.ts
+  3:10  error  'createMachine' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/packages/shared/src/machines/root.machine.ts
+  1:32  error  'StateMachine' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/packages/shared/src/schemas/question.schema.ts
+  1:13  error  'v' is defined but never used                      @typescript-eslint/no-unused-vars
+  3:7   error  'BaseQuestion' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/packages/shared/src/services/filter.service.ts
+  2:3  error  'Question' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/cramjs/Desktop/Projects/Bible-Quizzing-App/packages/shared/src/utils.ts
+  34:21  error  Expected '===' and instead saw '=='  eqeqeq
+
+✖ 103 problems (103 errors, 0 warnings)

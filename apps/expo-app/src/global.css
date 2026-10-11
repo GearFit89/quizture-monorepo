@@ -9,16 +9,18 @@
   --card: 248 250 252;                /* Slate 50 */
   --card-foreground: 15 23 42;
 
+  
+
   /* Primary: Deep Royal Navy (Buttons, Header headers) */
   --primary: 30 58 138;               /* Blue 900 */
-  --primary-foreground: 255 255 255;
+  --primary-foreground: 255 255 255;  /* Whiite */
 
   /* Secondary: Bright Sky Blue (Active states, secondary actions) */
   --secondary: 14 165 233;            /* Sky 500 */
   --secondary-foreground: 255 255 255;
 
   /* Accent: Electric Violet / Purple (Streaks, Badges, Points) */
-  --accent: 255 234 0;             /* yellow somethin */
+  --accent:30 58 138;        /* #7C3AED - Electric Violet / Purple */           /* somethin */
   --accent-foreground: 255 255 255;
 
   /* Muted elements & borders */
@@ -36,7 +38,7 @@
 .dark {
   /* Base background & text */
   --background: 15 23 42;             /* Slate 900 */
-  --foreground: 248 250 252;          /* Slate 50 */
+  --foreground: 0 0 255;          /* Slate 50 */
   --card: 30 41 59;                   /* Slate 800 */
   --card-foreground: 248 250 252;
 

@@ -5,7 +5,7 @@ import testSecrets from './test-env'
 export default defineConfig({
   plugins: [tsconfigPaths()],
   // Point Vite to load .env files from a specific directory if needed:
-  // envDir: './', 
+  // envDir: './',
   test: {
     environment: 'node',
     include: ['src/**/*.test.ts', 'src/**/*.spec.ts', 'test/**/*.{test,spec}.ts'],

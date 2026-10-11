@@ -1,8 +1,8 @@
-import { cn } from '@/lib/utils';
-import * as SwitchPrimitives from '@rn-primitives/switch';
-import { Platform } from 'react-native';
+import { cn } from '@/lib/utils'
+import * as SwitchPrimitives from '@rn-primitives/switch'
+import { Platform } from 'react-native'
 
-function Switch({
+function Switch ({
   className,
   ...props
 }: React.ComponentProps<typeof SwitchPrimitives.Root>) {
@@ -17,7 +17,8 @@ function Switch({
         props.disabled && 'opacity-50',
         className
       )}
-      {...props}>
+      {...props}
+    >
       <SwitchPrimitives.Thumb
         className={cn(
           'bg-background size-4 rounded-full transition-transform',
@@ -30,7 +31,7 @@ function Switch({
         )}
       />
     </SwitchPrimitives.Root>
-  );
+  )
 }
 
-export { Switch };
+export { Switch }

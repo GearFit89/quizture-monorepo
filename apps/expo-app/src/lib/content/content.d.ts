@@ -1,6 +1,6 @@
-import { Content } from "./types";
+import { Content } from './types'
 
-declare module "*.json" {
-  const value: Content;
-  export default value;
+declare module '*.json' {
+  const value: Content
+  export default value
 }

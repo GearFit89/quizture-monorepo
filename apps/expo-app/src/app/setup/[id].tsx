@@ -1,8 +1,12 @@
 import { QUIZ_REGISTRY } from '@/lib/quiz-registry';
 import { useLocalSearchParams } from 'expo-router';
-import { View, Text, ScrollView } from 'react-native';
+import { ScrollView } from 'react-native';
+import { Text } from '@/components/ui/text';
+import { useSetupContent, useStyleTarget } from '@/hooks';
 
 export default function SetupScreen() {
+  const { styles } = useStyleTarget('quizSetup');
+  const { filterSection } = useSetupContent();
   
   const { id } = useLocalSearchParams<{ id: string }>();
   const quiz = QUIZ_REGISTRY[id];
@@ -15,8 +19,9 @@ export default function SetupScreen() {
   const { Setup } = quiz;
 
   return (
-    <ScrollView >
-      <Text>Setup ID: {id}</Text>
+    <ScrollView style={styles.page} contentContainerStyle={styles.pageContent}>
+      <Text style={styles.heading}>{filterSection.title}</Text>
+      <Text style={styles.subtitle}>{filterSection.subtitle}</Text>
       
       <Setup />
     </ScrollView>

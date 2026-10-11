@@ -3,6 +3,7 @@ import { Question } from "@bq/shared/types";
 import { multiQuestionFilter } from "@bq/shared/services/filter.service";
 import { useMemo } from "react";
 import type { AppFilterCriteria } from "@bq/shared/types";
+import { storage } from "@/lib/storage";
 
 // Dynamic import function - fetches/loads the mock JSON on demand
 async function fetchQuestions(): Promise<Question[]> {
@@ -34,6 +35,9 @@ export function useFilteredQuestions ({ filterCriteria }: { filterCriteria: AppF
           if(!filterCriteria) return data;
           const filtered = multiQuestionFilter(data, filterCriteria, true);
           console.debug("filtered: ", filtered)
+          storage.setJSON("filteredQuestions", filtered)
+
+
           return filtered;
 
       }, [data, filterCriteria])

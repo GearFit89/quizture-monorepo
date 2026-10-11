@@ -1,0 +1,962 @@
+apps/expo-app/src/app/(tabs)/_layout.tsx(2,27): error TS2307: Cannot find module '@/components/navigation/bottom-nav-bav' or its corresponding type declarations.
+apps/expo-app/src/app/(tabs)/index.tsx(1,24): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+apps/expo-app/src/app/(tabs)/index.tsx(2,22): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/app/(tabs)/index.tsx(3,31): error TS2307: Cannot find module '@/lib/quiz-registry' or its corresponding type declarations.
+apps/expo-app/src/app/(tabs)/index.tsx(8,43): error TS2307: Cannot find module '@/components/styles/floating-button' or its corresponding type declarations.
+apps/expo-app/src/app/(tabs)/index.tsx(9,43): error TS2307: Cannot find module '@/hooks' or its corresponding type declarations.
+apps/expo-app/src/app/(tabs)/practice.tsx(5,31): error TS2307: Cannot find module '@/components/pressable-card' or its corresponding type declarations.
+apps/expo-app/src/app/(tabs)/practice.tsx(6,36): error TS2307: Cannot find module '@/lib/content/UI-quizzies.content' or its corresponding type declarations.
+apps/expo-app/src/app/(tabs)/practice.tsx(7,24): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+apps/expo-app/src/app/(tabs)/practice.tsx(8,22): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/app/(tabs)/practice.tsx(9,26): error TS2307: Cannot find module '@bq/shared/types' or its corresponding type declarations.
+apps/expo-app/src/app/(tabs)/practice.tsx(10,36): error TS2307: Cannot find module '@/components/ui/lucide-icon' or its corresponding type declarations.
+apps/expo-app/src/app/(tabs)/practice.tsx(19,36): error TS2307: Cannot find module '@/hooks' or its corresponding type declarations.
+apps/expo-app/src/app/(tabs)/practice.tsx(20,18): error TS2307: Cannot find module '@/components/icon' or its corresponding type declarations.
+apps/expo-app/src/app/(tabs)/practice.tsx(29,13): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/app/(tabs)/practice.tsx(57,13): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/app/(tabs)/practice.tsx(76,11): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/app/(tabs)/practice.tsx(78,13): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/app/(tabs)/practice.tsx(119,11): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/app/(tabs)/practice.tsx(164,7): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ScrollViewProps): ScrollView', gave the following error.
+    Type '{ children: Element[]; ref: RefObject<ScrollView>; className: string; contentContainerClassName: string; showsVerticalScrollIndicator: false; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<ScrollView> & Readonly<ScrollViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<ScrollView> & Readonly<ScrollViewProps>'.
+  Overload 2 of 2, '(props: ScrollViewProps, context: any): ScrollView', gave the following error.
+    Type '{ children: Element[]; ref: RefObject<ScrollView>; className: string; contentContainerClassName: string; showsVerticalScrollIndicator: false; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<ScrollView> & Readonly<ScrollViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<ScrollView> & Readonly<ScrollViewProps>'.
+apps/expo-app/src/app/(tabs)/practice.tsx(168,13): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/app/(tabs)/profile.tsx(1,25): error TS2307: Cannot find module '@/mock-styles/profile' or its corresponding type declarations.
+apps/expo-app/src/app/(tabs)/settings.tsx(1,25): error TS2307: Cannot find module '@/mock-styles/settings' or its corresponding type declarations.
+apps/expo-app/src/app/_layout.tsx(4,46): error TS2307: Cannot find module '@/lib/persist-query' or its corresponding type declarations.
+apps/expo-app/src/app/_layout.tsx(8,68): error TS2307: Cannot find module '@/providers' or its corresponding type declarations.
+apps/expo-app/src/app/_layout.tsx(9,43): error TS2307: Cannot find module '@/components/styles/floating-button' or its corresponding type declarations.
+apps/expo-app/src/app/quiz/[id].tsx(1,31): error TS2307: Cannot find module '@/lib/quiz-registry' or its corresponding type declarations.
+apps/expo-app/src/app/quiz/[id].tsx(3,22): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/app/quiz/[id].tsx(5,30): error TS2307: Cannot find module '@/providers' or its corresponding type declarations.
+apps/expo-app/src/app/setup/[id].tsx(1,31): error TS2307: Cannot find module '@/lib/quiz-registry' or its corresponding type declarations.
+apps/expo-app/src/components/icon.tsx(1,32): error TS2307: Cannot find module '@/lib/icons' or its corresponding type declarations.
+apps/expo-app/src/components/navigation/bottom-nav-bav.tsx(5,18): error TS2307: Cannot find module '@/components/icon' or its corresponding type declarations.
+apps/expo-app/src/components/navigation/bottom-nav-bav.tsx(6,32): error TS2307: Cannot find module '@/hooks' or its corresponding type declarations.
+apps/expo-app/src/components/navigation/bottom-nav-bav.tsx(7,26): error TS2307: Cannot find module '@/lib/styles' or its corresponding type declarations.
+apps/expo-app/src/components/navigation/bottom-nav-bav.tsx(8,35): error TS2307: Cannot find module 'expo-router/build/react-navigation/bottom-tabs' or its corresponding type declarations.
+apps/expo-app/src/components/pressable-card.tsx(3,22): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/components/pressable-card.tsx(4,18): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './icon.js'?
+apps/expo-app/src/components/pressable-card.tsx(5,24): error TS2307: Cannot find module '@/lib/content/UI-quizzies.content' or its corresponding type declarations.
+apps/expo-app/src/components/pressable-card.tsx(6,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/pressable-card.tsx(47,7): error TS2322: Type '{ children: Element[]; className: any; onPress: () => void | undefined; accessibilityRole: "search" | "link" | "none" | "button" | "header" | "image" | "adjustable" | "checkbox" | "summary"; accessibilityLabel: string; }' is not assignable to type 'IntrinsicAttributes & PressableProps & RefAttributes<View>'.
+  Property 'className' does not exist on type 'IntrinsicAttributes & PressableProps & RefAttributes<View>'.
+apps/expo-app/src/components/pressable-card.tsx(56,13): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: Element; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: Element; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/pressable-card.tsx(57,15): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: Element; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: Element; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/pressable-card.tsx(63,13): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/question-filters/default-quiz-filters.tsx(2,39): error TS2307: Cannot find module '@/components/question-filters/question-filter-section' or its corresponding type declarations.
+apps/expo-app/src/components/question-filters/default-quiz-filters.tsx(3,30): error TS2307: Cannot find module '@/hooks/quiz-setup.hook' or its corresponding type declarations.
+apps/expo-app/src/components/question-filters/default-quiz-filters.tsx(4,31): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './material.js'?
+apps/expo-app/src/components/question-filters/default-quiz-filters.tsx(5,33): error TS2307: Cannot find module '@/hooks' or its corresponding type declarations.
+apps/expo-app/src/components/question-filters/default-quiz-filters.tsx(13,11): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/question-filters/default-quiz-filters.tsx(23,20): error TS7006: Parameter 'val' implicitly has an 'any' type.
+apps/expo-app/src/components/question-filters/default-quiz-filters.tsx(32,20): error TS7006: Parameter 'val' implicitly has an 'any' type.
+apps/expo-app/src/components/question-filters/material.tsx(2,22): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/components/question-filters/material.tsx(3,24): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+apps/expo-app/src/components/question-filters/material.tsx(4,39): error TS2307: Cannot find module '@/components/question-filters/question-filter-section' or its corresponding type declarations.
+apps/expo-app/src/components/question-filters/material.tsx(5,30): error TS2307: Cannot find module '@/hooks/quiz-setup.hook' or its corresponding type declarations.
+apps/expo-app/src/components/question-filters/material.tsx(11,8): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../ui/accordion.js'?
+apps/expo-app/src/components/question-filters/material.tsx(13,33): error TS2307: Cannot find module '@/hooks' or its corresponding type declarations.
+apps/expo-app/src/components/question-filters/material.tsx(15,26): error TS2307: Cannot find module '@bq/shared/types' or its corresponding type declarations.
+apps/expo-app/src/components/question-filters/material.tsx(53,13): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/question-filters/material.tsx(70,13): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: Element; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: Element; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/question-filters/material.tsx(80,28): error TS7006: Parameter 'val' implicitly has an 'any' type.
+apps/expo-app/src/components/question-filters/material.tsx(110,34): error TS7006: Parameter 'val' implicitly has an 'any' type.
+apps/expo-app/src/components/question-filters/question-filter-option.tsx(3,26): error TS2307: Cannot find module '@/components/ui/checkbox' or its corresponding type declarations.
+apps/expo-app/src/components/question-filters/question-filter-option.tsx(4,32): error TS2307: Cannot find module '@/components/ui/radio-group' or its corresponding type declarations.
+apps/expo-app/src/components/question-filters/question-filter-option.tsx(5,23): error TS2307: Cannot find module '@/components/ui/label' or its corresponding type declarations.
+apps/expo-app/src/components/question-filters/question-filter-option.tsx(6,32): error TS2307: Cannot find module '@/hooks' or its corresponding type declarations.
+apps/expo-app/src/components/question-filters/question-filter-option.tsx(7,26): error TS2307: Cannot find module '@/lib/styles' or its corresponding type declarations.
+apps/expo-app/src/components/question-filters/question-filter-option.tsx(164,13): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/question-filters/question-filter-option.tsx(183,11): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/question-filters/question-filter-section.tsx(2,22): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/components/question-filters/question-filter-section.tsx(3,28): error TS2307: Cannot find module '@/components/ui/radio-group' or its corresponding type declarations.
+apps/expo-app/src/components/question-filters/question-filter-section.tsx(4,77): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './question-filter-option.js'?
+apps/expo-app/src/components/question-filters/question-filter-section.tsx(64,13): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: (Element | null)[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: (Element | null)[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/question-filters/question-filter-section.tsx(67,17): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/question-filters/question-filter-section.tsx(79,28): error TS7006: Parameter '_n' implicitly has an 'any' type.
+apps/expo-app/src/components/question-filters/question-filter-section.tsx(79,32): error TS7006: Parameter 'v' implicitly has an 'any' type.
+apps/expo-app/src/components/question-filters/question-filter-section.tsx(103,11): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: (Element | null)[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: (Element | null)[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/question-filters/question-filter-section.tsx(105,13): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/quiz-card.skeleton.tsx(1,26): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './ui/skeleton.js'?
+apps/expo-app/src/components/quiz-setup/difficulty-option.tsx(3,22): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/components/quiz-setup/difficulty-option.tsx(4,33): error TS2307: Cannot find module '@bq/shared/types' or its corresponding type declarations.
+apps/expo-app/src/components/quiz-setup/difficulty-option.tsx(5,30): error TS2307: Cannot find module '@/hooks/quiz-setup.hook' or its corresponding type declarations.
+apps/expo-app/src/components/quiz-setup/difficulty-option.tsx(6,32): error TS2307: Cannot find module '@/hooks' or its corresponding type declarations.
+apps/expo-app/src/components/quiz-setup/index.tsx(1,67): error TS2307: Cannot find module '@/components/ui/dialog' or its corresponding type declarations.
+apps/expo-app/src/components/quiz-setup/index.tsx(2,24): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+apps/expo-app/src/components/quiz-setup/index.tsx(3,22): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/components/quiz-setup/index.tsx(4,43): error TS2307: Cannot find module '@bq/shared/types' or its corresponding type declarations.
+apps/expo-app/src/components/quiz-setup/index.tsx(6,25): error TS2307: Cannot find module '@/lib/icons' or its corresponding type declarations.
+apps/expo-app/src/components/quiz-setup/index.tsx(8,30): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './difficulty-option.js'?
+apps/expo-app/src/components/quiz-setup/index.tsx(9,24): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './mode-option.js'?
+apps/expo-app/src/components/quiz-setup/index.tsx(10,32): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../question-filters/default-quiz-filters.js'?
+apps/expo-app/src/components/quiz-setup/index.tsx(11,35): error TS2307: Cannot find module '@/providers/quiz-setup.provider' or its corresponding type declarations.
+apps/expo-app/src/components/quiz-setup/mode-option.tsx(3,25): error TS2307: Cannot find module '@/lib/icons' or its corresponding type declarations.
+apps/expo-app/src/components/quiz-setup/mode-option.tsx(4,18): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../icon.js'?
+apps/expo-app/src/components/quiz-setup/mode-option.tsx(5,22): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../ui/text.js'?
+apps/expo-app/src/components/quiz-setup/mode-option.tsx(6,46): error TS2307: Cannot find module '@/hooks' or its corresponding type declarations.
+apps/expo-app/src/components/quiz-setup/mode-option.tsx(7,31): error TS2307: Cannot find module '@/lib/styles' or its corresponding type declarations.
+apps/expo-app/src/components/quiz-setup/questions.tsx(1,63): error TS2307: Cannot find module '@/hooks' or its corresponding type declarations.
+apps/expo-app/src/components/quiz-setup/questions.tsx(2,52): error TS2307: Cannot find module '@/hooks/use-questions' or its corresponding type declarations.
+apps/expo-app/src/components/quiz-setup/questions.tsx(5,22): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/components/quiz-setup/questions.tsx(35,11): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: Element[]; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/quiz-setup/quiz-start-button.tsx(1,34): error TS2307: Cannot find module '@/context' or its corresponding type declarations.
+apps/expo-app/src/components/quiz-setup/quiz-start-button.tsx(2,63): error TS2307: Cannot find module '@/hooks' or its corresponding type declarations.
+apps/expo-app/src/components/quiz-setup/quiz-start-button.tsx(4,24): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+apps/expo-app/src/components/quiz-setup/quiz-start-button.tsx(5,22): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/components/quiz-setup/quiz-start-button.tsx(7,26): error TS2307: Cannot find module '@/lib/styles' or its corresponding type declarations.
+apps/expo-app/src/components/quiz-setup/quiz-start-button.tsx(9,23): error TS2307: Cannot find module '@/lib/theme' or its corresponding type declarations.
+apps/expo-app/src/components/setups/standard.tsx(1,75): error TS2307: Cannot find module '@/components/quiz-setup' or its corresponding type declarations.
+apps/expo-app/src/components/setups/standard.tsx(2,26): error TS2307: Cannot find module '@bq/shared/types' or its corresponding type declarations.
+apps/expo-app/src/components/setups/standard.tsx(4,32): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../question-filters/default-quiz-filters.js'?
+apps/expo-app/src/components/setups/standard.tsx(5,33): error TS2307: Cannot find module '@/hooks/' or its corresponding type declarations.
+apps/expo-app/src/components/setups/standard.tsx(7,29): error TS2307: Cannot find module '@bq/shared/machines' or its corresponding type declarations.
+apps/expo-app/src/components/setups/standard.tsx(8,24): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+apps/expo-app/src/components/setups/standard.tsx(9,28): error TS2307: Cannot find module 'react-native-reanimated/lib/typescript/Animated' or its corresponding type declarations.
+apps/expo-app/src/components/setups/standard.tsx(10,30): error TS2307: Cannot find module '@/hooks/use-questions' or its corresponding type declarations.
+apps/expo-app/src/components/setups/standard.tsx(11,37): error TS2307: Cannot find module '@bq/shared/services/filter.service' or its corresponding type declarations.
+apps/expo-app/src/components/setups/standard.tsx(13,35): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../quiz-setup/questions.js'?
+apps/expo-app/src/components/setups/standard.tsx(14,29): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../quiz-setup/quiz-start-button.js'?
+apps/expo-app/src/components/setups/standard.tsx(17,20): error TS2554: Expected 2-3 arguments, but got 1.
+apps/expo-app/src/components/styles/StyleEditorSheet.tsx(19,34): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './StyleKeySelector.js'?
+apps/expo-app/src/components/styles/StyleEditorSheet.tsx(20,33): error TS2307: Cannot find module '@/components/styles/inputs/StyleValueInput' or its corresponding type declarations.
+apps/expo-app/src/components/styles/StyleEditorSheet.tsx(21,33): error TS2307: Cannot find module '@/lib/styles/styleKeyMeta' or its corresponding type declarations.
+apps/expo-app/src/components/styles/StyleEditorSheet.tsx(22,48): error TS2307: Cannot find module '@/lib/styles/types' or its corresponding type declarations.
+apps/expo-app/src/components/styles/StyleEditorSheet.tsx(23,27): error TS2307: Cannot find module '@/hooks' or its corresponding type declarations.
+apps/expo-app/src/components/styles/StyleEditorSheet.tsx(24,28): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../cpoy-button.js'?
+apps/expo-app/src/components/styles/StyleEditorSheet.tsx(25,24): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../ui/button.js'?
+apps/expo-app/src/components/styles/StyleEditorSheet.tsx(234,40): error TS7006: Parameter 'next' implicitly has an 'any' type.
+apps/expo-app/src/components/styles/StyleEditorSheet.tsx(253,30): error TS7006: Parameter 'key' implicitly has an 'any' type.
+apps/expo-app/src/components/styles/StyleKeySelector.tsx(3,32): error TS2307: Cannot find module '@/lib/styles/styleKeyMeta' or its corresponding type declarations.
+apps/expo-app/src/components/styles/StyleKeySelector.tsx(4,30): error TS2307: Cannot find module '@/lib/styles' or its corresponding type declarations.
+apps/expo-app/src/components/styles/StyleKeySelector.tsx(19,24): error TS7006: Parameter 'meta' implicitly has an 'any' type.
+apps/expo-app/src/components/styles/floating-button.tsx(3,55): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './StyleEditorSheet.js'?
+apps/expo-app/src/components/styles/floating-button.tsx(4,35): error TS2307: Cannot find module '@/lib/styles/types' or its corresponding type declarations.
+apps/expo-app/src/components/styles/inputs/ColorInput.tsx(4,23): error TS2307: Cannot find module '@/lib/theme' or its corresponding type declarations.
+apps/expo-app/src/components/styles/inputs/ColorInput.tsx(127,17): error TS2322: Type 'string | number | symbol' is not assignable to type 'Key | null | undefined'.
+  Type 'symbol' is not assignable to type 'Key | null | undefined'.
+apps/expo-app/src/components/styles/inputs/ColorInput.tsx(132,48): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: TextProps): Text', gave the following error.
+    Type 'string | number | symbol' is not assignable to type 'ReactNode'.
+      Type 'symbol' is not assignable to type 'ReactNode'.
+  Overload 2 of 2, '(props: TextProps, context: any): Text', gave the following error.
+    Type 'string | number | symbol' is not assignable to type 'ReactNode'.
+      Type 'symbol' is not assignable to type 'ReactNode'.
+apps/expo-app/src/components/styles/inputs/ColorInput.tsx(141,8): error TS2604: JSX element type 'ColorPicker' does not have any construct or call signatures.
+apps/expo-app/src/components/styles/inputs/ColorInput.tsx(141,8): error TS2786: 'ColorPicker' cannot be used as a JSX component.
+  Its type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/reanimated-color-picker/lib/typescript/index")' is not a valid JSX element type.
+apps/expo-app/src/components/styles/inputs/ColorInput.tsx(144,24): error TS7031: Binding element 'hex' implicitly has an 'any' type.
+apps/expo-app/src/components/styles/inputs/DimensionInput.tsx(76,8): error TS2604: JSX element type 'Slider' does not have any construct or call signatures.
+apps/expo-app/src/components/styles/inputs/DimensionInput.tsx(76,8): error TS2786: 'Slider' cannot be used as a JSX component.
+  Its type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@react-native-community/slider/typings/index")' is not a valid JSX element type.
+apps/expo-app/src/components/styles/inputs/DimensionInput.tsx(82,25): error TS7006: Parameter 'v' implicitly has an 'any' type.
+apps/expo-app/src/components/styles/inputs/NumberInput.tsx(46,8): error TS2604: JSX element type 'Slider' does not have any construct or call signatures.
+apps/expo-app/src/components/styles/inputs/NumberInput.tsx(46,8): error TS2786: 'Slider' cannot be used as a JSX component.
+  Its type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@react-native-community/slider/typings/index")' is not a valid JSX element type.
+apps/expo-app/src/components/styles/inputs/StyleValueInput.tsx(2,35): error TS2307: Cannot find module '@/lib/styles/types' or its corresponding type declarations.
+apps/expo-app/src/components/styles/inputs/StyleValueInput.tsx(3,30): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './BooleanInput.js'?
+apps/expo-app/src/components/styles/inputs/StyleValueInput.tsx(4,28): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './ColorInput.js'?
+apps/expo-app/src/components/styles/inputs/StyleValueInput.tsx(5,32): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './DimensionInput.js'?
+apps/expo-app/src/components/styles/inputs/StyleValueInput.tsx(6,27): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './EnumInput.js'?
+apps/expo-app/src/components/styles/inputs/StyleValueInput.tsx(7,29): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './NumberInput.js'?
+apps/expo-app/src/components/styles/inputs/StyleValueInput.tsx(8,29): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './StringInput.js'?
+apps/expo-app/src/components/ui/accordion.tsx(1,22): error TS2307: Cannot find module '@/components/ui/lucide-icon' or its corresponding type declarations.
+apps/expo-app/src/components/ui/accordion.tsx(2,34): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/components/ui/accordion.tsx(3,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/accordion.tsx(21,56): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/accordion/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/accordion.tsx(24,27): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/accordion/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/accordion.tsx(29,28): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/accordion/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/accordion.tsx(39,51): error TS2339: Property 'Item' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/accordion/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/accordion.tsx(41,25): error TS2339: Property 'Item' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/accordion/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/accordion.tsx(56,26): error TS2339: Property 'Item' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/accordion/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/accordion.tsx(66,51): error TS2339: Property 'Trigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/accordion/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/accordion.tsx(69,45): error TS2339: Property 'useItemContext' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/accordion/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/accordion.tsx(89,27): error TS2339: Property 'Header' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/accordion/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/accordion.tsx(90,29): error TS2339: Property 'Trigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/accordion/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/accordion.tsx(92,13): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps & PressableProps & RefAttributes<View>): string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<...> | View | null | undefined', gave the following error.
+    Type '{ children: Element[]; className: any; }' is not assignable to type 'IntrinsicAttributes & ViewProps & PressableProps & RefAttributes<View>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & ViewProps & PressableProps & RefAttributes<View>'.
+  Overload 2 of 2, '(props: ViewProps & PressableProps & RefAttributes<View>, context: any): string | number | boolean | ReactElement<any, string | JSXElementConstructor<...>> | Iterable<...> | View | null | undefined', gave the following error.
+    Type '{ children: Element[]; className: any; }' is not assignable to type 'IntrinsicAttributes & ViewProps & PressableProps & RefAttributes<View>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & ViewProps & PressableProps & RefAttributes<View>'.
+apps/expo-app/src/components/ui/accordion.tsx(114,30): error TS2339: Property 'Trigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/accordion/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/accordion.tsx(115,28): error TS2339: Property 'Header' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/accordion/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/accordion.tsx(124,51): error TS2339: Property 'Content' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/accordion/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/accordion.tsx(125,45): error TS2339: Property 'useItemContext' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/accordion/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/accordion.tsx(128,27): error TS2339: Property 'Content' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/accordion/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/accordion.tsx(148,28): error TS2339: Property 'Content' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/accordion/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/alert-dialog.tsx(1,52): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+apps/expo-app/src/components/ui/alert-dialog.tsx(2,40): error TS2307: Cannot find module '@/components/ui/native-only-animated-view' or its corresponding type declarations.
+apps/expo-app/src/components/ui/alert-dialog.tsx(3,34): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/components/ui/alert-dialog.tsx(4,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/alert-dialog.tsx(11,42): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/alert-dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/alert-dialog.tsx(13,49): error TS2339: Property 'Trigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/alert-dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/alert-dialog.tsx(15,48): error TS2339: Property 'Portal' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/alert-dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/alert-dialog.tsx(23,58): error TS2339: Property 'Overlay' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/alert-dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/alert-dialog.tsx(28,29): error TS2339: Property 'Overlay' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/alert-dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/alert-dialog.tsx(46,30): error TS2339: Property 'Overlay' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/alert-dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/alert-dialog.tsx(55,53): error TS2339: Property 'Content' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/alert-dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/alert-dialog.tsx(61,31): error TS2339: Property 'Content' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/alert-dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/alert-dialog.tsx(76,31): error TS2339: Property 'className' does not exist on type 'ViewProps'.
+apps/expo-app/src/components/ui/alert-dialog.tsx(79,13): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children?: ReactNode; hitSlop?: number | Insets | null | undefined; id?: string | undefined; needsOffscreenAlphaCompositing?: boolean | undefined; onLayout?: ((event: LayoutChangeEvent) => void) | undefined; ... 85 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children?: ReactNode; hitSlop?: number | Insets | null | undefined; id?: string | undefined; needsOffscreenAlphaCompositing?: boolean | undefined; onLayout?: ((event: LayoutChangeEvent) => void) | undefined; ... 85 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/ui/alert-dialog.tsx(84,31): error TS2339: Property 'className' does not exist on type 'ViewProps'.
+apps/expo-app/src/components/ui/alert-dialog.tsx(87,7): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children?: ReactNode; hitSlop?: number | Insets | null | undefined; id?: string | undefined; needsOffscreenAlphaCompositing?: boolean | undefined; onLayout?: ((event: LayoutChangeEvent) => void) | undefined; ... 85 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children?: ReactNode; hitSlop?: number | Insets | null | undefined; id?: string | undefined; needsOffscreenAlphaCompositing?: boolean | undefined; onLayout?: ((event: LayoutChangeEvent) => void) | undefined; ... 85 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/ui/alert-dialog.tsx(96,53): error TS2339: Property 'Title' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/alert-dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/alert-dialog.tsx(98,27): error TS2339: Property 'Title' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/alert-dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/alert-dialog.tsx(108,53): error TS2339: Property 'Description' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/alert-dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/alert-dialog.tsx(110,27): error TS2339: Property 'Description' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/alert-dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/alert-dialog.tsx(120,53): error TS2339: Property 'Action' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/alert-dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/alert-dialog.tsx(123,29): error TS2339: Property 'Action' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/alert-dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/alert-dialog.tsx(131,53): error TS2339: Property 'Cancel' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/alert-dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/alert-dialog.tsx(134,29): error TS2339: Property 'Cancel' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/alert-dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/alert.tsx(1,22): error TS2307: Cannot find module '@/components/ui/lucide-icon' or its corresponding type declarations.
+apps/expo-app/src/components/ui/alert.tsx(2,40): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/components/ui/alert.tsx(3,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/alert.tsx(9,3): error TS2339: Property 'className' does not exist on type 'ViewProps & RefAttributes<View> & { icon: LucideIcon; variant?: "default" | "destructive" | undefined; iconClassName?: string | undefined; }'.
+apps/expo-app/src/components/ui/alert.tsx(30,9): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: (Element | ReactNode)[]; hitSlop?: number | Insets | null | undefined; id?: string | undefined; needsOffscreenAlphaCompositing?: boolean | undefined; ... 88 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: (Element | ReactNode)[]; hitSlop?: number | Insets | null | undefined; id?: string | undefined; needsOffscreenAlphaCompositing?: boolean | undefined; ... 88 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/ui/alert.tsx(36,15): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: Element; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: Element; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/ui/alert.tsx(69,20): error TS2339: Property 'includes' does not exist on type '{}'.
+apps/expo-app/src/components/ui/aspect-ratio.tsx(3,42): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/aspect-ratio/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/avatar.tsx(1,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/avatar.tsx(7,48): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/avatar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/avatar.tsx(9,22): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/avatar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/avatar.tsx(19,48): error TS2339: Property 'Image' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/avatar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/avatar.tsx(20,27): error TS2339: Property 'Image' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/avatar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/avatar.tsx(26,48): error TS2339: Property 'Fallback' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/avatar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/avatar.tsx(28,22): error TS2339: Property 'Fallback' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/avatar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/badge.tsx(1,34): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/components/ui/badge.tsx(2,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/badge.tsx(56,19): error TS2339: Property 'className' does not exist on type 'ViewProps & RefAttributes<View> & { asChild?: boolean | undefined; } & VariantProps<(props?: (ConfigVariants<{ variant: { default: any; secondary: any; destructive: any; outline: string | undefined; }; }> & ClassProp) | undefined) => string>'.
+apps/expo-app/src/components/ui/button.tsx(1,34): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/components/ui/button.tsx(2,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/button.tsx(93,20): error TS2339: Property 'className' does not exist on type 'PressableProps & RefAttributes<View> & RefAttributes<ForwardRefExoticComponent<PressableProps & RefAttributes<View>>> & VariantProps<...>'.
+apps/expo-app/src/components/ui/button.tsx(97,9): error TS2322: Type '{ onHoverIn?: ((event: MouseEvent) => void) | null | undefined; onHoverOut?: ((event: MouseEvent) => void) | null | undefined; onPress?: ((event: GestureResponderEvent) => void) | null | undefined; ... 106 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & PressableProps & RefAttributes<View>'.
+  Property 'className' does not exist on type 'IntrinsicAttributes & PressableProps & RefAttributes<View>'.
+apps/expo-app/src/components/ui/card.tsx(1,40): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/components/ui/card.tsx(2,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/card.tsx(5,18): error TS2339: Property 'className' does not exist on type 'ViewProps & RefAttributes<View>'.
+apps/expo-app/src/components/ui/card.tsx(9,9): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children?: ReactNode; hitSlop?: number | Insets | null | undefined; id?: string | undefined; needsOffscreenAlphaCompositing?: boolean | undefined; onLayout?: ((event: LayoutChangeEvent) => void) | undefined; ... 87 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children?: ReactNode; hitSlop?: number | Insets | null | undefined; id?: string | undefined; needsOffscreenAlphaCompositing?: boolean | undefined; onLayout?: ((event: LayoutChangeEvent) => void) | undefined; ... 87 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/ui/card.tsx(19,24): error TS2339: Property 'className' does not exist on type 'ViewProps & RefAttributes<View>'.
+apps/expo-app/src/components/ui/card.tsx(20,16): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children?: ReactNode; hitSlop?: number | Insets | null | undefined; id?: string | undefined; needsOffscreenAlphaCompositing?: boolean | undefined; onLayout?: ((event: LayoutChangeEvent) => void) | undefined; ... 87 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children?: ReactNode; hitSlop?: number | Insets | null | undefined; id?: string | undefined; needsOffscreenAlphaCompositing?: boolean | undefined; onLayout?: ((event: LayoutChangeEvent) => void) | undefined; ... 87 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/ui/card.tsx(46,25): error TS2339: Property 'className' does not exist on type 'ViewProps & RefAttributes<View>'.
+apps/expo-app/src/components/ui/card.tsx(47,16): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children?: ReactNode; hitSlop?: number | Insets | null | undefined; id?: string | undefined; needsOffscreenAlphaCompositing?: boolean | undefined; onLayout?: ((event: LayoutChangeEvent) => void) | undefined; ... 87 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children?: ReactNode; hitSlop?: number | Insets | null | undefined; id?: string | undefined; needsOffscreenAlphaCompositing?: boolean | undefined; onLayout?: ((event: LayoutChangeEvent) => void) | undefined; ... 87 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/ui/card.tsx(50,24): error TS2339: Property 'className' does not exist on type 'ViewProps & RefAttributes<View>'.
+apps/expo-app/src/components/ui/card.tsx(51,16): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children?: ReactNode; hitSlop?: number | Insets | null | undefined; id?: string | undefined; needsOffscreenAlphaCompositing?: boolean | undefined; onLayout?: ((event: LayoutChangeEvent) => void) | undefined; ... 87 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children?: ReactNode; hitSlop?: number | Insets | null | undefined; id?: string | undefined; needsOffscreenAlphaCompositing?: boolean | undefined; onLayout?: ((event: LayoutChangeEvent) => void) | undefined; ... 87 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/ui/checkbox.tsx(1,22): error TS2307: Cannot find module '@/components/ui/lucide-icon' or its corresponding type declarations.
+apps/expo-app/src/components/ui/checkbox.tsx(2,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/checkbox.tsx(15,50): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/checkbox/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/checkbox.tsx(21,24): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/checkbox/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/checkbox.tsx(35,26): error TS2339: Property 'Indicator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/checkbox/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/checkbox.tsx(44,27): error TS2339: Property 'Indicator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/checkbox/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/checkbox.tsx(45,25): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/checkbox/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/collapsible.tsx(3,42): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/collapsible/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/collapsible.tsx(5,49): error TS2339: Property 'Trigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/collapsible/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/collapsible.tsx(7,49): error TS2339: Property 'Content' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/collapsible/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(1,22): error TS2307: Cannot find module '@/components/ui/lucide-icon' or its corresponding type declarations.
+apps/expo-app/src/components/ui/context-menu.tsx(2,40): error TS2307: Cannot find module '@/components/ui/native-only-animated-view' or its corresponding type declarations.
+apps/expo-app/src/components/ui/context-menu.tsx(3,34): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/components/ui/context-menu.tsx(4,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/context-menu.tsx(19,42): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(20,49): error TS2339: Property 'Trigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(21,47): error TS2339: Property 'Group' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(22,45): error TS2339: Property 'Sub' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(23,52): error TS2339: Property 'RadioGroup' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(31,53): error TS2339: Property 'SubTrigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(36,41): error TS2339: Property 'useSubContext' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(45,29): error TS2339: Property 'SubTrigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(59,30): error TS2339: Property 'SubTrigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(67,53): error TS2339: Property 'SubContent' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(70,29): error TS2339: Property 'SubContent' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(92,53): error TS2339: Property 'Content' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(98,27): error TS2339: Property 'Portal' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(100,31): error TS2339: Property 'Overlay' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(115,37): error TS2339: Property 'Content' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(131,32): error TS2339: Property 'Overlay' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(133,28): error TS2339: Property 'Portal' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(142,53): error TS2339: Property 'Item' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(154,29): error TS2339: Property 'Item' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(178,53): error TS2339: Property 'CheckboxItem' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(183,29): error TS2339: Property 'CheckboxItem' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(194,15): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: Element; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: Element; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/ui/context-menu.tsx(195,33): error TS2339: Property 'ItemIndicator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(203,34): error TS2339: Property 'ItemIndicator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(206,30): error TS2339: Property 'CheckboxItem' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(215,53): error TS2339: Property 'RadioItem' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(220,29): error TS2339: Property 'RadioItem' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(231,15): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: Element; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: Element; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/ui/context-menu.tsx(232,33): error TS2339: Property 'ItemIndicator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(233,19): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/ui/context-menu.tsx(234,34): error TS2339: Property 'ItemIndicator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(237,30): error TS2339: Property 'RadioItem' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(246,53): error TS2339: Property 'Label' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(251,27): error TS2339: Property 'Label' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(265,53): error TS2339: Property 'Separator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(267,27): error TS2339: Property 'Separator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/context-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/context-menu.tsx(274,33): error TS2339: Property 'className' does not exist on type 'TextProps'.
+apps/expo-app/src/components/ui/context-menu.tsx(277,7): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: TextProps): Text', gave the following error.
+    Type '{ allowFontScaling?: boolean | undefined; children?: ReactNode; ellipsizeMode?: "middle" | "head" | "clip" | "tail" | undefined; id?: string | undefined; lineBreakMode?: "middle" | ... 3 more ... | undefined; ... 61 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<Text> & Readonly<TextProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<Text> & Readonly<TextProps>'.
+  Overload 2 of 2, '(props: TextProps, context: any): Text', gave the following error.
+    Type '{ allowFontScaling?: boolean | undefined; children?: ReactNode; ellipsizeMode?: "middle" | "head" | "clip" | "tail" | undefined; id?: string | undefined; lineBreakMode?: "middle" | ... 3 more ... | undefined; ... 61 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<Text> & Readonly<TextProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<Text> & Readonly<TextProps>'.
+apps/expo-app/src/components/ui/dialog.tsx(1,22): error TS2307: Cannot find module '@/components/ui/lucide-icon' or its corresponding type declarations.
+apps/expo-app/src/components/ui/dialog.tsx(2,40): error TS2307: Cannot find module '@/components/ui/native-only-animated-view' or its corresponding type declarations.
+apps/expo-app/src/components/ui/dialog.tsx(3,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/dialog.tsx(11,32): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dialog.tsx(13,39): error TS2339: Property 'Trigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dialog.tsx(15,38): error TS2339: Property 'Portal' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dialog.tsx(17,37): error TS2339: Property 'Close' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dialog.tsx(26,53): error TS2339: Property 'Overlay' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dialog.tsx(29,44): error TS2339: Property 'useRootContext' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dialog.tsx(40,24): error TS2339: Property 'Overlay' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dialog.tsx(64,25): error TS2339: Property 'Overlay' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dialog.tsx(73,48): error TS2339: Property 'Content' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dialog.tsx(79,26): error TS2339: Property 'Content' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dialog.tsx(90,28): error TS2339: Property 'Close' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dialog.tsx(103,19): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: TextProps): Text', gave the following error.
+    Type '{ children: string; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<Text> & Readonly<TextProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<Text> & Readonly<TextProps>'.
+  Overload 2 of 2, '(props: TextProps, context: any): Text', gave the following error.
+    Type '{ children: string; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<Text> & Readonly<TextProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<Text> & Readonly<TextProps>'.
+apps/expo-app/src/components/ui/dialog.tsx(104,29): error TS2339: Property 'Close' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dialog.tsx(105,27): error TS2339: Property 'Content' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dialog.tsx(111,26): error TS2339: Property 'className' does not exist on type 'ViewProps'.
+apps/expo-app/src/components/ui/dialog.tsx(113,11): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children?: ReactNode; hitSlop?: number | Insets | null | undefined; id?: string | undefined; needsOffscreenAlphaCompositing?: boolean | undefined; onLayout?: ((event: LayoutChangeEvent) => void) | undefined; ... 85 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children?: ReactNode; hitSlop?: number | Insets | null | undefined; id?: string | undefined; needsOffscreenAlphaCompositing?: boolean | undefined; onLayout?: ((event: LayoutChangeEvent) => void) | undefined; ... 85 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/ui/dialog.tsx(117,26): error TS2339: Property 'className' does not exist on type 'ViewProps'.
+apps/expo-app/src/components/ui/dialog.tsx(120,7): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children?: ReactNode; hitSlop?: number | Insets | null | undefined; id?: string | undefined; needsOffscreenAlphaCompositing?: boolean | undefined; onLayout?: ((event: LayoutChangeEvent) => void) | undefined; ... 85 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children?: ReactNode; hitSlop?: number | Insets | null | undefined; id?: string | undefined; needsOffscreenAlphaCompositing?: boolean | undefined; onLayout?: ((event: LayoutChangeEvent) => void) | undefined; ... 85 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/ui/dialog.tsx(126,92): error TS2339: Property 'Title' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dialog.tsx(128,22): error TS2339: Property 'Title' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dialog.tsx(138,48): error TS2339: Property 'Description' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dialog.tsx(140,22): error TS2339: Property 'Description' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dialog/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(1,22): error TS2307: Cannot find module '@/components/ui/lucide-icon' or its corresponding type declarations.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(2,40): error TS2307: Cannot find module '@/components/ui/native-only-animated-view' or its corresponding type declarations.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(3,34): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(4,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(19,44): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(21,51): error TS2339: Property 'Trigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(23,49): error TS2339: Property 'Group' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(25,50): error TS2339: Property 'Portal' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(27,47): error TS2339: Property 'Sub' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(29,54): error TS2339: Property 'RadioGroup' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(37,54): error TS2339: Property 'SubTrigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(42,42): error TS2339: Property 'useSubContext' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(51,30): error TS2339: Property 'SubTrigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(65,31): error TS2339: Property 'SubTrigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(73,54): error TS2339: Property 'SubContent' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(76,30): error TS2339: Property 'SubContent' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(98,54): error TS2339: Property 'Content' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(104,28): error TS2339: Property 'Portal' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(106,32): error TS2339: Property 'Overlay' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(120,38): error TS2339: Property 'Content' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(136,33): error TS2339: Property 'Overlay' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(138,29): error TS2339: Property 'Portal' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(147,54): error TS2339: Property 'Item' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(159,30): error TS2339: Property 'Item' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(183,54): error TS2339: Property 'CheckboxItem' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(188,30): error TS2339: Property 'CheckboxItem' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(199,15): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: Element; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: Element; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(200,34): error TS2339: Property 'ItemIndicator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(208,35): error TS2339: Property 'ItemIndicator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(211,31): error TS2339: Property 'CheckboxItem' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(220,54): error TS2339: Property 'RadioItem' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(225,30): error TS2339: Property 'RadioItem' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(236,15): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: Element; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: Element; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(237,34): error TS2339: Property 'ItemIndicator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(238,19): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(239,35): error TS2339: Property 'ItemIndicator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(242,31): error TS2339: Property 'RadioItem' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(251,54): error TS2339: Property 'Label' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(256,28): error TS2339: Property 'Label' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(270,54): error TS2339: Property 'Separator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(272,28): error TS2339: Property 'Separator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/dropdown-menu/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(279,34): error TS2339: Property 'className' does not exist on type 'TextProps'.
+apps/expo-app/src/components/ui/dropdown-menu.tsx(282,7): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: TextProps): Text', gave the following error.
+    Type '{ allowFontScaling?: boolean | undefined; children?: ReactNode; ellipsizeMode?: "middle" | "head" | "clip" | "tail" | undefined; id?: string | undefined; lineBreakMode?: "middle" | ... 3 more ... | undefined; ... 61 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<Text> & Readonly<TextProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<Text> & Readonly<TextProps>'.
+  Overload 2 of 2, '(props: TextProps, context: any): Text', gave the following error.
+    Type '{ allowFontScaling?: boolean | undefined; children?: ReactNode; ellipsizeMode?: "middle" | "head" | "clip" | "tail" | undefined; id?: string | undefined; lineBreakMode?: "middle" | ... 3 more ... | undefined; ... 61 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<Text> & Readonly<TextProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<Text> & Readonly<TextProps>'.
+apps/expo-app/src/components/ui/hover-card.tsx(1,40): error TS2307: Cannot find module '@/components/ui/native-only-animated-view' or its corresponding type declarations.
+apps/expo-app/src/components/ui/hover-card.tsx(2,34): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/components/ui/hover-card.tsx(3,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/hover-card.tsx(10,38): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/hover-card/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/hover-card.tsx(12,45): error TS2339: Property 'Trigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/hover-card/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/hover-card.tsx(21,51): error TS2339: Property 'Content' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/hover-card/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/hover-card.tsx(23,25): error TS2339: Property 'Portal' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/hover-card/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/hover-card.tsx(25,29): error TS2339: Property 'Overlay' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/hover-card/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/hover-card.tsx(35,35): error TS2339: Property 'Content' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/hover-card/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/hover-card.tsx(53,30): error TS2339: Property 'Overlay' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/hover-card/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/hover-card.tsx(55,26): error TS2339: Property 'Portal' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/hover-card/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/input.tsx(1,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/input.tsx(4,19): error TS2339: Property 'className' does not exist on type 'TextInputProps & RefAttributes<TextInput>'.
+apps/expo-app/src/components/ui/input.tsx(7,7): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: TextInputProps): TextInput', gave the following error.
+    Type '{ allowFontScaling?: boolean | undefined; autoCapitalize?: "none" | "sentences" | "words" | "characters" | undefined; autoComplete?: "name" | "username" | "email" | "url" | "off" | ... 64 more ... | undefined; ... 157 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<TextInput> & Readonly<TextInputProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<TextInput> & Readonly<TextInputProps>'.
+  Overload 2 of 2, '(props: TextInputProps, context: any): TextInput', gave the following error.
+    Type '{ allowFontScaling?: boolean | undefined; autoCapitalize?: "none" | "sentences" | "words" | "characters" | undefined; autoComplete?: "name" | "username" | "email" | "url" | "off" | ... 64 more ... | undefined; ... 157 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<TextInput> & Readonly<TextInputProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<TextInput> & Readonly<TextInputProps>'.
+apps/expo-app/src/components/ui/label.tsx(1,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/label.tsx(13,47): error TS2339: Property 'Text' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/label/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/label.tsx(15,21): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/label/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/label.tsx(29,23): error TS2339: Property 'Text' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/label/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/label.tsx(37,22): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/label/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/lucide-icon.tsx(1,34): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/components/ui/lucide-icon.tsx(2,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/lucide-icon.tsx(45,37): error TS2339: Property 'className' does not exist on type 'LucideProps & { as: LucideIcon; } & RefAttributes<LucideIcon>'.
+apps/expo-app/src/components/ui/lucide-icon.tsx(50,7): error TS2322: Type '{ width?: string | number | undefined; height?: string | number | undefined; absoluteStrokeWidth?: boolean | undefined; nonScalingStroke?: boolean | undefined; 'data-testid'?: string | undefined; ... 158 more ...; size: string | number; }' is not assignable to type 'IntrinsicAttributes & LucideProps & { as: LucideIcon; } & RefAttributes<LucideIcon>'.
+  Property 'className' does not exist on type 'IntrinsicAttributes & LucideProps & { as: LucideIcon; } & RefAttributes<LucideIcon>'.
+apps/expo-app/src/components/ui/menubar.tsx(1,22): error TS2307: Cannot find module '@/components/ui/lucide-icon' or its corresponding type declarations.
+apps/expo-app/src/components/ui/menubar.tsx(2,40): error TS2307: Cannot find module '@/components/ui/native-only-animated-view' or its corresponding type declarations.
+apps/expo-app/src/components/ui/menubar.tsx(3,34): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/components/ui/menubar.tsx(4,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/menubar.tsx(21,38): error TS2339: Property 'Menu' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(23,39): error TS2339: Property 'Group' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(25,40): error TS2339: Property 'Portal' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(27,37): error TS2339: Property 'Sub' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(29,44): error TS2339: Property 'RadioGroup' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(38,49): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(59,25): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(75,49): error TS2339: Property 'Trigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(76,38): error TS2339: Property 'useRootContext' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(77,49): error TS2339: Property 'useMenuContext' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(86,25): error TS2339: Property 'Trigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(107,49): error TS2339: Property 'SubTrigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(112,37): error TS2339: Property 'useSubContext' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(121,25): error TS2339: Property 'SubTrigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(135,26): error TS2339: Property 'SubTrigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(143,49): error TS2339: Property 'SubContent' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(146,25): error TS2339: Property 'SubContent' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(167,49): error TS2339: Property 'Content' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(171,23): error TS2339: Property 'Portal' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(180,31): error TS2339: Property 'Content' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(200,24): error TS2339: Property 'Portal' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(209,49): error TS2339: Property 'Item' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(221,25): error TS2339: Property 'Item' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(245,49): error TS2339: Property 'CheckboxItem' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(250,25): error TS2339: Property 'CheckboxItem' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(261,15): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: Element; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: Element; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/ui/menubar.tsx(262,29): error TS2339: Property 'ItemIndicator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(270,30): error TS2339: Property 'ItemIndicator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(273,26): error TS2339: Property 'CheckboxItem' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(282,49): error TS2339: Property 'RadioItem' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(287,25): error TS2339: Property 'RadioItem' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(298,15): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: Element; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: Element; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/ui/menubar.tsx(299,29): error TS2339: Property 'ItemIndicator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(300,19): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/ui/menubar.tsx(301,30): error TS2339: Property 'ItemIndicator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(304,26): error TS2339: Property 'RadioItem' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(313,49): error TS2339: Property 'Label' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(318,23): error TS2339: Property 'Label' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(332,49): error TS2339: Property 'Separator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(334,23): error TS2339: Property 'Separator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/menubar/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/menubar.tsx(338,29): error TS2339: Property 'className' does not exist on type 'TextProps'.
+apps/expo-app/src/components/ui/menubar.tsx(341,7): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: TextProps): Text', gave the following error.
+    Type '{ allowFontScaling?: boolean | undefined; children?: ReactNode; ellipsizeMode?: "middle" | "head" | "clip" | "tail" | undefined; id?: string | undefined; lineBreakMode?: "middle" | ... 3 more ... | undefined; ... 61 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<Text> & Readonly<TextProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<Text> & Readonly<TextProps>'.
+  Overload 2 of 2, '(props: TextProps, context: any): Text', gave the following error.
+    Type '{ allowFontScaling?: boolean | undefined; children?: ReactNode; ellipsizeMode?: "middle" | "head" | "clip" | "tail" | undefined; id?: string | undefined; lineBreakMode?: "middle" | ... 3 more ... | undefined; ... 61 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<Text> & Readonly<TextProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<Text> & Readonly<TextProps>'.
+apps/expo-app/src/components/ui/p.tsx(3,22): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './text.js'?
+apps/expo-app/src/components/ui/popover.tsx(1,40): error TS2307: Cannot find module '@/components/ui/native-only-animated-view' or its corresponding type declarations.
+apps/expo-app/src/components/ui/popover.tsx(2,34): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/components/ui/popover.tsx(3,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/popover.tsx(10,34): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/popover/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/popover.tsx(12,41): error TS2339: Property 'Trigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/popover/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/popover.tsx(22,49): error TS2339: Property 'Content' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/popover/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/popover.tsx(26,23): error TS2339: Property 'Portal' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/popover/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/popover.tsx(28,27): error TS2339: Property 'Overlay' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/popover/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/popover.tsx(38,33): error TS2339: Property 'Content' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/popover/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/popover.tsx(56,28): error TS2339: Property 'Overlay' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/popover/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/popover.tsx(58,24): error TS2339: Property 'Portal' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/popover/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/progress.tsx(1,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/progress.tsx(17,50): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/progress/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/progress.tsx(21,24): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/progress/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/progress.tsx(26,25): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/progress/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/progress.tsx(50,7): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: Element; className: any; style: { transform: string; }; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: Element; className: any; style: { transform: string; }; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/ui/progress.tsx(53,26): error TS2339: Property 'Indicator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/progress/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/progress.tsx(75,24): error TS2339: Property 'Indicator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/progress/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/progress.tsx(77,25): error TS2339: Property 'Indicator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/progress/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/radio-group.tsx(1,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/radio-group.tsx(8,52): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/radio-group/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/radio-group.tsx(9,31): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/radio-group/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/radio-group.tsx(15,52): error TS2339: Property 'Item' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/radio-group/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/radio-group.tsx(17,26): error TS2339: Property 'Item' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/radio-group/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/radio-group.tsx(28,28): error TS2339: Property 'Indicator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/radio-group/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/radio-group.tsx(29,27): error TS2339: Property 'Item' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/radio-group/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(1,22): error TS2307: Cannot find module '@/components/ui/lucide-icon' or its corresponding type declarations.
+apps/expo-app/src/components/ui/select.tsx(2,40): error TS2307: Cannot find module '@/components/ui/native-only-animated-view' or its corresponding type declarations.
+apps/expo-app/src/components/ui/select.tsx(3,34): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/components/ui/select.tsx(4,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/select.tsx(14,32): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(16,37): error TS2339: Property 'Group' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(22,48): error TS2339: Property 'Value' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(25,37): error TS2339: Property 'useRootContext' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(27,22): error TS2339: Property 'Value' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(45,48): error TS2339: Property 'Trigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(50,22): error TS2339: Property 'Trigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(65,23): error TS2339: Property 'Trigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(77,48): error TS2339: Property 'Content' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(82,22): error TS2339: Property 'Portal' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(84,26): error TS2339: Property 'Overlay' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(95,32): error TS2339: Property 'Content' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(119,34): error TS2339: Property 'Viewport' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(132,35): error TS2339: Property 'Viewport' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(134,33): error TS2339: Property 'Content' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(137,27): error TS2339: Property 'Overlay' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(139,23): error TS2339: Property 'Portal' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(146,48): error TS2339: Property 'Label' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(148,22): error TS2339: Property 'Label' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(159,48): error TS2339: Property 'Item' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(161,22): error TS2339: Property 'Item' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(172,13): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children: Element; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children: Element; className: string; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/ui/select.tsx(173,26): error TS2339: Property 'ItemIndicator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(175,27): error TS2339: Property 'ItemIndicator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(177,24): error TS2339: Property 'ItemText' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(178,23): error TS2339: Property 'Item' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(185,48): error TS2339: Property 'Separator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(187,22): error TS2339: Property 'Separator' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(205,48): error TS2339: Property 'ScrollUpButton' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(210,22): error TS2339: Property 'ScrollUpButton' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(215,23): error TS2339: Property 'ScrollUpButton' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(226,48): error TS2339: Property 'ScrollDownButton' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(231,22): error TS2339: Property 'ScrollDownButton' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/select.tsx(236,23): error TS2339: Property 'ScrollDownButton' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/select/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/separator.tsx(1,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/separator.tsx(9,51): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/separator/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/separator.tsx(11,25): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/separator/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/skeleton.tsx(1,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/skeleton.tsx(5,3): error TS2339: Property 'className' does not exist on type 'ViewProps & RefAttributes<View>'.
+apps/expo-app/src/components/ui/skeleton.tsx(8,16): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: ViewProps): View', gave the following error.
+    Type '{ children?: ReactNode; hitSlop?: number | Insets | null | undefined; id?: string | undefined; needsOffscreenAlphaCompositing?: boolean | undefined; onLayout?: ((event: LayoutChangeEvent) => void) | undefined; ... 87 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+  Overload 2 of 2, '(props: ViewProps, context: any): View', gave the following error.
+    Type '{ children?: ReactNode; hitSlop?: number | Insets | null | undefined; id?: string | undefined; needsOffscreenAlphaCompositing?: boolean | undefined; onLayout?: ((event: LayoutChangeEvent) => void) | undefined; ... 87 more ...; className: any; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<View> & Readonly<ViewProps>'.
+apps/expo-app/src/components/ui/switch.tsx(1,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/switch.tsx(8,49): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/switch/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/switch.tsx(10,23): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/switch/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/switch.tsx(22,25): error TS2339: Property 'Thumb' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/switch/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/switch.tsx(33,24): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/switch/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/tabs.tsx(1,34): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/components/ui/tabs.tsx(2,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/tabs.tsx(9,46): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/tabs/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/tabs.tsx(10,25): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/tabs/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/tabs.tsx(16,46): error TS2339: Property 'List' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/tabs/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/tabs.tsx(18,20): error TS2339: Property 'List' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/tabs/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/tabs.tsx(32,46): error TS2339: Property 'Trigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/tabs/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/tabs.tsx(33,35): error TS2339: Property 'useRootContext' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/tabs/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/tabs.tsx(41,22): error TS2339: Property 'Trigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/tabs/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/tabs.tsx(60,46): error TS2339: Property 'Content' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/tabs/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/tabs.tsx(62,20): error TS2339: Property 'Content' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/tabs/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/text.tsx(1,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/text.tsx(68,3): error TS2339: Property 'className' does not exist on type 'TextProps & RefAttributes<typeof Text> & TextVariantProps & { asChild?: boolean | undefined; }'.
+apps/expo-app/src/components/ui/textarea.tsx(1,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/textarea.tsx(5,3): error TS2339: Property 'className' does not exist on type 'TextInputProps & RefAttributes<TextInput>'.
+apps/expo-app/src/components/ui/textarea.tsx(8,3): error TS2339: Property 'placeholderClassName' does not exist on type 'TextInputProps & RefAttributes<TextInput>'.
+apps/expo-app/src/components/ui/textarea.tsx(13,7): error TS2769: No overload matches this call.
+  Overload 1 of 2, '(props: TextInputProps): TextInput', gave the following error.
+    Type '{ allowFontScaling?: boolean | undefined; autoCapitalize?: "none" | "sentences" | "words" | "characters" | undefined; autoComplete?: "name" | "username" | "email" | "url" | "off" | ... 64 more ... | undefined; ... 158 more ...; numberOfLines: number | undefined; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<TextInput> & Readonly<TextInputProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<TextInput> & Readonly<TextInputProps>'.
+  Overload 2 of 2, '(props: TextInputProps, context: any): TextInput', gave the following error.
+    Type '{ allowFontScaling?: boolean | undefined; autoCapitalize?: "none" | "sentences" | "words" | "characters" | undefined; autoComplete?: "name" | "username" | "email" | "url" | "off" | ... 64 more ... | undefined; ... 158 more ...; numberOfLines: number | undefined; }' is not assignable to type 'IntrinsicAttributes & IntrinsicClassAttributes<TextInput> & Readonly<TextInputProps>'.
+      Property 'className' does not exist on type 'IntrinsicAttributes & IntrinsicClassAttributes<TextInput> & Readonly<TextInputProps>'.
+apps/expo-app/src/components/ui/toggle-group.tsx(1,22): error TS2307: Cannot find module '@/components/ui/lucide-icon' or its corresponding type declarations.
+apps/expo-app/src/components/ui/toggle-group.tsx(2,34): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/components/ui/toggle-group.tsx(3,32): error TS2307: Cannot find module '@/components/ui/toggle' or its corresponding type declarations.
+apps/expo-app/src/components/ui/toggle-group.tsx(4,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/toggle-group.tsx(18,53): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/toggle-group/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/toggle-group.tsx(21,27): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/toggle-group/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/toggle-group.tsx(33,28): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/toggle-group/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/toggle-group.tsx(55,53): error TS2339: Property 'Item' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/toggle-group/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/toggle-group.tsx(61,42): error TS2339: Property 'useRootContext' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/toggle-group/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/toggle-group.tsx(67,30): error TS2339: Property 'utils' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/toggle-group/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/toggle-group.tsx(72,29): error TS2339: Property 'Item' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/toggle-group/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/toggle-group.tsx(79,32): error TS2339: Property 'utils' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/toggle-group/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/toggle-group.tsx(93,30): error TS2339: Property 'Item' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/toggle-group/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/toggle.tsx(1,22): error TS2307: Cannot find module '@/components/ui/lucide-icon' or its corresponding type declarations.
+apps/expo-app/src/components/ui/toggle.tsx(2,34): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/components/ui/toggle.tsx(3,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/toggle.tsx(45,48): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/toggle/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/toggle.tsx(56,24): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/toggle/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/tooltip.tsx(1,40): error TS2307: Cannot find module '@/components/ui/native-only-animated-view' or its corresponding type declarations.
+apps/expo-app/src/components/ui/tooltip.tsx(2,34): error TS2307: Cannot find module '@/components/ui/text' or its corresponding type declarations.
+apps/expo-app/src/components/ui/tooltip.tsx(3,20): error TS2307: Cannot find module '@/lib/utils' or its corresponding type declarations.
+apps/expo-app/src/components/ui/tooltip.tsx(10,34): error TS2339: Property 'Root' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/tooltip/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/tooltip.tsx(12,41): error TS2339: Property 'Trigger' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/tooltip/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/tooltip.tsx(22,49): error TS2339: Property 'Content' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/tooltip/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/tooltip.tsx(26,23): error TS2339: Property 'Portal' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/tooltip/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/tooltip.tsx(28,27): error TS2339: Property 'Overlay' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/tooltip/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/tooltip.tsx(46,33): error TS2339: Property 'Content' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/tooltip/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/tooltip.tsx(66,28): error TS2339: Property 'Overlay' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/tooltip/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/components/ui/tooltip.tsx(68,24): error TS2339: Property 'Portal' does not exist on type 'typeof import("/home/cramjs/Desktop/Projects/Bible-Quizzing-App/node_modules/@rn-primitives/tooltip/dist/index", { with: { "resolution-mode": "import" } })'.
+apps/expo-app/src/context.ts(1,50): error TS2834: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path.
+apps/expo-app/src/context.ts(3,37): error TS2834: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path.
+apps/expo-app/src/context.ts(5,29): error TS2307: Cannot find module '@bq/shared/machines' or its corresponding type declarations.
+apps/expo-app/src/hooks/content.hook.ts(2,30): error TS2307: Cannot find module '@/lib/content/types' or its corresponding type declarations.
+apps/expo-app/src/hooks/content.hook.ts(3,32): error TS2307: Cannot find module '@/context' or its corresponding type declarations.
+apps/expo-app/src/hooks/content.hook.ts(4,25): error TS2307: Cannot find module '@/lib/content' or its corresponding type declarations.
+apps/expo-app/src/hooks/index.ts(1,15): error TS2307: Cannot find module './content.hook' or its corresponding type declarations.
+apps/expo-app/src/hooks/index.ts(2,15): error TS2307: Cannot find module './language.hook' or its corresponding type declarations.
+apps/expo-app/src/hooks/index.ts(3,15): error TS2307: Cannot find module './quiz-setup.hook' or its corresponding type declarations.
+apps/expo-app/src/hooks/index.ts(4,15): error TS2307: Cannot find module './styles.hook' or its corresponding type declarations.
+apps/expo-app/src/hooks/language.hook.ts(1,21): error TS2307: Cannot find module '@/lib/content' or its corresponding type declarations.
+apps/expo-app/src/hooks/language.hook.ts(2,30): error TS2307: Cannot find module '@/lib/content/types' or its corresponding type declarations.
+apps/expo-app/src/hooks/quiz-actor.hook.ts(2,34): error TS2307: Cannot find module '@/context' or its corresponding type declarations.
+apps/expo-app/src/hooks/quiz-setup.hook.ts(2,42): error TS2307: Cannot find module '@bq/shared/types' or its corresponding type declarations.
+apps/expo-app/src/hooks/quiz-setup.hook.ts(7,8): error TS2307: Cannot find module '@bq/shared/types' or its corresponding type declarations.
+apps/expo-app/src/hooks/quiz-setup.hook.ts(8,34): error TS2307: Cannot find module '@/context' or its corresponding type declarations.
+apps/expo-app/src/hooks/quiz-setup.hook.ts(9,33): error TS2307: Cannot find module '@/hooks' or its corresponding type declarations.
+apps/expo-app/src/hooks/quiz-setup.hook.ts(10,56): error TS2307: Cannot find module '@bq/shared/utils' or its corresponding type declarations.
+apps/expo-app/src/hooks/quiz-setup.hook.ts(55,45): error TS7006: Parameter 'o' implicitly has an 'any' type.
+apps/expo-app/src/hooks/quiz-setup.hook.ts(57,50): error TS7006: Parameter 'o' implicitly has an 'any' type.
+apps/expo-app/src/hooks/quiz-setup.hook.ts(59,46): error TS7006: Parameter 'o' implicitly has an 'any' type.
+apps/expo-app/src/hooks/styles.hook.ts(2,57): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../lib/styles/types.js'?
+apps/expo-app/src/hooks/styles.hook.ts(3,30): error TS2307: Cannot find module '@/context' or its corresponding type declarations.
+apps/expo-app/src/hooks/styles.hook.ts(4,31): error TS2307: Cannot find module '@/lib/styles/content' or its corresponding type declarations.
+apps/expo-app/src/hooks/styles.hook.ts(5,40): error TS2307: Cannot find module 'expo-router/build/react-navigation' or its corresponding type declarations.
+apps/expo-app/src/hooks/styles.hook.ts(37,25): error TS7006: Parameter 'prev' implicitly has an 'any' type.
+apps/expo-app/src/hooks/styles.hook.ts(49,25): error TS7006: Parameter 'prev' implicitly has an 'any' type.
+apps/expo-app/src/hooks/styles.hook.ts(69,25): error TS7006: Parameter 'prev' implicitly has an 'any' type.
+apps/expo-app/src/hooks/styles.hook.ts(87,23): error TS7006: Parameter 'prev' implicitly has an 'any' type.
+apps/expo-app/src/hooks/styles.hook.ts(108,23): error TS7006: Parameter 'prev' implicitly has an 'any' type.
+apps/expo-app/src/hooks/styles.hook.ts(151,11): error TS2339: Property 'stylesContent' does not exist on type '{}'.
+apps/expo-app/src/hooks/styles.hook.ts(151,26): error TS2339: Property 'updateStylesContent' does not exist on type '{}'.
+apps/expo-app/src/hooks/styles.hook.ts(151,47): error TS2339: Property 'setStyleProperty' does not exist on type '{}'.
+apps/expo-app/src/hooks/use-questions.ts(2,26): error TS2307: Cannot find module '@bq/shared/types' or its corresponding type declarations.
+apps/expo-app/src/hooks/use-questions.ts(3,37): error TS2307: Cannot find module '@bq/shared/services/filter.service' or its corresponding type declarations.
+apps/expo-app/src/hooks/use-questions.ts(5,40): error TS2307: Cannot find module '@bq/shared/types' or its corresponding type declarations.
+apps/expo-app/src/hooks/use-questions.ts(6,25): error TS2307: Cannot find module '@/lib/storage' or its corresponding type declarations.
+apps/expo-app/src/hooks/use-questions.ts(10,31): error TS2307: Cannot find module '@bq/shared/mock-data/questions.json' or its corresponding type declarations.
+apps/expo-app/src/hooks/use-questions.ts(14,5): error TS2698: Spread types may only be created from object types.
+apps/expo-app/src/lib/content/UI-quizzies.content.ts(1,24): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.
+apps/expo-app/src/lib/content/UI-quizzies.content.ts(2,30): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../icons.js'?
+apps/expo-app/src/lib/content/UI-quizzies.content.ts(3,40): error TS2307: Cannot find module '@bq/shared/types' or its corresponding type declarations.
+apps/expo-app/src/lib/content/index.ts(1,25): error TS1543: Importing a JSON file into an ECMAScript module requires a 'type: "json"' import attribute when 'module' is set to 'NodeNext'.
+apps/expo-app/src/lib/content/index.ts(2,25): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './types.js'?
+apps/expo-app/src/lib/content/types.ts(1,37): error TS2307: Cannot find module '@bq/shared/types' or its corresponding type declarations.
+apps/expo-app/src/lib/content/types.ts(2,25): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../icons.js'?
+apps/expo-app/src/lib/persist-query.ts(4,35): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './storage.js'?
+apps/expo-app/src/lib/quiz-registry.ts(1,27): error TS2307: Cannot find module '@/components/setups/standard' or its corresponding type declarations.
+apps/expo-app/src/lib/quiz-registry.ts(2,25): error TS2307: Cannot find module '@bq/shared/types' or its corresponding type declarations.
+apps/expo-app/src/lib/storage.ts(116,45): error TS7006: Parameter 'err' implicitly has an 'any' type.
+apps/expo-app/src/lib/storage.ts(122,41): error TS7006: Parameter 'err' implicitly has an 'any' type.
+apps/expo-app/src/lib/storage.ts(128,33): error TS7006: Parameter 'err' implicitly has an 'any' type.
+apps/expo-app/src/lib/styles/content.ts(1,23): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean '../theme.js'?
+apps/expo-app/src/lib/styles/content.ts(2,26): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './types.js'?
+apps/expo-app/src/lib/styles/index.ts(1,15): error TS2834: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Consider adding an extension to the import path.
+apps/expo-app/src/lib/styles/index.ts(2,15): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './types.js'?
+apps/expo-app/src/lib/styles/mockData.ts(1,35): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './types.js'?
+apps/expo-app/src/lib/styles/styleKeyMeta.ts(1,35): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './types.js'?
+apps/expo-app/src/providers/content.provider.tsx(2,41): error TS2307: Cannot find module '@/hooks' or its corresponding type declarations.
+apps/expo-app/src/providers/content.provider.tsx(3,32): error TS2307: Cannot find module '@/context' or its corresponding type declarations.
+apps/expo-app/src/providers/index.ts(1,15): error TS2307: Cannot find module './quiz-setup.provider' or its corresponding type declarations.
+apps/expo-app/src/providers/index.ts(2,15): error TS2307: Cannot find module './styles.provider' or its corresponding type declarations.
+apps/expo-app/src/providers/index.ts(3,15): error TS2307: Cannot find module './content.provider' or its corresponding type declarations.
+apps/expo-app/src/providers/index.ts(4,15): error TS2307: Cannot find module './root-actor.proivder' or its corresponding type declarations.
+apps/expo-app/src/providers/index.ts(5,15): error TS2307: Cannot find module './quiz.provider' or its corresponding type declarations.
+apps/expo-app/src/providers/quiz-setup.provider.tsx(1,69): error TS2307: Cannot find module '@/hooks/quiz-setup.hook' or its corresponding type declarations.
+apps/expo-app/src/providers/quiz-setup.provider.tsx(3,26): error TS2307: Cannot find module '@bq/shared/types' or its corresponding type declarations.
+apps/expo-app/src/providers/quiz-setup.provider.tsx(5,33): error TS2307: Cannot find module '@bq/shared/types' or its corresponding type declarations.
+apps/expo-app/src/providers/quiz-setup.provider.tsx(6,34): error TS2307: Cannot find module '@/context' or its corresponding type declarations.
+apps/expo-app/src/providers/quiz-setup.provider.tsx(7,33): error TS2307: Cannot find module '@/hooks/content.hook' or its corresponding type declarations.
+apps/expo-app/src/providers/quiz-setup.provider.tsx(16,3): error TS2339: Property 'quizType' does not exist on type 'QuizSetupProviderProps<Mode_T>'.
+apps/expo-app/src/providers/quiz-setup.provider.tsx(17,3): error TS2339: Property 'id' does not exist on type 'QuizSetupProviderProps<Mode_T>'.
+apps/expo-app/src/providers/quiz-setup.provider.tsx(18,3): error TS2339: Property 'minQuizQuestionLength' does not exist on type 'QuizSetupProviderProps<Mode_T>'.
+apps/expo-app/src/providers/quiz-setup.provider.tsx(19,3): error TS2339: Property 'initialMode' does not exist on type 'QuizSetupProviderProps<Mode_T>'.
+apps/expo-app/src/providers/quiz.provider.tsx(2,34): error TS2307: Cannot find module '@/context' or its corresponding type declarations.
+apps/expo-app/src/providers/quiz.provider.tsx(3,34): error TS2307: Cannot find module '@/context' or its corresponding type declarations.
+apps/expo-app/src/providers/root-actor.proivder.tsx(1,34): error TS2307: Cannot find module '@/context' or its corresponding type declarations.
+apps/expo-app/src/providers/styles.provider.tsx(1,32): error TS2307: Cannot find module '@/hooks' or its corresponding type declarations.
+apps/expo-app/src/providers/styles.provider.tsx(2,35): error TS2307: Cannot find module '@/lib/styles' or its corresponding type declarations.
+apps/expo-app/src/providers/styles.provider.tsx(3,31): error TS2307: Cannot find module '@/lib/styles/content' or its corresponding type declarations.
+apps/expo-app/src/providers/styles.provider.tsx(4,30): error TS2307: Cannot find module '@/context' or its corresponding type declarations.
+apps/expo-app/tailwind.config.ts(2,23): error TS2835: Relative import paths need explicit file extensions in ECMAScript imports when '--moduleResolution' is 'node16' or 'nodenext'. Did you mean './src/lib/theme.js'?
+apps/server/src/redis/index.ts(2,17): error TS2307: Cannot find module '@/env' or its corresponding type declarations.
+apps/server/src/scraper/scraper.ts(2,33): error TS2307: Cannot find module '@/redis/key-setter' or its corresponding type declarations.
+apps/server/src/services/answer-logic.ts(1,39): error TS2307: Cannot find module '@/types/index' or its corresponding type declarations.
+apps/server/src/services/answer.service.ts(2,25): error TS2307: Cannot find module '@/services/answer-logic' or its corresponding type declarations.
+apps/server/test/filter.test.ts(2,37): error TS2307: Cannot find module '@bq/shared/services' or its corresponding type declarations.
+apps/server/test/filter.test.ts(131,5): error TS2578: Unused '@ts-expect-error' directive.
+apps/server/test/filter.test.ts(133,5): error TS2578: Unused '@ts-expect-error' directive.
+apps/server/test/filter.test.ts(141,31): error TS7006: Parameter 'q' implicitly has an 'any' type.
+apps/server/test/filter.test.ts(148,32): error TS7006: Parameter 'q' implicitly has an 'any' type.
+apps/server/test/filter.test.ts(161,24): error TS7006: Parameter 'q' implicitly has an 'any' type.
+apps/server/test/filter.test.ts(198,32): error TS7006: Parameter 'q' implicitly has an 'any' type.
+apps/server/test/redis-pino.test.ts(7,29): error TS2307: Cannot find module '@/scraper/scraper' or its corresponding type declarations.
+apps/server/test/redis-pino.test.ts(8,39): error TS2307: Cannot find module '@/redis' or its corresponding type declarations.
+apps/server/test/redis-pino.test.ts(9,24): error TS2307: Cannot find module '@/logger' or its corresponding type declarations.
+apps/server/test/redis.test.ts(7,29): error TS2307: Cannot find module '@/scraper/scraper' or its corresponding type declarations.
+apps/server/test/redis.test.ts(8,39): error TS2307: Cannot find module '@/redis' or its corresponding type declarations.
+apps/server/test/scraper.test.ts(3,29): error TS2307: Cannot find module '@/scraper/scraper' or its corresponding type declarations.
+apps/server/test/scraper.test.ts(4,33): error TS2307: Cannot find module '@/redis/key-setter' or its corresponding type declarations.
+apps/server/vitest.config.ts(14,5): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Type '{ NODE_ENV: string; REDIS_URL: string; TBQN_BASE_URL: string; }' is not assignable to type 'Partial<ProcessEnv>'.
+      Types of property 'NODE_ENV' are incompatible.
+        Type 'string' is not assignable to type '"test" | "development" | "production" | undefined'.
+packages/shared/src/logic/answer-checker.ts(1,36): error TS2307: Cannot find module '@/machines/types' or its corresponding type declarations.
+packages/shared/src/logic/load-questions.ts(1,40): error TS2307: Cannot find module '@/types' or its corresponding type declarations.
+packages/shared/src/logic/load-questions.ts(2,68): error TS2307: Cannot find module '@/utils' or its corresponding type declarations.
+packages/shared/src/machines/questions/normal.ts(2,29): error TS2307: Cannot find module '@/logic' or its corresponding type declarations.
+packages/shared/src/machines/quizzes/normal.machine.ts(1,59): error TS2307: Cannot find module '@/types/quiz' or its corresponding type declarations.
+packages/shared/src/machines/quizzes/normal.machine.ts(2,30): error TS2307: Cannot find module '@/types' or its corresponding type declarations.
+packages/shared/src/machines/quizzes/normal.machine.ts(5,33): error TS2307: Cannot find module '@/utils' or its corresponding type declarations.
+packages/shared/src/machines/quizzes/normal.machine.ts(6,34): error TS2307: Cannot find module '@/logic' or its corresponding type declarations.
+packages/shared/src/machines/quizzes/normal.machine.ts(35,33): error TS2339: Property 'activeUser' does not exist on type 'QuizMachineContext'.
+packages/shared/src/machines/quizzes/normal.machine.ts(38,20): error TS2339: Property 'activeUser' does not exist on type 'QuizMachineContext'.
+packages/shared/src/machines/quizzes/normal.machine.ts(81,3): error TS2322: Type '({ input }: { spawn: { <TSrc extends "questionActor" | "loadingQuizActor">(logic: TSrc, ...[options]: SpawnOptions<{ src: "questionActor"; logic: StateMachine<QuestionMachineContext, UserInputEvent | { ...; } | { ...; } | { ...; } | { ...; }, ... 12 more ..., MetaObject>; id: string | undefined; }, TSrc> | SpawnOpti...' is not assignable to type 'InitialContext<QuizMachineContext, ToProvidedActor<{}, { loadingQuizActor: PromiseActorLogic<unknown, NonReducibleUnknown, EventObject>; questionActor: StateMachine<...>; }>, Partial<...>, { ...; } | ... 3 more ... | { ...; }>'.
+  Type '({ input }: { spawn: { <TSrc extends "questionActor" | "loadingQuizActor">(logic: TSrc, ...[options]: SpawnOptions<{ src: "questionActor"; logic: StateMachine<QuestionMachineContext, UserInputEvent | { ...; } | { ...; } | { ...; } | { ...; }, ... 12 more ..., MetaObject>; id: string | undefined; }, TSrc> | SpawnOpti...' is not assignable to type 'ContextFactory<QuizMachineContext, ToProvidedActor<{}, { loadingQuizActor: PromiseActorLogic<unknown, NonReducibleUnknown, EventObject>; questionActor: StateMachine<...>; }>, Partial<...>, { ...; } | ... 3 more ... | { ...; }>'.
+    Property 'scoreConfig' is missing in type '{ score: {}; questions: never[]; currentQuestionIndex: number; settings: { timerLength: number; }; users: string[] | undefined; activeUser: string; }' but required in type 'QuizMachineContext'.

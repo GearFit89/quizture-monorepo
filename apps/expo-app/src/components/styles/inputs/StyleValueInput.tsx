@@ -1,11 +1,11 @@
-import React from "react";
-import type { StyleKeyMeta } from "@/lib/styles/types";
-import { BooleanInput } from "./BooleanInput";
-import { ColorInput } from "./ColorInput";
-import { DimensionInput } from "./DimensionInput";
-import { EnumInput } from "./EnumInput";
-import { NumberInput } from "./NumberInput";
-import { StringInput } from "./StringInput";
+import React from 'react'
+import type { StyleKeyMeta } from '@/lib/styles/types'
+import { BooleanInput } from './BooleanInput'
+import { ColorInput } from './ColorInput'
+import { DimensionInput } from './DimensionInput'
+import { EnumInput } from './EnumInput'
+import { NumberInput } from './NumberInput'
+import { StringInput } from './StringInput'
 
 interface StyleValueInputProps {
   meta: StyleKeyMeta;
@@ -17,12 +17,12 @@ interface StyleValueInputProps {
  * Renders the correct control for a style key based on its metadata type.
  * This is the single place that maps StyleValueType -> concrete component.
  */
-export function StyleValueInput({ meta, value, onChange }: StyleValueInputProps) {
+export function StyleValueInput ({ meta, value, onChange }: StyleValueInputProps) {
   switch (meta.type) {
-    case "color":
-      return <ColorInput value={value as string} onChange={onChange} />;
+    case 'color':
+      return <ColorInput value={value as string} onChange={onChange} />
 
-    case "dimension":
+    case 'dimension':
       return (
         <DimensionInput
           value={value as number | string}
@@ -32,9 +32,9 @@ export function StyleValueInput({ meta, value, onChange }: StyleValueInputProps)
           step={meta.step}
           allowPercent={meta.allowPercent}
         />
-      );
+      )
 
-    case "number":
+    case 'number':
       return (
         <NumberInput
           value={value as number}
@@ -43,18 +43,18 @@ export function StyleValueInput({ meta, value, onChange }: StyleValueInputProps)
           max={meta.max}
           step={meta.step}
         />
-      );
+      )
 
-    case "enum":
+    case 'enum':
       return (
         <EnumInput value={value as string} onChange={onChange} options={meta.options ?? []} />
-      );
+      )
 
-    case "boolean":
-      return <BooleanInput value={value as boolean} onChange={onChange} />;
+    case 'boolean':
+      return <BooleanInput value={value as boolean} onChange={onChange} />
 
-    case "string":
+    case 'string':
     default:
-      return <StringInput value={value as string} onChange={onChange} />;
+      return <StringInput value={value as string} onChange={onChange} />
   }
 }

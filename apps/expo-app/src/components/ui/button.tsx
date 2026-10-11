@@ -1,7 +1,7 @@
-import { TextClassContext } from '@/components/ui/text';
-import { cn } from '@/lib/utils';
-import { cva, type VariantProps } from 'class-variance-authority';
-import { Platform, Pressable } from 'react-native';
+import { TextClassContext } from '@/components/ui/text'
+import { cn } from '@/lib/utils'
+import { cva, type VariantProps } from 'class-variance-authority'
+import { Platform, Pressable } from 'react-native'
 
 const buttonVariants = cva(
   cn(
@@ -24,18 +24,20 @@ const buttonVariants = cva(
           })
         ),
         outline: cn(
-          'border-border bg-background active:bg-accent dark:bg-input/30 dark:border-input dark:active:bg-input/50 border shadow-sm shadow-black/5',
+          // Changed active:bg-accent to a neutral background darkening
+          'border-border bg-background active:bg-muted dark:bg-input/30 dark:border-input dark:active:bg-input/50 border shadow-sm shadow-black/5',
           Platform.select({
-            web: 'hover:bg-accent dark:hover:bg-input/50',
+            web: 'hover:bg-muted dark:hover:bg-input/50 hover:-translate-y-0.5 transition-all',
           })
         ),
         secondary: cn(
           'bg-secondary active:bg-secondary/80 shadow-sm shadow-black/5',
-          Platform.select({ web: 'hover:bg-secondary/80' })
+          Platform.select({ web: 'hover:bg-secondary/80 hover:-translate-y-0.5 transition-transform' })
         ),
         ghost: cn(
-          'active:bg-accent dark:active:bg-accent/50',
-          Platform.select({ web: 'hover:bg-accent dark:hover:bg-accent/50' })
+          // Changed active:bg-accent to active:bg-muted or a slightly darker transparent background
+          'active:bg-muted dark:active:bg-muted/50',
+          Platform.select({ web: 'hover:bg-muted dark:hover:bg-muted/50 hover:-translate-y-0.5 transition-all' })
         ),
         link: '',
       },
@@ -51,7 +53,7 @@ const buttonVariants = cva(
       size: 'default',
     },
   }
-);
+)
 
 const buttonTextVariants = cva(
   cn(
@@ -86,21 +88,21 @@ const buttonTextVariants = cva(
       size: 'default',
     },
   }
-);
+)
 
-type ButtonProps = React.ComponentProps<typeof Pressable> & React.RefAttributes<typeof Pressable> & VariantProps<typeof buttonVariants>;
+type ButtonProps = React.ComponentProps<typeof Pressable> & React.RefAttributes<typeof Pressable> & VariantProps<typeof buttonVariants>
 
-function Button({ className, variant, size, ...props }: ButtonProps) {
+function Button ({ className, variant, size, ...props }: ButtonProps) {
   return (
     <TextClassContext.Provider value={buttonTextVariants({ variant, size })}>
       <Pressable
         className={cn(props.disabled && 'opacity-50', buttonVariants({ variant, size }), className)}
-        role="button"
+        role='button'
         {...props}
       />
     </TextClassContext.Provider>
-  );
+  )
 }
 
-export { Button, buttonTextVariants, buttonVariants };
-export type { ButtonProps };
+export { Button, buttonTextVariants, buttonVariants }
+export type { ButtonProps }

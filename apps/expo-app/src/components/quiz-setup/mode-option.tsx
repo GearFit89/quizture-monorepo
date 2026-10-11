@@ -23,30 +23,30 @@ export default function ModeOption<Mode_T>({
   description,
   color = "#007AFF", // Pass a valid color hex/string or token if overriding
 }: ModeOptionProps<Mode_T>) {
-  const { setMode } = useQuizSetup<Mode_T>();
-  const [isPressed, setIsPressed] = React.useState(false);
+  const { data, setMode } = useQuizSetup<Mode_T>();
+  const selected = data.mode === value;
   const { styles } = useStyleTarget("modeOption");
 
   const handlePress = () => {
-    setIsPressed(!isPressed);
     setMode(value);
   };
 
   return (
     <Pressable
       onPress={handlePress}
+      accessibilityRole="radio"
+      accessibilityState={{ selected }}
       style={[
-        styles.container as AnyStyle,
-        { backgroundColor: color },
-        isPressed ? styles.pressedBorder : styles.defaultBorder,
+        styles.container,
+        selected ? styles.pressedBorder : styles.defaultBorder,
       ]}
     >
       <View style={styles.textContainer}>
-        <Text variant="p" style={styles.titleText as AnyStyle}>
+        <Text style={styles.titleText}>
           {title}
         </Text>
         {description ? (
-          <Text variant="p" style={styles.descriptionText as AnyStyle}>
+          <Text style={styles.descriptionText }>
             {description}
           </Text>
         ) : null}

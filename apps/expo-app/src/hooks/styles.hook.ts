@@ -76,7 +76,7 @@ export function useStylesState(initial: StyleContent): StylesState {
           ...prev,
           [target]: {
             ...prevClass,
-            [element]: nextElementStyle as AnyStyle,
+            [element]: nextElementStyle ,
           },
         };
       });
