@@ -94,58 +94,11 @@ export const stylesContent = {
     },
   },
 
-  "difficultyOption": {
-    "container": {
-      "padding": 16,
-      "marginVertical": 8,
-      "borderRadius": 12,
-      "borderWidth": 1
-    },
-    "superHard": {
-      "backgroundColor": "#f3e8ff",
-      "borderColor": "#7e22ce"
-    },
-    "superHardTitle": {
-      "color": "#581c87"
-    },
-    "superHardDesc": {
-      "color": "#6b21a8"
-    },
-    "hard": {
-      "backgroundColor": "#fecaca",
-      "borderColor": "#b91c1c"
-    },
-    "hardTitle": {
-      "color": "#7f1d1d"
-    },
-    "hardDesc": {
-      "color": "#991b1b"
-    },
-    "medium": {
-      "backgroundColor": "#fed7aa",
-      "borderColor": "#c2410c"
-    },
-    "mediumTitle": {
-      "color": "#7c2d12"
-    },
-    "mediumDesc": {
-      "color": "#9a3412"
-    },
-    "easy": {
-      "backgroundColor": "#fef08a",
-      "borderColor": "#a16207"
-    },
-    "easyTitle": {
-      "color": "#713f12"
-    },
-    "easyDesc": {
-      "color": "#854d0e"
-    },
-    "desc": {
-      "marginTop": 4,
-      "fontSize": 14,
-      "lineHeight": 20
-    }
+  difficultyOption: {
+    container: { padding: 12, marginVertical: 4, borderRadius: 12, borderWidth: 2, borderColor: '#e2e8f0', backgroundColor: '#ffffff', gap: 4 },
+    selected: { borderColor: theme.colors['primary-blue'], backgroundColor: '#eff6ff' },
+    title: { fontSize: 15, fontWeight: '600', color: '#0f172a' },
+    desc: { fontSize: 13, lineHeight: 18, color: '#64748b' },
   },
   bottomNav: {
     navContainer: {
@@ -197,51 +150,30 @@ export const stylesContent = {
       opacity: 0.5,
     },
   },
-  "quizSetup":{
-  "sartButton": { 
-    "width": "80%",
-    "backgroundColor":"#f3e8ff"
+  quizSetup: {
+    page: { flex: 1, backgroundColor: '#ffffff' },
+    pageContent: { width: '100%', maxWidth: 720, alignSelf: 'center', padding: 20, paddingBottom: 32 },
+    heading: { fontSize: 28, fontWeight: '700', color: '#0f172a', marginBottom: 6 },
+    subtitle: { fontSize: 15, lineHeight: 22, color: '#64748b', marginBottom: 20 },
+    sartButton: { width: '100%', minHeight: 52, height: 'auto', marginTop: 16, marginBottom: 24, borderRadius: 14, backgroundColor: theme.colors['primary-blue'], flexDirection: 'row', gap: 10, paddingVertical: 14 },
+    startButtonText: { color: '#ffffff', fontSize: 16, fontWeight: '700' },
+    startButtonDisabled: { backgroundColor: '#94a3b8', opacity: 0.7 },
+    quizLength: { flexDirection: 'row', alignItems: 'center', gap: 12, padding: 16, marginTop: 12, backgroundColor: '#f8fafc', borderWidth: 1, borderColor: '#e2e8f0', borderRadius: 12 },
+    countText: { flex: 1, gap: 4 },
+    countTitle: { color: '#0f172a', fontSize: 15, fontWeight: '600' },
+    countHint: { color: '#64748b', fontSize: 13, lineHeight: 18 },
   },
-  "quizLength":{
-    "borderColor": "black"
-  }
-
-
-},
   text: {
     white: {
       color: '#ffffff',
     },
   },
   modeOption: {
-  container: {
-    padding: 16,
-    marginVertical: 8,
-    borderRadius: 12,
-    borderWidth: 1,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
+    container: { padding: 14, marginVertical: 4, borderRadius: 12, borderWidth: 2, flexDirection: 'row', alignItems: 'center', gap: 12, backgroundColor: '#ffffff' },
+    defaultBorder: { borderColor: '#e2e8f0' },
+    pressedBorder: { borderColor: theme.colors['primary-blue'], backgroundColor: '#eff6ff' },
+    textContainer: { flex: 1, gap: 4 },
+    titleText: { fontWeight: '600', fontSize: 16, color: '#0f172a' },
+    descriptionText: { fontSize: 13, lineHeight: 18, color: '#64748b' },
   },
-  defaultBorder: {
-    borderColor: theme.colors.border, 
-  },
-  pressedBorder: {
-    borderColor: theme.colors.primary, 
-  },
-  textContainer: {
-    flex: 1,
-    marginRight: 12,
-  },
-  titleText: {
-    fontWeight: "bold",
-    fontSize: 18,
-    color: "#FFFFFF",
-  },
-  descriptionText: {
-    fontSize: 14,
-    marginTop: 4,
-    color: "#FFFFFF",
-  },
-},
 } satisfies Record<string, Record<string, AnyStyle>>;

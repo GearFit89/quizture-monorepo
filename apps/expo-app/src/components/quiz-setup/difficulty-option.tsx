@@ -3,7 +3,7 @@ import { Pressable, View, StyleProp, ViewStyle } from 'react-native'
 import { Text } from '@/components/ui/text'
 import { DifficultyLevel } from '@bq/shared/types'
 import { useQuizSetup } from '@/hooks/quiz-setup.hook'
-import { useStyleTarget } from '@/hooks'
+import { useSetupContent, useStyleTarget } from '@/hooks'
 
 export interface DifficultyOptionProps {
   value: DifficultyLevel;
@@ -12,28 +12,17 @@ export interface DifficultyOptionProps {
   style?: StyleProp<ViewStyle>;
 }
 
-const DIFFICULTY_LABELS: Record<DifficultyLevel, string> = {
-  easy: 'Easy',
-  medium: 'Medium',
-  hard: 'Hard',
-  superHard: 'Super Hard',
-}
-
 export const DifficultyOption: React.FC<DifficultyOptionProps> = ({
   value,
   description,
   onPress,
   style,
 }) => {
-  const { setDifficulty } = useQuizSetup()
+  const { data, setDifficulty } = useQuizSetup()
   const { styles } = useStyleTarget('difficultyOption')
 
-  // Format super_hard key to camelCase for json property matching
-  const key = value === 'superHard' ? 'superHard' : value
-
-  const containerStyle = styles[key]
-  const titleStyle = styles[`${key}Title` as keyof typeof styles]
-  const descStyle = styles[`${key}Desc` as keyof typeof styles]
+  const content = useSetupContent().difficultyOptions[value]
+  const selected = data.difficultyLevel === value
 
   const handlePress = () => {
     setDifficulty(value)
@@ -41,18 +30,12 @@ export const DifficultyOption: React.FC<DifficultyOptionProps> = ({
   }
 
   return (
-    <Pressable onPress={handlePress} disabled={!onPress}>
-      <View style={[styles.container, containerStyle, style]}>
-        <Text variant='p' style={titleStyle}>
-          {DIFFICULTY_LABELS[value]}
+    <Pressable onPress={handlePress} accessibilityRole="radio" accessibilityState={{ selected }}>
+      <View style={[styles.container, style, selected && styles.selected]}>
+        <Text style={styles.title}>
+          {content.title}
         </Text>
-        {description
-          ? (
-            <Text variant='p' style={[styles.desc, descStyle]}>
-              {description}
-            </Text>
-            )
-          : null}
+        <Text style={styles.desc}>{description ?? content.description}</Text>
       </View>
     </Pressable>
   )

@@ -34,16 +34,24 @@
     }
   },
   "setup": {
+    "difficultyOptions": {
+      "easy": { "title": "Easy", "description": "Build your answer with word blocks." },
+      "medium": { "title": "Medium", "description": "Practice recalling and typing your answer." },
+      "hard": { "title": "Hard", "description": "Challenge yourself with typed answers." },
+      "superHard": { "title": "Super hard", "description": "Take on the highest difficulty." }
+    },
+    "questionCount": "{count} questions available",
+    "questionCountHint": "Your quiz will use {count} questions from this selection.",
     "standard": {
       "modes": {
         "normal": {
           "title": "Normal Mode",
-          "description": "Standard setup",
+          "description": "Practice at your own pace.",
           "icon": "bookmark"
         },
         "timed": {
           "title": "Timed Mode",
-          "description": "Beat the clock",
+          "description": "Answer each question before time runs out.",
           "icon": "timer"
         }
       }
@@ -190,6 +198,7 @@
         ]
       }
     },
+    "invalidSetupButton": "Quiz is not valid",
     "setupButton": "Start Quiz",
     "errorInvalidQuestionLength": {
       "title": "Quiz Setup Error",

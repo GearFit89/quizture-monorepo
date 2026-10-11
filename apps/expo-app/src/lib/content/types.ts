@@ -71,11 +71,15 @@ interface TimedSetupModes extends SetupModes {
 }
 
 export interface SetupContent {
+  difficultyOptions: typeof import('./content.json').setup.difficultyOptions;
+  questionCount: string;
+  questionCountHint: string;
   standard: {
     modes: TimedSetupModes
   },
   filterSection: QuizFilterSection;
   setupButton: string;
+  invalidSetupButton: string;
   errorInvalidQuestionLength: {
     title: string;
     message: string;

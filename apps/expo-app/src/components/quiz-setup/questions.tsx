@@ -3,6 +3,7 @@ import { useFilteredQuestions, useQuestions } from '@/hooks/use-questions'
 import { useEffect, useMemo } from 'react'
 import { Modal, View } from 'react-native'
 import { Text } from '@/components/ui/text'
+import Icon from '@/components/icon'
 import { TriangleAlertIcon } from 'lucide-react-native'
 
 export function FilteredQuestions () {
@@ -23,7 +24,8 @@ export function FilteredQuestions () {
 
   return (
     <View>
-      {isQuizValid ? <QuizSetupLength length={questions.length} /> : <QuizSetupError />}
+      <QuizSetupLength length={questions.length} quizLength={minQuizQuestionLength} />
+      {!isQuizValid && <QuizSetupError />}
     </View>
   )
 }
@@ -40,11 +42,16 @@ function QuizSetupError () {
   )
 }
 
-function QuizSetupLength ({ length }: { length: number }) {
+function QuizSetupLength ({ length, quizLength }: { length: number; quizLength: number }) {
   const { styles } = useStyleTarget('quizSetup')
+  const content = useSetupContent()
   return (
     <View style={styles.quizLength}>
-      <Text>{length}</Text>
+      <Icon name="help" size={24} color="#2563eb" />
+      <View style={styles.countText}>
+        <Text style={styles.countTitle}>{content.questionCount.replace('{count}', String(length))}</Text>
+        <Text style={styles.countHint}>{content.questionCountHint.replace('{count}', String(quizLength))}</Text>
+      </View>
     </View>
   )
 }
