@@ -1,3 +1,1 @@
-import { createMachine } from 'xstate'
-
-export const quizMachine = createMachine({})
+export { normalQuizMachine } from "./normal.machine"

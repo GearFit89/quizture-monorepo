@@ -6,7 +6,7 @@ import type {
   QuestionState,
   QuizScoreUser,
   UserState,
-} from "@/types";
+} from "../../types";
 import type { QuizMachineContext } from "./normal.machine";
 
 

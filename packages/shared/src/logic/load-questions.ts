@@ -1,5 +1,5 @@
-import { Question, QuizQuestion } from "@/types";
-import { processQuestion, processQuestionType, shuffleArray } from "@/utils";
+import { Question, QuizQuestion } from "../types";
+import { processQuestion, processQuestionType, shuffleArray } from "../utils";
 
 export async function getQuizQuestions(
   filteredQuestions: Question[],

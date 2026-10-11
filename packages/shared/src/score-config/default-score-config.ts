@@ -1,4 +1,4 @@
-import type { ScoreConfig } from "@/types";
+import type { ScoreConfig } from "../types";
 
 // TODO; Make labels keys for lanaguage support
 export const defaultScoreConfig: ScoreConfig = {

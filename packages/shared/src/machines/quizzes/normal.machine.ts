@@ -1,4 +1,4 @@
-import { QuizScore, QuizSettings } from "@/types";
+import { QuizScore, QuizSettings } from "../../types";
 import type {
   QuizQuestion,
   Question,
@@ -7,11 +7,12 @@ import type {
   QuizScoreUser,
   UserState,
   QuizQuestionState,
-} from "@/types";
+  DifficultyLevel,
+} from "../../types";
 import { createMachine, setup, assign, fromPromise } from "xstate";
-import { questionMachine, QuestionMachineContext } from "../questions/normal";
-import defaultScoreConfig from "@/score-config";
-import { getQuizQuestions } from "@/logic";
+import { normalQuestionMachine, QuestionMachineContext } from "../questions/normal.machine";
+import defaultScoreConfig from "../../score-config";
+import { getQuizQuestions } from "../../logic/load-questions";
 import { scoreQuestion } from "./actions";
 
 export interface QuizLoadInput {
@@ -21,14 +22,16 @@ export interface QuizLoadInput {
 export interface QuizMachineContext {
   score: QuizScore;
   scoreConfig: ScoreConfig;
-  settings: QuizSettings;
 
   incomingQuesions: QuizQuestion[];
   completedQuestions: QuizQuestion[];
 
   quizLength: number;
-  
+
   activeUser: string;
+  timerLength: number;
+  difficulty: DifficultyLevel;
+  initialQuestions?: Question[];
 }
 export interface QuizNextQuestionEvent<T> {
   type: T;
@@ -45,17 +48,21 @@ export type QuizEvent =
   | QuizNextQuestionEvent<"NEXT">
   | QuizQuestionEvent<"CORRECT">
   | QuizQuestionEvent<"INCORRECT">
-  | (QuizQuestionEvent<"TRY_AGAIN"> & { typedAnswer: string });
-
-export const machine = setup({
+  | (QuizQuestionEvent<"TRY_AGAIN"> & { typedAnswer: string })
+  | { type: "COMPLETE" };
+export interface QuizInput {
+  quizLength: number;
+  userId?: string;
+  difficulty?: DifficultyLevel;
+  questions?: Question[];
+  scoreConfig?: ScoreConfig;
+  isQuestionTimed: boolean;
+}
+export const normalQuizMachine = setup({
   types: {
     context: {} as QuizMachineContext,
     events: {} as QuizEvent,
-    input: {} as {
-      quizLength: number;
-      userId?: string;
-      scoreConfig?: ScoreConfig;
-    },
+    input: {} as QuizInput,
   },
   actions: {
     handleIncorrect: assign({
@@ -96,14 +103,14 @@ export const machine = setup({
 
       const changedQuestion = {
         ...currentQuestion,
-        typedAnswer: [
+        typedAnswers: [
           ...(currentQuestion.typedAnswers || []),
           event.typedAnswer,
         ],
       } as QuizQuestion;
 
       return {
-        incomingQuesions: [changedQuestion, ...incomingQuesions],
+        incomingQuesions: [changedQuestion, ...incomingQuesions.slice(1)],
       };
     }),
     nextQuestion: assign(({ context, event }) => {
@@ -129,78 +136,105 @@ export const machine = setup({
         return await getQuizQuestions(input?.questions, input?.quizLength);
       },
     ),
-    questionActor: questionMachine,
+    questionActor: normalQuestionMachine,
   },
   guards: {
     isQuizDone: function ({ context }) {
-      return context.incomingQuesions.length === 0;
+      return context.incomingQuesions.length <= 1;
     },
   },
 }).createMachine({
-  /** @xstate-layout N4IgpgJg5mDOIC5QEcCuBLAXggdgewCcBbAQwBsA6ASQnTLAGIAZAeQEEARAbQAYBdRKAAOeWOgAu6PDkEgAHogAsATgoAOAExrlAdh4BmNfoBsPZQYA0IAJ6IN+gIwUNDnhuNqArGrMaennQBfQKs0LFxCUkoyPBJaHCgGCGkwCnQcADc8AGtUmLiAOUjyAEUMTF4BJBARMUlpWQUEfXMKfUV9HXbjHUVPA2UrWwRXYwoeCZ4HTw1+nQcHNWDQ8ojicgoSAGNJDNSyuHqcdMSAYRYAJQuAUVOAFUrZWokpGWqmjS7nKa1tRxNTIohogALQODRtDSKNR6Bw6LqeaHGZYgMLYfDrSjbXb7VCHV4nBhUArnK63B78J6iF4Nd6IOFqCjzHjGOEBBzGPqKYzAhCeUxMtTTZT6FnKTnIkKo1YYqKbHboPYUA6wI6EgrXAAaFKqwmpR0aiB4vJ4KLRazl2MVuPx0nVWoeDl1NX1r0NCGNNkQakZ-Qm0OULmMos6wSl+AgcFk5tl5CpdTddIQYP8bUUGmUrn0hh0XksXuTix0kOh-OUma6rk8ZplxUoNDoYHjNLeoCa3PUWnFukMDhFOkGBYzThcbg83l8-iCUpjdYo+XiUGbBqTIICaeHBhzef0vPBTmZ9g5OlmiJ6NfCsaxCr2y8TbdB0N5IPLnehigH4OMpjMF-Rc6tJUVTVBI71pB8PV5cU-wtDYADN0nQWAAAtIDA1t5HpLQeHGNRjChPofE8ENeWhfQ2h4IwdE8BZFEWLQw0CIA */
+  /** @xstate-layout N4IgpgJg5mDOIC5QEcCuBLAXggdgewCcBbAQwBsA6ASQnTLAGIAZAeQEEARAbQAYBdRKAAOeWOgAu6PDkEgAHogAsATgoAOAExrlAdh4BmNfoBsPZQYA0IAJ6IN+gIwUNDnhuNqArGrMaennQBfQKs0LFxCUkoaOkZeASQQETFJaVkFBA1FRXUtZWNdQwdlQytbBB0HY3Vss30eAuNFY2DQjGx8YnIKMjwSWhwoBghpMAp0HAA3PABrMd7+gDlI8gBFdvjZZIkpGUSM-XMKfUV9HRPjHUVPA2UyxFdqnmeeB08NG8qHNVaQMI6VpQFgMhiMcGMJtM5j0+hBll0yOssFwHAlhKIdml9og1GonjodJ5jI4TvUSvcEABaLQ5TTFAKmD5va6-f4RBEw-oTIZgAgEQgUIRkEjiABmkU5cMBSMwm0S21Se1ABx0qm+RkOxmMDhcKh0FMp9NyijUegcBP0nhNnlZ7XZUQoJAAxpJJnF+FsMYr0ogAhoKAytNoSVqDUbNCazRarV5beFOg7na6xus4IruQwAMIsABKOYAopmACpy9EpXY+zInGouHjZd76WueA0aZROVXaLTvZqaK1xgEcpPoN0UVOwdODBhURbZvOFkse+VeivYhDmtQUSoNc0BKrXZoUok8TdqN4lBr5Zr9+3dIcjscToZFnMATQA+mwAOJsaelpLLrFlRxYpN38L5WxOU59ApHcKGuIxXD0YxPBKN5rwTW8XWHFNUDTXYM0WfMAA0FzRf9y0A+REENY8VAcfQTB0IxiXozQDROHQKF0dw3H8ZRzB+EI-jtDDKDvHC8OkAjiJLVFPQopUqIQHgKVxAMXhNZQXGJAwgl+fAIDgWQ2VE+TMUUjIaM8Y5FFbVwGNNLxLBsajmmqDtdHyD4mKaRR0MBahaHoMzvVXZpcm0ApzlPEpVQpOznFcdwvB8LSwP8jlgW5EKVyAqkAhsuyDEMJibmgly1xcTckscS4PitS4MsTLC3RyyjLJNdjVWcZRtCuTyGIcBwmsw5NR1w8d8MGNqLMQFSKvyEbKFFEhYggGbK0pAqTiKhzSuc8o9ByJiz3qRpmmGoSTIC0UJnQWAAAtIA21cdR8CgeDxLJ4P8epyvKE19GOT6zk8IbFG+LRgmCIA */
   context: ({ input }) => ({
     score: {},
     incomingQuesions: [],
     completedQuestions: [],
     currentQuestionIndex: 0,
-    settings: {
-      timerLength: 60,
-    },
+    // TODO: Add seconds based on difficulty level
+    timerLength: input.isQuestionTimed ? 30 : Infinity,
     quizLength: input.quizLength,
     scoreConfig: input.scoreConfig ?? defaultScoreConfig,
-    activeUser: "",
+    activeUser: input.userId ?? "solo",
+    difficulty: input.difficulty ?? "easy",
+    initialQuestions: input.questions ?? [],
   }),
   id: "quiz:normal",
   initial: "Idile",
   states: {
     Idile: {
+      always: {
+        guard: ({ context }) => context.initialQuestions !== undefined,
+        target: "Loading",
+      },
       on: {
-        LOAD: "loading",
+        LOAD: "Loading",
       },
     },
-    loading: {
+
+    Loading: {
       invoke: {
         id: "loadNormalQuiz",
 
         input: ({ context, event }) => {
           const questions =
-            "filteredQuestions" in event ? event.filteredQuestions : [];
+            "filteredQuestions" in event
+              ? (event.filteredQuestions ?? [])
+              : (context.initialQuestions ?? []);
           return {
             questions: questions,
             quizLength: context.quizLength,
           };
         },
 
-        onDone: {
-          target: "active",
-          actions: assign(({ event }) => ({
-            incomingQuesions: event.output,
-            // Explictly define [] to ensure that it is empty
-            completedQuestions: [],
-          })),
-        },
+        onDone: [
+          {
+            guard: ({ event }) => event.output.length === 0,
+            target: "Failed",
+          },
+          {
+            target: "Active",
+            actions: assign(({ event }) => ({
+              incomingQuesions: event.output,
+              // Explictly define [] to ensure that it is empty
+              completedQuestions: [],
+            })),
+          },
+        ],
+        onError: "Failed",
 
         src: "loadingQuizActor",
       },
     },
 
-    active: {
+    Active: {
       initial: "Questioning",
+      always: {
+        guard: ({ context }) => context.incomingQuesions.length === 0,
+        target: "#quiz:normal.Summary",
+      },
       states: {
         Questioning: {
           invoke: {
             id: "questionNormalQuiz",
 
             input: ({ context: ctx }) => {
-              const [ currentQuestion ] = ctx.incomingQuesions;
+              const [currentQuestion] = ctx.incomingQuesions;
               return {
                 question: {
                   head: currentQuestion.head,
                   body: currentQuestion.body,
+                  answer: currentQuestion.answer,
                 },
-                isQuestionTimed: ctx.settings.timerLength !== 0,
-                timerLength: ctx.settings.timerLength,
-              } as QuestionMachineContext;
+
+                userInput: "",
+                activeUser: ctx.activeUser,
+                state: "none",
+                type: "normal",
+                displayedCharsArr: [],
+                incommingCharsArr: Array.from(currentQuestion.body),
+                isQuestionTimed: ctx.timerLength !== Infinity,
+                timerLength: ctx.timerLength,
+              } satisfies QuestionMachineContext;
             },
 
             src: "questionActor",
@@ -221,7 +255,8 @@ export const machine = setup({
               {
                 guard: "isQuizDone",
 
-                target: "#quiz:normal.finished",
+                target: "#quiz:normal.Summary",
+                actions: "nextQuestion",
               },
               {
                 reenter: true,
@@ -234,7 +269,18 @@ export const machine = setup({
       },
     },
 
-    finished: {
+    Failed: {
+      type: "final",
+    },
+    Summary: {
+      on: {
+        COMPLETE: {
+          target: "Finished",
+        },
+      },
+    },
+
+    Finished: {
       type: "final",
     },
   },
