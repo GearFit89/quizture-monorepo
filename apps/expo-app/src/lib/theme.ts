@@ -1,9 +1,10 @@
 export const theme = {
   colors: {
+    'primary-blue': '#2563eb',
     primary: 'rgb(var(--primary) / <alpha-value>)',
-    primaryForeground: 'rgb(var(--primary-foreground) / <alpha-value>)',
+    "primary-foreground": 'rgb(var(--primary-foreground) / <alpha-value>)',
     secondary: 'rgb(var(--secondary) / <alpha-value>)',
-    secondaryForeground: 'rgb(var(--secondary-foreground) / <alpha-value>)',
+    "secondary-foreground": 'rgb(var(--secondary-foreground) / <alpha-value>)',
     accent: 'rgb(var(--accent) / <alpha-value>)',
     accentForeground: 'rgb(var(--accent-foreground) / <alpha-value>)',
     background: 'rgb(var(--background) / <alpha-value>)',
