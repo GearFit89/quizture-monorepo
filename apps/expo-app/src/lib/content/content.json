@@ -26,11 +26,37 @@
   "practicePage": {
     "flashCardButton": {
       "title": "Flashcards",
-      "description": "Practice with flashcards"
+      "description": "Build confidence with quick recall practice."
     },
     "contentButton": {
-      "title": "Content",
-      "description": "Read the content"
+      "title": "Bible content",
+      "description": "Explore the passages behind your questions."
+    },
+    "eyebrow": "LEARN THE WORD",
+    "title": "Practice",
+    "description": "A little practice. A stronger foundation.",
+    "quizSectionTitle": "Choose your session",
+    "quizSectionDescription": "Make it your own with flexible quiz settings.",
+    "soloLabel": "Solo",
+    "vsLabel": "VS",
+    "studyTitle": "Study tools",
+    "studyDescription": "More ways to build your Bible knowledge.",
+    "startQuiz": "Set up quiz",
+    "setupHint": "Choose your questions, difficulty, and pace.",
+    "comingSoon": "Coming soon",
+    "answerFeature": "Blocks or typing",
+    "timerFeature": "Optional timer",
+    "settingsLabel": "Settings",
+    "footer": "Learn at your pace. Keep growing.",
+    "quizCards": {
+      "SOLO-1": {
+        "title": "Solo quiz",
+        "description": "Challenge your recall, one question at a time. Build an answer with word blocks or put your memory to the test by typing."
+      },
+      "VS-1": {
+        "title": "Quiz with a friend",
+        "description": "Bring a little friendly competition to your practice. Head-to-head quizzing is on the way."
+      }
     }
   },
   "setup": {
