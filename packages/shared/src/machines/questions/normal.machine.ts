@@ -131,7 +131,9 @@ export const normalQuestionMachine = setup({
       return context.isQuestionTimed;
     },
     hasRetryAttempts: ({ context }) => {
-      return true;
+      return (
+        (context.currentRetryAttempts ?? 0) >= (context.maxRetryAttempts ?? 0)
+      );
     },
   },
 }).createMachine({
@@ -243,11 +245,9 @@ export const normalQuestionMachine = setup({
                     }) satisfies QuizEvent,
                 ),
               },
-              
+
               {
-                target: "#question:normal.Incorrect"
-                
-                
+                target: "#question:normal.Incorrect",
               },
             ],
           },
@@ -264,8 +264,11 @@ export const normalQuestionMachine = setup({
             },
 
             RETRY: {
-              target: "Waiting"
-            }
+              target: "Waiting",
+              action: assign({
+                currentAttmepts: ({ context }) => context.currentAttempts + 1,
+              }),
+            },
           },
         },
       },
