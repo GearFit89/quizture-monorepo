@@ -1,9 +1,9 @@
 import { useSelector } from '@xstate/react';
 import { useQuiz, useQuestionActor, useQuizContent } from '@/hooks';
 import { Text } from '@/components/ui/text';
-import { QuestionSection } from './question-section';
+import { QuestionSection } from '../quiz/question-section';
 
-export function NormalQuiz() {
+export function NormalQuestion() {
   const actor = useQuiz();
   const question = useQuestionActor();
   const unavailable = useSelector(actor, (snapshot) => snapshot.matches('Active') || snapshot.matches('Failed') || snapshot.status === 'error');

@@ -1,7 +1,7 @@
 import React from 'react';
 import { expect, it, vi } from 'vitest';
-import content from '../../lib/content/content.json';
-import { stylesContent } from '../../lib/styles/content';
+import content from '../../../lib/content/content.json';
+import { stylesContent } from '../../../lib/styles/content';
 vi.mock('@/hooks', () => ({
   useQuiz: () => ({ getSnapshot: () => ({ context: {
     incomingQuesions: [{}, {}], completedQuestions: [{}], activeUser: 'solo', score: { solo: { points: 20 }, other: { points: 5 } },

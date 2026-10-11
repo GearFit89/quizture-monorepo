@@ -55,7 +55,7 @@ export default function HomePage() {
         <Text>Press me!(I do nothing)</Text>
       </Button>
 
-      <RNButton title="IO" onPress={() => alert('yo YO')} />
+      <RNButton title="IO" onPress={() => alert('YO')} />
     </View>
   );
 }

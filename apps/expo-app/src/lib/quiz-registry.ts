@@ -1,5 +1,5 @@
 import StandardSetup from "@/components/setups/standard";
-import { QuizContainer } from '@/quiz';
+import { NormalQuiz } from '@/components/quizzes/normal';
 import { QuizKey } from "@bq/shared/types";
 
 interface QuizEntry {
@@ -17,7 +17,7 @@ export const QUIZ_REGISTRY: Record<QuizKey, QuizEntry> = {
     {
         Setup: StandardSetup,
         actorId: "solo.normalQuiz",
-        Quiz: QuizContainer
+        Quiz: NormalQuiz
 
 
     }

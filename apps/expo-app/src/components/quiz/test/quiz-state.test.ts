@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { QuizMachineContext } from '@bq/shared/machines/quizzes/normal.machine';
-import { createAnswerBlocks } from '../answer-blocks';
+import { createAnswerBlocks } from '../../question/answer-blocks';
 import { getQuizDisplayState, getQuizSummary } from '../quiz-state';
 
 const question = { head: 'Question', body: 'Body', answer: 'Answer' };

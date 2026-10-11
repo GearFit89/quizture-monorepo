@@ -41,11 +41,10 @@ export function QuestionSection() {
     if (!ready || !answer.trim()) return;
     actor.send({ type: 'USER_INPUT', userInput: answer.trim() });
     const result = actor.getSnapshot();
-    if (result.matches('Correct') || result.matches('Incorrect')) {
-      actor.send({ type: 'NEXT' });
-    } else {
-      setRetry(true);
-    }
+    if(result.matches("Correct")) alert("Correct");
+    if(result.matches("Incorrect") ) alert("Incorrect");
+    
+
   };
 
   return (

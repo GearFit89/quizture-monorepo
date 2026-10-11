@@ -4,7 +4,7 @@ import { View } from 'react-native';
 import { useBlocks, useStyleTarget, useQuestionActor } from '@/hooks';
 import { BlockProvider } from '@/providers/blocks.provider';
 import { BottomBlocks, TopBlocks } from './blocks';
-import { createAnswerBlocks } from '@/quiz/answer-blocks';
+import { createAnswerBlocks } from '@/components/question/answer-blocks';
 
 interface BlocksProps {
   onChange: (answer: string) => void;

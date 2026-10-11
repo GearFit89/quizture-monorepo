@@ -1,14 +1,19 @@
-import { GestureHandlerRootView } from 'react-native-gesture-handler'
-import { Stack } from 'expo-router'
-import { PersistQueryClientProvider } from '@tanstack/react-query-persist-client'
-import { queryClient, clientPersister } from '@/lib/persist-query'
-import '../global.css'
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { Stack } from 'expo-router';
+import { PersistQueryClientProvider } from '@tanstack/react-query-persist-client';
+import { queryClient, clientPersister } from '@/lib/persist-query';
+import '../global.css';
 
-import { SafeAreaProvider } from 'react-native-safe-area-context'
-import { StylesProvider, ContentProvider, RootActorProvider } from '@/providers'
-import { FloatingStyleEditorButton } from '@/components/styles/floating-button'
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import {
+  StylesProvider,
+  ContentProvider,
+  RootActorProvider,
+} from '@/providers';
+import { FloatingStyleEditorButton } from '@/components/styles/floating-button';
+import MonitorButton, { RootMonitor } from '@/components/xstate-monitor';
 
-export default function RootLayout () {
+export default function RootLayout() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider>
@@ -21,17 +26,18 @@ export default function RootLayout () {
               <ContentProvider>
                 <Stack>
                   <Stack.Screen
-                    name='(tabs)'
+                    name="(tabs)"
                     options={{ headerShown: false }}
                   />
-                  <Stack.Screen name='setup' options={{ headerShown: false }} />
+                  <Stack.Screen name="setup" options={{ headerShown: false }} />
                 </Stack>
-                <FloatingStyleEditorButton />
+                {__DEV__ && <RootMonitor />}
+                {__DEV__ && <FloatingStyleEditorButton />}
               </ContentProvider>
             </StylesProvider>
           </RootActorProvider>
         </PersistQueryClientProvider>
       </SafeAreaProvider>
     </GestureHandlerRootView>
-  )
+  );
 }

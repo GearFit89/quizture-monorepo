@@ -1,6 +1,6 @@
 import React from 'react';
 import { beforeEach, expect, it, vi } from 'vitest';
-import content from '../../lib/content/content.json';
+import content from '../../../lib/content/content.json';
 const mocks = vi.hoisted(() => ({ send: vi.fn(), back: vi.fn(), replace: vi.fn(), canGoBack: vi.fn() }));
 const context = { activeUser: 'solo', score: { solo: { points: 20 } }, incomingQuesions: [], completedQuestions: [{ state: 'correct', owner: 'solo' }] };
 vi.mock('@/hooks', () => ({ useQuiz: () => ({ send: mocks.send, getSnapshot: () => ({ context }) }), useQuizContent: () => content.quiz, useStyleTarget: () => ({ styles: {} }) }));

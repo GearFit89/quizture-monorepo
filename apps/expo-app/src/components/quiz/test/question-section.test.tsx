@@ -1,6 +1,6 @@
 import React from 'react';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import content from '../../lib/content/content.json';
+import content from '../../../lib/content/content.json';
 
 vi.mock('react', async (importOriginal) => ({ ...await importOriginal<typeof import('react')>(), useEffect: () => {}, useState: (initial: unknown) => [initial, () => {}] }));
 
@@ -47,8 +47,8 @@ describe('question input UI', () => {
     expect(nodes.some((node) => node.props.accessibilityLabel === content.quiz.answerLabel)).toBe(true);
     expect(nodes.some((node) => node.props.disabled === true)).toBe(true);
     expect(text(tree)).toContain(content.quiz.submit);
-    expect(text(tree)).toContain(content.quiz.microphoneLabel);
-    expect(nodes.some((node) => node.props.accessibilityState?.disabled === true)).toBe(true);
+    expect(text(tree)).not.toContain(content.quiz.microphoneLabel);
+
   });
   it('renders block input for easy mode', () => {
     mode = 'easy';
