@@ -1,8 +1,0 @@
-{
-  "android": {
-    "package": "com.anonymous.biblequizzingapp"
-  },
-  "ios": {
-    "bundleIdentifier": "com.anonymous.biblequizzingapp"
-  }
-}
