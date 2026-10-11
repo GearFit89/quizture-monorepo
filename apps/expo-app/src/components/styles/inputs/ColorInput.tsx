@@ -5,10 +5,11 @@ import { theme } from '@/lib/theme'
 
 // Visual fallback mapping for React Native Native (iOS/Android) standard StyleSheet rendering
 const THEME_FALLBACKS: Record<keyof typeof theme.colors, string> = {
+  'primary-blue': theme.colors['primary-blue'],
   primary: '#6366F1',
-  primaryForeground: '#FFFFFF',
+  "primary-foreground": '#FFFFFF',
   secondary: '#EC4899',
-  secondaryForeground: '#FFFFFF',
+  "secondary-foreground": '#FFFFFF',
   accent: '#8B5CF6',
   accentForeground: '#FFFFFF',
   background: '#FFFFFF',

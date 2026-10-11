@@ -1,5 +1,6 @@
 import {
   // Navigation
+  Mic,
   Home,
   BookOpen,
   Trophy,
@@ -32,6 +33,7 @@ import {
 } from 'lucide-react-native'
 
 export const Icons = {
+  microphone: Mic,
   // Navigation
   home: Home,
   study: BookOpen,
