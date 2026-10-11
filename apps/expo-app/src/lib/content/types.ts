@@ -5,10 +5,7 @@ interface Button {
   title: string;
   description: string;
 };
-export interface PracticeContent {
-  flashCardButton: Button;
-  contentButton: Button;
-}
+export type PracticeContent = typeof import('./content.json').practicePage;
 
 export interface Option {
   label: string;
