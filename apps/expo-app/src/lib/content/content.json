@@ -1,4 +1,28 @@
 {
+  "quiz": {
+    "timerLabel": "Quiz timer preview",
+    "timerPlaceholder": "—",
+    "microphoneLabel": "PRESS FOR MIC",
+    "progress": "Question {current} of {total}",
+    "points": "Points: {points}",
+    "loading": "Loading quiz…",
+    "finished": "Quiz complete",
+    "complete": "Done",
+    "questionStart": "Question: ",
+    "answerLabel": "Your answer",
+    "answerPlaceholder": "Type your answer…",
+    "submit": "Submit",
+    "next": "Next question",
+    "tryAgain": "Try again. Your answer needs another attempt.",
+    "incorrect": "Time expired. Continue to the next question.",
+    "actorUnavailable": "The active question is unavailable. Please restart the quiz.",
+    "quizUnavailable": "The quiz could not be started. Please return to setup.",
+    "summaryScore": "Total score: {points}",
+    "summaryCorrect": "Correct answers: {correct}",
+    "summaryIncorrect": "Incorrect answers: {incorrect}",
+    "summarySkipped": "Skipped questions: {skipped}",
+    "summaryCompleted": "Completed: {completed} of {total}"
+  },
   "practicePage": {
     "flashCardButton": {
       "title": "Flashcards",

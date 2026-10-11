@@ -22,6 +22,10 @@ export function useSetupContent () {
   return useContent((c) => c.setup)
 }
 
+export function useQuizContent () {
+  return useContent((c) => c.quiz)
+}
+
 export function usePracticeContent () {
   return useContent((c) => c.practicePage)
 }

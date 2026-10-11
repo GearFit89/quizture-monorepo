@@ -86,6 +86,7 @@ export type ProfileMockContent = typeof import('./content.json').profileMock
 export type SettingsMockContent = typeof import('./content.json').settingsMock
 
 export interface Content {
+  quiz: typeof import('./content.json').quiz;
   profileMock: ProfileMockContent;
   settingsMock: SettingsMockContent;
   practicePage: PracticeContent;

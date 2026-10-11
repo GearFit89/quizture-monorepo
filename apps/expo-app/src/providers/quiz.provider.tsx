@@ -1,4 +1,7 @@
+import type { QuizActorRef } from '@bq/shared/types/machine';
 
+import { Text } from "@/components/ui/text";
+import { useQuizContent } from "@/hooks";
 import { useSelector } from "@xstate/react";
 import { QuizActorContext } from "@/context";
 import { RootActorContext } from "@/context";
@@ -13,11 +16,16 @@ export function QuizProvider({ actorId, children }: QuizProviderProps) {
 
   const quizActorRef = useSelector(
     rootActorRef,
-    (state: any) => state.children?.[actorId] ?? null,
+    (state) => state.children[actorId] ?? null,
   );
 
+  const content = useQuizContent();
+  const actor = quizActorRef;
+  const quizContext = actor?.getSnapshot().context;
+  if (!actor || !Array.isArray(quizContext?.incomingQuesions)) return <Text>{content.quizUnavailable}</Text>;
+
   return (
-    <QuizActorContext.Provider value={quizActorRef}>
+    <QuizActorContext.Provider value={actor as QuizActorRef}>
       {children}
     </QuizActorContext.Provider>
   );
