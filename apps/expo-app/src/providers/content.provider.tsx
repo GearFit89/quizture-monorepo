@@ -1,10 +1,8 @@
+import { useMemo } from 'react'
+import { useContent, useLanguage } from '@/hooks'
+import { ContentContext } from '@/context'
 
-import { useMemo } from "react";
-import { useContent, useLanguage } from "@/hooks";
-import { ContentContext } from "@/context";
-
-
-export function ContentProvider({ children }: { children: React.ReactNode }) {
+export function ContentProvider ({ children }: { children: React.ReactNode }) {
   // Pull language-specific content from the hook
   // const { content } = useContent()
 
@@ -14,5 +12,5 @@ export function ContentProvider({ children }: { children: React.ReactNode }) {
     <ContentContext.Provider value={{} as any}>
       {children}
     </ContentContext.Provider>
-  );
+  )
 }

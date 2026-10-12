@@ -1,7 +1,7 @@
-import { cn } from '@/lib/utils';
-import { Platform, TextInput } from 'react-native';
+import { cn } from '@/lib/utils'
+import { Platform, TextInput } from 'react-native'
 
-function Textarea({
+function Textarea ({
   className,
   multiline = true,
   numberOfLines = Platform.select({ web: 2, native: 8 }), // On web, numberOfLines also determines initial height. On native, it determines the maximum height.
@@ -21,10 +21,10 @@ function Textarea({
       placeholderClassName={cn('text-muted-foreground', placeholderClassName)}
       multiline={multiline}
       numberOfLines={numberOfLines}
-      textAlignVertical="top"
+      textAlignVertical='top'
       {...props}
     />
-  );
+  )
 }
 
-export { Textarea };
+export { Textarea }

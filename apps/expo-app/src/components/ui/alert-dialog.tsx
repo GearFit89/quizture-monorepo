@@ -1,28 +1,28 @@
-import { buttonTextVariants, buttonVariants } from '@/components/ui/button';
-import { NativeOnlyAnimatedView } from '@/components/ui/native-only-animated-view';
-import { TextClassContext } from '@/components/ui/text';
-import { cn } from '@/lib/utils';
-import * as AlertDialogPrimitive from '@rn-primitives/alert-dialog';
-import * as React from 'react';
-import { Platform, View, type ViewProps } from 'react-native';
-import { FadeIn, FadeOut, ReduceMotion } from 'react-native-reanimated';
-import { FullWindowOverlay as RNFullWindowOverlay } from 'react-native-screens';
+import { buttonTextVariants, buttonVariants } from '@/components/ui/button'
+import { NativeOnlyAnimatedView } from '@/components/ui/native-only-animated-view'
+import { TextClassContext } from '@/components/ui/text'
+import { cn } from '@/lib/utils'
+import * as AlertDialogPrimitive from '@rn-primitives/alert-dialog'
+import * as React from 'react'
+import { Platform, View, type ViewProps } from 'react-native'
+import { FadeIn, FadeOut, ReduceMotion } from 'react-native-reanimated'
+import { FullWindowOverlay as RNFullWindowOverlay } from 'react-native-screens'
 
-const AlertDialog = AlertDialogPrimitive.Root;
+const AlertDialog = AlertDialogPrimitive.Root
 
-const AlertDialogTrigger = AlertDialogPrimitive.Trigger;
+const AlertDialogTrigger = AlertDialogPrimitive.Trigger
 
-const AlertDialogPortal = AlertDialogPrimitive.Portal;
+const AlertDialogPortal = AlertDialogPrimitive.Portal
 
-const FullWindowOverlay = Platform.OS === 'ios' ? RNFullWindowOverlay : React.Fragment;
+const FullWindowOverlay = Platform.OS === 'ios' ? RNFullWindowOverlay : React.Fragment
 
-function AlertDialogOverlay({
+function AlertDialogOverlay ({
   className,
   children,
   ...props
 }: Omit<React.ComponentProps<typeof AlertDialogPrimitive.Overlay>, 'asChild'> & {
-    children?: React.ReactNode;
-  }) {
+  children?: React.ReactNode;
+}) {
   return (
     <FullWindowOverlay>
       <AlertDialogPrimitive.Overlay
@@ -34,25 +34,27 @@ function AlertDialogOverlay({
           className
         )}
         {...props}
-        asChild={Platform.OS !== 'web'}>
+        asChild={Platform.OS !== 'web'}
+      >
         <NativeOnlyAnimatedView
           entering={FadeIn.duration(200).delay(50).reduceMotion(ReduceMotion.System)}
           exiting={FadeOut.duration(150).reduceMotion(ReduceMotion.System)}
-          as="Pressable">
+          as='Pressable'
+        >
           <>{children}</>
         </NativeOnlyAnimatedView>
       </AlertDialogPrimitive.Overlay>
     </FullWindowOverlay>
-  );
+  )
 }
 
-function AlertDialogContent({
+function AlertDialogContent ({
   className,
   portalHost,
   ...props
 }: React.ComponentProps<typeof AlertDialogPrimitive.Content> & {
-    portalHost?: string;
-  }) {
+  portalHost?: string;
+}) {
   return (
     <AlertDialogPortal hostName={portalHost}>
       <AlertDialogOverlay>
@@ -68,27 +70,27 @@ function AlertDialogContent({
         />
       </AlertDialogOverlay>
     </AlertDialogPortal>
-  );
+  )
 }
 
-function AlertDialogHeader({ className, ...props }: ViewProps) {
+function AlertDialogHeader ({ className, ...props }: ViewProps) {
   return (
-    <TextClassContext.Provider value="text-center sm:text-left">
+    <TextClassContext.Provider value='text-center sm:text-left'>
       <View className={cn('flex flex-col gap-2', className)} {...props} />
     </TextClassContext.Provider>
-  );
+  )
 }
 
-function AlertDialogFooter({ className, ...props }: ViewProps) {
+function AlertDialogFooter ({ className, ...props }: ViewProps) {
   return (
     <View
       className={cn('flex flex-col-reverse gap-2 sm:flex-row sm:justify-end', className)}
       {...props}
     />
-  );
+  )
 }
 
-function AlertDialogTitle({
+function AlertDialogTitle ({
   className,
   ...props
 }: React.ComponentProps<typeof AlertDialogPrimitive.Title>) {
@@ -97,10 +99,10 @@ function AlertDialogTitle({
       className={cn('text-foreground text-lg font-semibold', className)}
       {...props}
     />
-  );
+  )
 }
 
-function AlertDialogDescription({
+function AlertDialogDescription ({
   className,
   ...props
 }: React.ComponentProps<typeof AlertDialogPrimitive.Description>) {
@@ -109,10 +111,10 @@ function AlertDialogDescription({
       className={cn('text-muted-foreground text-sm', className)}
       {...props}
     />
-  );
+  )
 }
 
-function AlertDialogAction({
+function AlertDialogAction ({
   className,
   ...props
 }: React.ComponentProps<typeof AlertDialogPrimitive.Action>) {
@@ -120,10 +122,10 @@ function AlertDialogAction({
     <TextClassContext.Provider value={buttonTextVariants({ className })}>
       <AlertDialogPrimitive.Action className={cn(buttonVariants(), className)} {...props} />
     </TextClassContext.Provider>
-  );
+  )
 }
 
-function AlertDialogCancel({
+function AlertDialogCancel ({
   className,
   ...props
 }: React.ComponentProps<typeof AlertDialogPrimitive.Cancel>) {
@@ -134,7 +136,7 @@ function AlertDialogCancel({
         {...props}
       />
     </TextClassContext.Provider>
-  );
+  )
 }
 
 export {
@@ -149,4 +151,4 @@ export {
   AlertDialogPortal,
   AlertDialogTitle,
   AlertDialogTrigger,
-};
+}

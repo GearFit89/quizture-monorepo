@@ -16,7 +16,7 @@
         "rootDir": "./src",
         /* Strict Type Checking */
         "strict": true,
-        "noUncheckedIndexedAccess": true,
+
         "exactOptionalPropertyTypes": true,
         "noImplicitReturns": true,
         /* Interop & Modern Behavior */

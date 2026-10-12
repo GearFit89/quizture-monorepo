@@ -1,46 +1,48 @@
-import { NativeOnlyAnimatedView } from '@/components/ui/native-only-animated-view';
-import { TextClassContext } from '@/components/ui/text';
-import { cn } from '@/lib/utils';
-import * as TooltipPrimitive from '@rn-primitives/tooltip';
-import * as React from 'react';
-import { Platform, StyleSheet } from 'react-native';
-import { FadeInDown, FadeInUp, FadeOut, ReduceMotion } from 'react-native-reanimated';
-import { FullWindowOverlay as RNFullWindowOverlay } from 'react-native-screens';
+import { NativeOnlyAnimatedView } from '@/components/ui/native-only-animated-view'
+import { TextClassContext } from '@/components/ui/text'
+import { cn } from '@/lib/utils'
+import * as TooltipPrimitive from '@rn-primitives/tooltip'
+import * as React from 'react'
+import { Platform, StyleSheet } from 'react-native'
+import { FadeInDown, FadeInUp, FadeOut, ReduceMotion } from 'react-native-reanimated'
+import { FullWindowOverlay as RNFullWindowOverlay } from 'react-native-screens'
 
-const Tooltip = TooltipPrimitive.Root;
+const Tooltip = TooltipPrimitive.Root
 
-const TooltipTrigger = TooltipPrimitive.Trigger;
+const TooltipTrigger = TooltipPrimitive.Trigger
 
-const FullWindowOverlay = Platform.OS === 'ios' ? RNFullWindowOverlay : React.Fragment;
+const FullWindowOverlay = Platform.OS === 'ios' ? RNFullWindowOverlay : React.Fragment
 
-function TooltipContent({
+function TooltipContent ({
   className,
   sideOffset = 4,
   portalHost,
   side = 'top',
   ...props
 }: React.ComponentProps<typeof TooltipPrimitive.Content> & {
-    portalHost?: string;
-  }) {
+  portalHost?: string;
+}) {
   return (
     <TooltipPrimitive.Portal hostName={portalHost}>
       <FullWindowOverlay>
         <TooltipPrimitive.Overlay
           style={Platform.select({ native: StyleSheet.absoluteFill })}
-          asChild={Platform.OS !== 'web'}>
+          asChild={Platform.OS !== 'web'}
+        >
           <NativeOnlyAnimatedView
             entering={
               side === 'top'
                 ? FadeInDown.withInitialValues({ transform: [{ translateY: 3 }] })
-                    .duration(150)
-                    .reduceMotion(ReduceMotion.System)
+                  .duration(150)
+                  .reduceMotion(ReduceMotion.System)
                 : FadeInUp.withInitialValues({ transform: [{ translateY: -5 }] }).reduceMotion(
-                    ReduceMotion.System
-                  )
+                  ReduceMotion.System
+                )
             }
             exiting={FadeOut.reduceMotion(ReduceMotion.System)}
-            as="Pressable">
-            <TextClassContext.Provider value="text-xs text-primary-foreground">
+            as='Pressable'
+          >
+            <TextClassContext.Provider value='text-xs text-primary-foreground'>
               <TooltipPrimitive.Content
                 sideOffset={sideOffset}
                 className={cn(
@@ -64,7 +66,7 @@ function TooltipContent({
         </TooltipPrimitive.Overlay>
       </FullWindowOverlay>
     </TooltipPrimitive.Portal>
-  );
+  )
 }
 
-export { Tooltip, TooltipContent, TooltipTrigger };
+export { Tooltip, TooltipContent, TooltipTrigger }

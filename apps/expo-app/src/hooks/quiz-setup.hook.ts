@@ -1,13 +1,13 @@
-import { Dispatch, SetStateAction, useCallback, useContext, useMemo, useState } from "react";
-import { BookRange, type QuizMode } from "@bq/shared/types";
+import { Dispatch, SetStateAction, useCallback, useContext, useMemo, useState } from 'react'
+import { BookRange, type QuizMode } from '@bq/shared/types'
 import type {
   DifficultyLevel,
   AppFilterCriteria,
   BibleKey,
-} from "@bq/shared/types";
-import { QuizSetupContext } from "@/context";
-import { useSetupContent } from "@/hooks"
-import { getChapters, BIBLE_BOOKS, getBookRange } from "@bq/shared/utils";
+} from '@bq/shared/types'
+import { QuizSetupContext } from '@/context'
+import { useSetupContent } from '@/hooks'
+import { getChapters, BIBLE_BOOKS, getBookRange } from '@bq/shared/utils'
 
 export interface QuizSetupData<Mode_T> {
   id: string;
@@ -28,7 +28,7 @@ export interface QuizSetupState<Mode_T> {
   updateData: (newData: Partial<QuizSetupData<Mode_T>>) => void;
   updateBibleRef: (
     bibleKey: BibleKey,
-    value: AppFilterCriteria["bookRange"][BibleKey],
+    value: AppFilterCriteria['bookRange'][BibleKey],
   ) => void;
   // setFilterCriteria: React.Dispatch<React.SetStateAction<FilterCriteria>>;
   updateFilterCriteria: <K extends keyof AppFilterCriteria>(
@@ -43,41 +43,39 @@ export interface QuizSetupStateArgs<Mode_T> {
   minQuizQuestionLength: number
 }
 
-export function useQuizSetupState<Mode_T>({
+export function useQuizSetupState<Mode_T> ({
   quizType,
   initialMode,
   id,
   minQuizQuestionLength
 }: QuizSetupStateArgs<Mode_T>): QuizSetupState<Mode_T> {
-
   const { filterSection } = useSetupContent()
 
-  const defualtQuizFilters: AppFilterCriteria  = useMemo(()=>({
-  month: filterSection.months.options.map(o=>o.value),
-  bookRange: getBookRange,
-  type: filterSection.questionType.options.map(o=>o.value),
-  
-  flight: filterSection.flight.options.map(o=>o.value)
-}), []);
+  const defualtQuizFilters: AppFilterCriteria = useMemo(() => ({
+    month: filterSection.months.options.map(o => o.value),
+    bookRange: getBookRange,
+    type: filterSection.questionType.options.map(o => o.value),
 
+    flight: filterSection.flight.options.map(o => o.value)
+  }), [])
 
   const [data, setData] = useState<QuizSetupData<Mode_T>>({
     id,
     quizType,
     mode: initialMode,
-    difficultyLevel: "easy",
-    
+    difficultyLevel: 'easy',
+
     questionFilters: defualtQuizFilters,
-  });
-  const [isQuizValid, setIsQuizVaild] = useState<boolean>(true);
-  
+  })
+  const [isQuizValid, setIsQuizVaild] = useState<boolean>(true)
+
   const setMode = useCallback((mode: Mode_T) => {
-    setData((prev) => ({ ...prev, mode }));
-  }, []);
+    setData((prev) => ({ ...prev, mode }))
+  }, [])
 
   const setDifficulty = useCallback((difficultyLevel: DifficultyLevel) => {
-    setData((prev) => ({ ...prev, difficultyLevel }));
-  }, []);
+    setData((prev) => ({ ...prev, difficultyLevel }))
+  }, [])
 
   const updateFilterCriteria = useCallback(
     <K extends keyof AppFilterCriteria>(key: K, value: AppFilterCriteria[K]) => {
@@ -87,34 +85,33 @@ export function useQuizSetupState<Mode_T>({
           ...(prev.questionFilters ?? defualtQuizFilters),
           [key]: value,
         },
-      }));
+      }))
     },
-    [],
-  );
-   
+    []
+  )
 
   const updateBibleRef = useCallback(
     <K extends BibleKey>(
       bibleKey: BibleKey,
-      value: AppFilterCriteria["bookRange"][K],
+      value: AppFilterCriteria['bookRange'][K]
     ) => {
       setData((prev) => ({
         ...prev,
         questionFilters: {
-          ...(prev.questionFilters?? defualtQuizFilters),
+          ...(prev.questionFilters ?? defualtQuizFilters),
           bookRange: {
             ...prev.questionFilters?.bookRange,
             [bibleKey]: value,
           },
         },
-      }));
+      }))
     },
-    [],
-  );
+    []
+  )
 
   const updateData = useCallback((newData: Partial<QuizSetupData<Mode_T>>) => {
-    setData((prev) => ({ ...prev, ...newData }));
-  }, []);
+    setData((prev) => ({ ...prev, ...newData }))
+  }, [])
 
   return useMemo(
     () => ({
@@ -129,15 +126,14 @@ export function useQuizSetupState<Mode_T>({
       updateBibleRef,
       updateFilterCriteria,
     }),
-    [data, setDifficulty, setMode, updateBibleRef, updateData, updateFilterCriteria, isQuizValid, setIsQuizVaild],
-  );
+    [data, setDifficulty, setMode, updateBibleRef, updateData, updateFilterCriteria, isQuizValid, setIsQuizVaild]
+  )
 }
 
-export function useQuizSetup<Mode_T>(): QuizSetupState<Mode_T> {
-  const context = useContext(QuizSetupContext);
+export function useQuizSetup<Mode_T> (): QuizSetupState<Mode_T> {
+  const context = useContext(QuizSetupContext)
   if (!context) {
-    throw new Error("useQuizSetup must be used within a <QuizSetup>");
+    throw new Error('useQuizSetup must be used within a <QuizSetup>')
   }
-  return context as QuizSetupState<Mode_T>;
+  return context as QuizSetupState<Mode_T>
 }
-

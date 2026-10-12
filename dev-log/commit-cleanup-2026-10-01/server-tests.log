@@ -1,0 +1,79 @@
+npm notice run Bible-Quizzing-App@1.0.0 test
+npm notice run npm run test:run --workspace=apps/server
+npm notice run @bq/server@1.0.0 test:run
+npm notice run vitest run
+(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+  - ESM syntax in a file loaded as CommonJS (vitest.config.ts:1:1). Use a `.mjs` extension or set `"type": "module"` in the closest package.json
+  - ESM syntax in a file loaded as CommonJS (test-env.ts:8:1). Use a `.mjs` extension or set `"type": "module"` in the closest package.json
+Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+The plugin "vite-tsconfig-paths" is detected. Vite now supports tsconfig paths resolution natively via the resolve.tsconfigPaths option. You can remove the plugin and set resolve.tsconfigPaths: true in your Vite config instead.
+
+ RUN  v4.1.11 /home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/server
+
+ ❯ test/filter.test.ts (0 test)
+ ❯ test/redis.test.ts (0 test)
+ ❯ test/redis-pino.test.ts (0 test)
+ ❯ test/scraper.test.ts (0 test)
+
+⎯⎯⎯⎯⎯⎯ Failed Suites 4 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  test/filter.test.ts [ test/filter.test.ts ]
+Error: Cannot find package '@bq/shared/services' imported from /home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/server/test/filter.test.ts
+ ❯ test/filter.test.ts:2:1
+      1| import { describe, it, expect } from 'vitest'
+      2| import { multiQuestionFilter } from '@bq/shared/services'
+       | ^
+      3| import type { Question, BookRange } from '@bq/shared/src/types'
+      4|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/4]⎯
+
+ FAIL  test/redis-pino.test.ts [ test/redis-pino.test.ts ]
+Error: Cannot find package '@/redis' imported from /home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/server/test/redis-pino.test.ts
+ ❯ test/redis-pino.test.ts:8:1
+      6| } from '../src/scraper'
+      7| import { materialMap } from '@/scraper/scraper'
+      8| import redis, { redisSubClient } from '@/redis'
+       | ^
+      9| import { logger } from '@/logger' // Import Pino logger
+     10|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/4]⎯
+
+ FAIL  test/redis.test.ts [ test/redis.test.ts ]
+Error: Cannot find package '@/redis' imported from /home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/server/test/redis.test.ts
+ ❯ test/redis.test.ts:8:1
+      6| } from '../src/scraper'
+      7| import { materialMap } from '@/scraper/scraper'
+      8| import redis, { redisSubClient } from '@/redis'
+       | ^
+      9|
+     10| console.log('NODE_ENV', process.env.NODE_ENV)
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/4]⎯
+
+ FAIL  test/scraper.test.ts [ test/scraper.test.ts ]
+Error: Cannot find package '@/redis/key-setter' imported from /home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/server/src/scraper/scraper.ts
+ ❯ src/scraper/scraper.ts:2:1
+      1| // import redis from "@/redis";
+      2| import { getTBQNCacheKey } from '@/redis/key-setter'
+       | ^
+      3|
+      4| const redis = {} as any // TODO Add redis
+ ❯ src/scraper/index.ts:1:1
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/4]⎯
+
+
+ Test Files  4 failed (4)
+      Tests  no tests
+   Start at  17:52:53
+   Duration  282ms (transform 210ms, setup 0ms, import 0ms, tests 0ms, environment 1ms)
+
+npm error Lifecycle script `test:run` failed with error:
+npm error code 1
+npm error path /home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/server
+npm error workspace @bq/server@1.0.0
+npm error location /home/cramjs/Desktop/Projects/Bible-Quizzing-App/apps/server
+npm error command failed
+npm error command sh -c vitest run

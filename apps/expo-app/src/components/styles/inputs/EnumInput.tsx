@@ -1,5 +1,5 @@
-import React from "react";
-import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import React from 'react'
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 interface EnumInputProps {
   value: string | undefined;
@@ -7,7 +7,7 @@ interface EnumInputProps {
   options: string[];
 }
 
-export function EnumInput({ value, onChange, options }: EnumInputProps) {
+export function EnumInput ({ value, onChange, options }: EnumInputProps) {
   // Segmented control for short option sets, scrollable chips for longer ones.
   if (options.length <= 4) {
     return (
@@ -24,7 +24,7 @@ export function EnumInput({ value, onChange, options }: EnumInputProps) {
           </TouchableOpacity>
         ))}
       </View>
-    );
+    )
   }
 
   return (
@@ -41,39 +41,39 @@ export function EnumInput({ value, onChange, options }: EnumInputProps) {
         ))}
       </View>
     </ScrollView>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   segmented: {
-    flexDirection: "row",
-    backgroundColor: "#F0F0F3",
+    flexDirection: 'row',
+    backgroundColor: '#F0F0F3',
     borderRadius: 10,
     padding: 3,
   },
   segment: {
     flex: 1,
     paddingVertical: 8,
-    alignItems: "center",
+    alignItems: 'center',
     borderRadius: 8,
   },
   segmentActive: {
-    backgroundColor: "#FFFFFF",
-    shadowColor: "#000",
+    backgroundColor: '#FFFFFF',
+    shadowColor: '#000',
     shadowOpacity: 0.1,
     shadowRadius: 2,
     shadowOffset: { width: 0, height: 1 },
   },
   segmentText: {
     fontSize: 13,
-    color: "#888",
+    color: '#888',
   },
   segmentTextActive: {
-    color: "#2196F3",
-    fontWeight: "600",
+    color: '#2196F3',
+    fontWeight: '600',
   },
   chipRow: {
-    flexDirection: "row",
+    flexDirection: 'row',
     gap: 8,
     paddingVertical: 2,
   },
@@ -81,17 +81,17 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     paddingVertical: 8,
     borderRadius: 16,
-    backgroundColor: "#F0F0F3",
+    backgroundColor: '#F0F0F3',
   },
   chipActive: {
-    backgroundColor: "#2196F3",
+    backgroundColor: '#2196F3',
   },
   chipText: {
     fontSize: 13,
-    color: "#555",
+    color: '#555',
   },
   chipTextActive: {
-    color: "#FFFFFF",
-    fontWeight: "600",
+    color: '#FFFFFF',
+    fontWeight: '600',
   },
-});
+})

@@ -1,11 +1,9 @@
-import { RootActorContext } from "@/context";
+import { RootActorContext } from '@/context'
 
-export function RootActorProvider({ children }: { children: React.ReactNode }) {
-  
-
+export function RootActorProvider ({ children }: { children: React.ReactNode }) {
   return (
-    <RootActorContext.Provider >
+    <RootActorContext.Provider>
       {children}
     </RootActorContext.Provider>
-  );
+  )
 }

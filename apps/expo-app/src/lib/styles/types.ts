@@ -1,9 +1,6 @@
+import type { ViewStyle, TextStyle, ImageStyle } from 'react-native'
 
-import type { ViewStyle, TextStyle, ImageStyle } from "react-native";
-
-
-export type AnyStyle = ViewStyle | TextStyle | ImageStyle;
-
+export type AnyStyle = ViewStyle | TextStyle | ImageStyle
 
 /**
  * Level 2 / Level 3 container: maps a sub-element name (e.g. "header")
@@ -23,12 +20,12 @@ export interface StyleContent {
 
 /** How a given style key's value should be edited in the UI. */
 export type StyleValueType =
-  | "color"
-  | "dimension"
-  | "number"
-  | "enum"
-  | "boolean"
-  | "string";
+  | 'color'
+  | 'dimension'
+  | 'number'
+  | 'enum'
+  | 'boolean'
+  | 'string'
 
 export interface StyleKeyMeta {
   key: string;
@@ -51,4 +48,4 @@ export interface StylePropertyPath {
 }
 
 /** Navigation levels for the bottom sheet drill-down flow. */
-export type EditorLevel = "targets" | "elements" | "properties" | "addProperty";
+export type EditorLevel = 'targets' | 'elements' | 'properties' | 'addProperty'
