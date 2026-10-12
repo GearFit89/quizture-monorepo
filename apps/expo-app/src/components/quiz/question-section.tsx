@@ -43,6 +43,11 @@ export function QuestionSection() {
     const result = actor.getSnapshot();
     if(result.matches("Correct")) alert("Correct");
     if(result.matches("Incorrect") ) alert("Incorrect");
+    if(result.matches({ WaitingForInput: "TryAgain"})){
+       alert("Try Again");
+       
+
+    }
     
 
   };
@@ -86,13 +91,7 @@ export function QuestionSection() {
         <Icon name="microphone" size={18} color="#8000ff" />
         <Text style={styles.microphoneText}>{content.microphoneLabel}</Text>
       </Pressable> */}
-      <Button
-        style={styles.submitButton}
-        onPress={submit}
-        disabled={!resolved && (!ready || !answer.trim())}
-      >
-        <Text>{resolved ? content.next : content.submit}</Text>
-      </Button>
+     
       </View>
     </View>
   );

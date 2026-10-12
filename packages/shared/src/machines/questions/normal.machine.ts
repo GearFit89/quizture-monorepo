@@ -84,7 +84,7 @@ export const normalQuestionMachine = setup({
 
       // Enqueue the internal event back to this machine
       enqueue.raise({
-        type: result.EVENT, // The all caps event CORRECT| INCORRECT| TRY AGAIN
+        type: "TRY_AGAIN", // The all caps event CORRECT| INCORRECT| TRY AGAIN
       });
     }),
     sendIncorrectToQuiz: sendParent(
@@ -132,7 +132,8 @@ export const normalQuestionMachine = setup({
     },
     hasRetryAttempts: ({ context }) => {
       return (
-        (context.currentRetryAttempts ?? 0) >= (context.maxRetryAttempts ?? 0)
+        
+         (context.currentRetryAttempts ?? 0) <= (context.maxRetryAttempts ?? 1)
       );
     },
   },
@@ -248,6 +249,14 @@ export const normalQuestionMachine = setup({
 
               {
                 target: "#question:normal.Incorrect",
+                actions: sendParent(
+                  ({ context }) =>
+                    ({
+                      type: "TRY_AGAIN",
+                      activeUser: context.activeUser,
+                      typedAnswer: context.userInput,
+                    }) satisfies QuizEvent,
+                ),
               },
             ],
           },
