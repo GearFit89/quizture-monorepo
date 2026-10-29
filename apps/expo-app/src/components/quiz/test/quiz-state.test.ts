@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import type { QuizMachineContext } from '@bq/shared/machines/quizzes/normal.machine';
 import { createAnswerBlocks } from '../../question/answer-blocks';
-import { getQuizDisplayState, getQuizSummary } from '../quiz-state';
+import { getQuizDisplayState, getQuizSummary } from '../../../lib/actions/quiz-state';
 
 const question = { head: 'Question', body: 'Body', answer: 'Answer' };
 function context(overrides: Partial<QuizMachineContext> = {}): QuizMachineContext {
