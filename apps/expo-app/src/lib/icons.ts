@@ -1,37 +1,39 @@
-import { 
+import {
   // Navigation
-  Home, 
-  BookOpen, 
-  Trophy, 
-  User, 
+  Mic,
+  Home,
+  BookOpen,
+  Trophy,
+  User,
   Settings,
   // Quizzing & Study
-  Book, 
-  Bookmark, 
-  Flame, 
-  Clock, 
-  Award, 
-  Volume2, 
-  Search, 
+  Book,
+  Bookmark,
+  Flame,
+  Clock,
+  Award,
+  Volume2,
+  Search,
   HelpCircle,
   // Actions & UI
   PlayCircle,
-  ChevronRight, 
-  ChevronLeft, 
-  Check, 
-  X, 
-  Plus, 
-  Trash2, 
-  RefreshCw, 
-  Bell, 
-  Share2, 
-  Lock, 
-  LogOut, 
+  ChevronRight,
+  ChevronLeft,
+  Check,
+  X,
+  Plus,
+  Trash2,
+  RefreshCw,
+  Bell,
+  Share2,
+  Lock,
+  LogOut,
   Filter,
   UserCircle2,
-} from 'lucide-react-native';
+} from 'lucide-react-native'
 
 export const Icons = {
+  microphone: Mic,
   // Navigation
   home: Home,
   study: BookOpen,
@@ -63,7 +65,7 @@ export const Icons = {
   lock: Lock,
   logout: LogOut,
   filter: Filter,
-};
+}
 
 // TODO: make an actual icon library
-export type IconKey = keyof typeof Icons;
+export type IconKey = keyof typeof Icons

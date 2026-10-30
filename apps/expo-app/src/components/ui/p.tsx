@@ -1,6 +1,6 @@
-import React, { JSX } from 'react';
-import { TextProps as RNTextProps } from 'react-native';
-import { Text } from './text';
+import React, { JSX } from 'react'
+import { TextProps as RNTextProps } from 'react-native'
+import { Text } from './text'
 
 /**
  * Props for the `P` (Paragraph) typography component.
@@ -18,7 +18,7 @@ export interface PProps extends RNTextProps {
  * @param props - Component properties extending React Native's `TextProps`.
  * @returns A styled React Native `Text` element.
  */
-export function P({ className = '', children, ...props }: PProps): JSX.Element {
+export function P ({ className = '', children, ...props }: PProps): JSX.Element {
   return (
     <Text
       className={`text-base text-foreground leading-6 mb-4 ${className}`.trim()}
@@ -26,5 +26,5 @@ export function P({ className = '', children, ...props }: PProps): JSX.Element {
     >
       {children}
     </Text>
-  );
+  )
 }

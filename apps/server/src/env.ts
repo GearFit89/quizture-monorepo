@@ -1,4 +1,4 @@
-type NodeEnv = "development" | "test" | "production";
+type NodeEnv = 'development' | 'test' | 'production'
 
 interface Env {
   REDIS_URL: string;
@@ -6,8 +6,8 @@ interface Env {
 }
 
 const ENV: Env = {
-  REDIS_URL: process.env.REDIS_URL ?? "",
-  NODE_ENV: (process.env.NODE_ENV as NodeEnv) ?? "development",
-};
+  REDIS_URL: process.env.REDIS_URL ?? '',
+  NODE_ENV: (process.env.NODE_ENV as NodeEnv) ?? 'development',
+}
 
-export default ENV;
+export default ENV

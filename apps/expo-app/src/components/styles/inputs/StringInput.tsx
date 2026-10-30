@@ -1,5 +1,5 @@
-import React from "react";
-import { StyleSheet, TextInput } from "react-native";
+import React from 'react'
+import { StyleSheet, TextInput } from 'react-native'
 
 interface StringInputProps {
   value: string | undefined;
@@ -7,26 +7,26 @@ interface StringInputProps {
   placeholder?: string;
 }
 
-export function StringInput({ value, onChange, placeholder }: StringInputProps) {
+export function StringInput ({ value, onChange, placeholder }: StringInputProps) {
   return (
     <TextInput
       style={styles.input}
-      value={value ?? ""}
+      value={value ?? ''}
       onChangeText={onChange}
-      placeholder={placeholder ?? "Enter value"}
-      placeholderTextColor="#999"
-      autoCapitalize="none"
+      placeholder={placeholder ?? 'Enter value'}
+      placeholderTextColor='#999'
+      autoCapitalize='none'
     />
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   input: {
     borderWidth: 1,
-    borderColor: "#DDD",
+    borderColor: '#DDD',
     borderRadius: 8,
     paddingHorizontal: 12,
     paddingVertical: 10,
     fontSize: 15,
   },
-});
+})

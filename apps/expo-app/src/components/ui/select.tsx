@@ -1,28 +1,28 @@
-import { Icon } from '@/components/ui/lucide-icon';
-import { NativeOnlyAnimatedView } from '@/components/ui/native-only-animated-view';
-import { TextClassContext } from '@/components/ui/text';
-import { cn } from '@/lib/utils';
-import * as SelectPrimitive from '@rn-primitives/select';
-import { Check, ChevronDown, ChevronDownIcon, ChevronUpIcon } from 'lucide-react-native';
-import * as React from 'react';
-import { Platform, StyleSheet, View } from 'react-native';
-import { FadeIn, FadeOut, ReduceMotion } from 'react-native-reanimated';
-import { FullWindowOverlay as RNFullWindowOverlay } from 'react-native-screens';
+import { Icon } from '@/components/ui/lucide-icon'
+import { NativeOnlyAnimatedView } from '@/components/ui/native-only-animated-view'
+import { TextClassContext } from '@/components/ui/text'
+import { cn } from '@/lib/utils'
+import * as SelectPrimitive from '@rn-primitives/select'
+import { Check, ChevronDown, ChevronDownIcon, ChevronUpIcon } from 'lucide-react-native'
+import * as React from 'react'
+import { Platform, StyleSheet, View } from 'react-native'
+import { FadeIn, FadeOut, ReduceMotion } from 'react-native-reanimated'
+import { FullWindowOverlay as RNFullWindowOverlay } from 'react-native-screens'
 
-type Option = SelectPrimitive.Option;
+type Option = SelectPrimitive.Option
 
-const Select = SelectPrimitive.Root;
+const Select = SelectPrimitive.Root
 
-const SelectGroup = SelectPrimitive.Group;
+const SelectGroup = SelectPrimitive.Group
 
-function SelectValue({
+function SelectValue ({
   ref,
   className,
   ...props
 }: React.ComponentProps<typeof SelectPrimitive.Value> & {
-    className?: string;
-  }) {
-  const { value } = SelectPrimitive.useRootContext();
+  className?: string;
+}) {
+  const { value } = SelectPrimitive.useRootContext()
   return (
     <SelectPrimitive.Value
       ref={ref}
@@ -33,19 +33,19 @@ function SelectValue({
       )}
       {...props}
     />
-  );
+  )
 }
 
-function SelectTrigger({
+function SelectTrigger ({
   ref,
   className,
   children,
   size = 'default',
   ...props
 }: React.ComponentProps<typeof SelectPrimitive.Trigger> & {
-    children?: React.ReactNode;
-    size?: 'default' | 'sm';
-  }) {
+  children?: React.ReactNode;
+  size?: 'default' | 'sm';
+}) {
   return (
     <SelectPrimitive.Trigger
       ref={ref}
@@ -58,37 +58,40 @@ function SelectTrigger({
         size === 'sm' && 'h-8 py-2 sm:py-1.5',
         className
       )}
-      {...props}>
+      {...props}
+    >
       <>{children}</>
-      <Icon as={ChevronDown} aria-hidden={true} className="text-muted-foreground size-4" />
+      <Icon as={ChevronDown} aria-hidden className='text-muted-foreground size-4' />
     </SelectPrimitive.Trigger>
-  );
+  )
 }
 
-const FullWindowOverlay = Platform.OS === 'ios' ? RNFullWindowOverlay : React.Fragment;
+const FullWindowOverlay = Platform.OS === 'ios' ? RNFullWindowOverlay : React.Fragment
 
-function SelectContent({
+function SelectContent ({
   className,
   children,
   position = 'popper',
   portalHost,
   ...props
 }: React.ComponentProps<typeof SelectPrimitive.Content> & {
-    className?: string;
-    portalHost?: string;
-  }) {
+  className?: string;
+  portalHost?: string;
+}) {
   return (
     <SelectPrimitive.Portal hostName={portalHost}>
       <FullWindowOverlay>
         <SelectPrimitive.Overlay
           style={Platform.select({ native: StyleSheet.absoluteFill })}
-          asChild={Platform.OS !== 'web'}>
+          asChild={Platform.OS !== 'web'}
+        >
           <NativeOnlyAnimatedView
-            className="z-50"
+            className='z-50'
             entering={FadeIn.reduceMotion(ReduceMotion.System)}
             exiting={FadeOut.reduceMotion(ReduceMotion.System)}
-            as="Pressable">
-            <TextClassContext.Provider value="text-popover-foreground">
+            as='Pressable'
+          >
+            <TextClassContext.Provider value='text-popover-foreground'>
               <SelectPrimitive.Content
                 className={cn(
                   'bg-popover border-border relative z-50 min-w-[8rem] rounded-md border shadow-md shadow-black/5',
@@ -110,7 +113,8 @@ function SelectContent({
                   className
                 )}
                 position={position}
-                {...props}>
+                {...props}
+              >
                 <SelectScrollUpButton />
                 <SelectPrimitive.Viewport
                   className={cn(
@@ -122,7 +126,8 @@ function SelectContent({
                         web: 'h-[var(--radix-select-trigger-height)] min-w-[var(--radix-select-trigger-width)]',
                       })
                     )
-                  )}>
+                  )}
+                >
                   {children}
                 </SelectPrimitive.Viewport>
                 <SelectScrollDownButton />
@@ -132,10 +137,10 @@ function SelectContent({
         </SelectPrimitive.Overlay>
       </FullWindowOverlay>
     </SelectPrimitive.Portal>
-  );
+  )
 }
 
-function SelectLabel({
+function SelectLabel ({
   className,
   ...props
 }: React.ComponentProps<typeof SelectPrimitive.Label>) {
@@ -144,10 +149,10 @@ function SelectLabel({
       className={cn('text-muted-foreground px-2 py-2 text-xs sm:py-1.5', className)}
       {...props}
     />
-  );
+  )
 }
 
-function SelectItem({
+function SelectItem ({
   className,
   children,
   ...props
@@ -162,18 +167,19 @@ function SelectItem({
         props.disabled && 'opacity-50',
         className
       )}
-      {...props}>
-      <View className="absolute right-2 flex size-3.5 items-center justify-center">
+      {...props}
+    >
+      <View className='absolute right-2 flex size-3.5 items-center justify-center'>
         <SelectPrimitive.ItemIndicator>
-          <Icon as={Check} className="text-muted-foreground size-4 shrink-0" />
+          <Icon as={Check} className='text-muted-foreground size-4 shrink-0' />
         </SelectPrimitive.ItemIndicator>
       </View>
-      <SelectPrimitive.ItemText className="text-foreground group-active:text-accent-foreground select-none text-sm" />
+      <SelectPrimitive.ItemText className='text-foreground group-active:text-accent-foreground select-none text-sm' />
     </SelectPrimitive.Item>
-  );
+  )
 }
 
-function SelectSeparator({
+function SelectSeparator ({
   className,
   ...props
 }: React.ComponentProps<typeof SelectPrimitive.Separator>) {
@@ -186,50 +192,50 @@ function SelectSeparator({
       )}
       {...props}
     />
-  );
+  )
 }
 
 /**
  * @platform Web only
  * Returns null on native platforms
  */
-function SelectScrollUpButton({
+function SelectScrollUpButton ({
   className,
   ...props
 }: React.ComponentProps<typeof SelectPrimitive.ScrollUpButton>) {
   if (Platform.OS !== 'web') {
-    return null;
+    return null
   }
   return (
     <SelectPrimitive.ScrollUpButton
       className={cn('flex cursor-default items-center justify-center py-1', className)}
-      {...props}>
-      <Icon as={ChevronUpIcon} className="size-4" />
+      {...props}
+    >
+      <Icon as={ChevronUpIcon} className='size-4' />
     </SelectPrimitive.ScrollUpButton>
-  );
+  )
 }
 
 /**
  * @platform Web only
  * Returns null on native platforms
  */
-function SelectScrollDownButton({
+function SelectScrollDownButton ({
   className,
   ...props
 }: React.ComponentProps<typeof SelectPrimitive.ScrollDownButton>) {
   if (Platform.OS !== 'web') {
-    return null;
+    return null
   }
   return (
     <SelectPrimitive.ScrollDownButton
       className={cn('flex cursor-default items-center justify-center py-1', className)}
-      {...props}>
-      <Icon as={ChevronDownIcon} className="size-4" />
+      {...props}
+    >
+      <Icon as={ChevronDownIcon} className='size-4' />
     </SelectPrimitive.ScrollDownButton>
-  );
+  )
 }
-
-
 
 export {
   Select,
@@ -243,4 +249,4 @@ export {
   SelectTrigger,
   SelectValue,
   type Option,
-};
+}

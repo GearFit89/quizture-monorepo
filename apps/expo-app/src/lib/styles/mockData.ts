@@ -1,35 +1,35 @@
-import type { StyleContent } from "./types";
+import type { StyleContent } from './types'
 
 export const mockStyleContent: StyleContent = {
   home: {
     header: {
-      backgroundColor: "#1E1E2E",
+      backgroundColor: '#1E1E2E',
       opacity: 1,
       borderBottomWidth: 1,
-      borderBottomColor: "#33334d",
+      borderBottomColor: '#33334d',
     },
     title: {
-      color: "#FFFFFF",
+      color: '#FFFFFF',
       fontSize: 22,
-      fontWeight: "700",
-      textAlign: "center",
+      fontWeight: '700',
+      textAlign: 'center',
     },
     footer: {
-      backgroundColor: "#F5F5F7",
-      flexDirection: "row",
-      justifyContent: "space-between",
+      backgroundColor: '#F5F5F7',
+      flexDirection: 'row',
+      justifyContent: 'space-between',
       padding: 16,
     },
   },
   add_more: {
     header: {
-      backgroundColor: "#00C48C",
+      backgroundColor: '#00C48C',
       opacity: 0.95,
     },
     body: {
-      backgroundColor: "#FFFFFF",
+      backgroundColor: '#FFFFFF',
       borderRadius: 12,
       padding: 20,
     },
   },
-};
+}

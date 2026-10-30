@@ -1,3 +1,3 @@
-export default function AuthLayout (){
-    
+export default function AuthLayout () {
+
 }

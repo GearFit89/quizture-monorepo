@@ -1,7 +1,7 @@
-import { cn } from '@/lib/utils';
-import * as SeparatorPrimitive from '@rn-primitives/separator';
+import { cn } from '@/lib/utils'
+import * as SeparatorPrimitive from '@rn-primitives/separator'
 
-function Separator({
+function Separator ({
   className,
   orientation = 'horizontal',
   decorative = true,
@@ -18,7 +18,7 @@ function Separator({
       )}
       {...props}
     />
-  );
+  )
 }
 
-export { Separator };
+export { Separator }

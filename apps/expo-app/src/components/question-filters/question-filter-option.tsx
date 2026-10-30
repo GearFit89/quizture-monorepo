@@ -135,7 +135,7 @@ export function QuestionFilterOption({
   accessibilityState={{ checked, disabled }}
   nativeID={labelId}
   style={[
-    isCircle ? styles.circleBase as AnyStyle : styles.blockBase as AnyStyle,
+    isCircle ? styles.circleBase  : styles.blockBase ,
     {
       backgroundColor: checked ? COLORS.selectedBg : "#ffffff",
       borderColor: checked ? COLORS.selectedBorder : COLORS.border,
