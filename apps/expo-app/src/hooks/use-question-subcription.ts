@@ -7,13 +7,18 @@ import { QuestionEvents } from '@bq/shared/machines/questions/setup'; // FIXME m
 import { QuizEvent } from '@bq/shared/machines/quizzes/normal.machine'; // FIXME make theses imports smaller
 
 
-/** Must be called with `useQuestionSubscription()`, in order for data to be populated. */
+/**  Observable wrapper around a question machine. 
+Includes the  ability to send and read context, 
+to both the quiz and the question machine. 
+Must be called with `useQuestionSubscription()`, in order for data to be populated.
+*/
 export const question$ = observable({
   _questionSubscription: null as Subscription | null,
   _quizActorRef: null as QuizActorRef | null,
   _questionActorRef: null as QuestionActorRef | null,
-
+/** The xstate machine snapshot of the invoked Quiz Actor.**/
   quizSnapshot: null as SnapshotFrom<QuizActorRef> | null,
+  /** The xstate machine snapshot of the spawned Question Actor.**/
   snapshot: null as SnapshotFrom<QuestionActorRef> | null,
 
   initialize: (quizActorRef: QuizActorRef) => {
