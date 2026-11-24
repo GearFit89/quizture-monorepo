@@ -2,8 +2,6 @@ import { useCallback, useContext, useMemo, useState } from "react";
 import type { AnyStyle, StyleClass, StyleContent } from "../lib/styles/types";
 import { StyleContext } from "@/context";
 import { stylesContent } from "@/lib/styles/content";
-import { NavigationRouteContext } from "expo-router/build/react-navigation";
-import { NativeEventsManager } from "react-native-reanimated";
 
 type StyleJson = typeof stylesContent;
 export interface StylesState {

@@ -1,7 +1,7 @@
 import { useQuizSetup, useSetupContent, useStyleTarget } from "@/hooks";
-import { useFilteredQuestions, useQuestions } from "@/hooks/use-questions";
-import { useEffect, useMemo } from "react";
-import { Modal, View } from "react-native";
+import { useFilteredQuestions } from "@/hooks/use-questions";
+import { useEffect } from "react";
+import { View } from "react-native";
 import { Text } from "@/components/ui/text";
 import { TriangleAlertIcon } from "lucide-react-native";
 

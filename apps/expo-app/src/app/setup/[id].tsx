@@ -1,6 +1,6 @@
 import { QUIZ_REGISTRY } from '@/lib/quiz-registry';
 import { useLocalSearchParams } from 'expo-router';
-import { View, Text, ScrollView } from 'react-native';
+import { Text, ScrollView } from 'react-native';
 
 export default function SetupScreen() {
   

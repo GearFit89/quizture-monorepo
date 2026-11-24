@@ -1,10 +1,4 @@
 import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
-import {
-  defaultTBQNParams,
-  fetchTBQNcontent,
-  getTBQNQuestions,
-} from "../src/scraper";
-import { materialMap } from "@/scraper/scraper";
 import redis, { redisSubClient } from "@/redis";
 
 console.log("NODE_ENV", process.env.NODE_ENV);

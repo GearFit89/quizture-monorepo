@@ -1,4 +1,4 @@
-import { setup, createMachine, StateMachine, AnyStateMachine } from "xstate";
+import { setup, createMachine, AnyStateMachine } from "xstate";
 import { soloQuizMachine } from "./quizzes/offline/solo-quiz.machine";
 
 

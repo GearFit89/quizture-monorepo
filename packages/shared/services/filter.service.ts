@@ -1,5 +1,4 @@
 import type {
-  Question,
   FilterCriteria,
   BibleKey,
   BookRange,

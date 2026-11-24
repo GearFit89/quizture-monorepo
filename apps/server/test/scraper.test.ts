@@ -1,7 +1,7 @@
 
 
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
-import { defaultTBQNParams, fetchTBQNcontent, getTBQNQuestions } from '../src/scraper'
+import { describe, it, vi, beforeEach, afterEach } from 'vitest'
+import { getTBQNQuestions } from '../src/scraper'
 import { materialMap } from '@/scraper/scraper'
 import { getTBQNCacheKey } from '@/redis/key-setter';
 import { writeFileSync } from "fs"

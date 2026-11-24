@@ -25,7 +25,7 @@ class AnswerLogic {
             const {cleanans, switched } = this.manageAnswer(answer, false, enteredAnswer);
          
             switched && console.warn(switched, 'switched with chcj answer')
-            const changedEntr = switched ? switched : enteredAnswer;
+            const changedEntr = switched || enteredAnswer;
             const cleanAns =cleanans.map(w => this.stripChar(w) as string).filter(Boolean);
             const cleanEntrAns = changedEntr.split(/\s+/).map(w => this.stripChar(w) as string).filter(Boolean);
             
@@ -75,7 +75,7 @@ class AnswerLogic {
             });
 
          
-            if ((correctedAnswer === cleanAns) || (fixedAns === fixedEntr) || (answer.includes('and') && incorrectCount == 0)) {
+            if ((correctedAnswer === cleanAns) || (fixedAns === fixedEntr) || (answer.includes('and') && incorrectCount === 0)) {
             // This returns 1 even if "common words" are missing. 
                 // If you want to require "the", "and", etc., compare correctedAnswer vs cleanAns here.
                 return { score: 1 };
@@ -162,9 +162,9 @@ class AnswerLogic {
         let inAns;
         let lastWord;
         let altPhar = '';
-        let exANs = [];
-        let altans = [];
-        let cleanans = [];
+        const exANs = [];
+        const altans = [];
+        const cleanans = [];
         let corspondAns = [];
         let isAlt = false;
         let isEx = false;
@@ -178,7 +178,7 @@ class AnswerLogic {
             inAns = ans;
         }
         //if(inAns.includes('(') || inAns.includes('[')){
-        for (let i of inAns) {
+        for (const i of inAns) {
             if (i.includes('[') || isEx) {
                 //maybe
                 isEx = true;
