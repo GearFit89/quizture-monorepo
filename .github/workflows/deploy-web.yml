@@ -1,3 +1,4 @@
+---
 name: Deploy web
 
 on:
@@ -21,20 +22,13 @@ jobs:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
         run: |
           if [ -z "$EXPO_TOKEN" ]; then
-            echo "::error::Add an EXPO_TOKEN repository secret (expo.dev > Access tokens) to deploy with EAS Hosting."
+            echo "::error::Add an EXPO_TOKEN repository secret to deploy."
             exit 1
           fi
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Set up Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - name: Install npm 11
-        run: npm install -g npm@11
-      - name: Install dependencies
-        run: npm ci --ignore-scripts --no-audit --no-fund
+      - name: Set up Node and dependencies
+        uses: ./.github/actions/setup
       - name: Set up EAS
         uses: expo/expo-github-action@v8
         with:
