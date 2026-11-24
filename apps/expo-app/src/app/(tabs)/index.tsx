@@ -1,12 +1,7 @@
-import { Button } from "@/components/ui/button";
 import { Text } from "@/components/ui/text";
-import { QUIZ_REGISTRY } from "@/lib/quiz-registry";
-import { Pressable, ScrollView, View } from "react-native";
+import { Pressable, View } from "react-native";
 
-import { useEffect } from "react";
-import { ElementInspector } from "react-native-element-inspector";
-import { FloatingStyleEditorButton } from "@/components/styles/floating-button";
-import { useStyles, useStyleTarget } from "@/hooks";
+import { useStyleTarget } from "@/hooks";
 
 
 

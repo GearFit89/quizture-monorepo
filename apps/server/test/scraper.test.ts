@@ -1,7 +1,7 @@
 
 
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
-import { defaultTBQNParams, fetchTBQNcontent, getTBQNQuestions } from '../src/scraper'
+import { describe, it, vi, beforeEach, afterEach } from 'vitest'
+import { getTBQNQuestions } from '../src/scraper'
 import { materialMap } from '@/scraper/scraper'
 import { getTBQNCacheKey } from '@/redis/key-setter';
 import { writeFileSync } from "fs"
@@ -31,7 +31,8 @@ describe("fetchTBQNData", () => {
     vi.unstubAllGlobals();
   });
 
-  it("REturn data", async () => {
+  // Live request to TBQN; set TBQN_BASE_URL (e.g. in test-env.ts) to run it.
+  it.skipIf(!process.env.TBQN_BASE_URL)("REturn data", async () => {
    const { data, success, error } = await getTBQNQuestions({ materialNumbers: materialMap[materialMap.length -1],
     questionType:"question",
     submit:"Print"

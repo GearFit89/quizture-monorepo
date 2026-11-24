@@ -5,11 +5,6 @@ import DefaultQuizFilters from "../question-filters/default-quiz-filters";
 import { useSetupContent } from "@/hooks/";
 import { useActorRef } from "@xstate/react";
 import { rootMachine } from "@bq/shared/machines";
-import { Button } from "@/components/ui/button"
-import { ScrollView } from "react-native-reanimated/lib/typescript/Animated";
-import { useQuestions } from "@/hooks/use-questions";
-import { multiQuestionFilter } from "@bq/shared/services/filter.service";
-import { useMemo } from "react";
 import { FilteredQuestions } from "../quiz-setup/questions";
 import QuizStartButton from "../quiz-setup/quiz-start-button";
 

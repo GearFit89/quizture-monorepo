@@ -17,7 +17,6 @@ import {
   Layers,
 } from "lucide-react-native";
 import { usePracticeContent } from "@/hooks";
-import Icon from "@/components/icon";
 function FlashCardButton() {
   const { flashCardButton } = usePracticeContent();
 

@@ -25,7 +25,7 @@ export function useQuestions() {
 }
 
 
-export function useFilteredQuestions ({ filterCriteria }: { filterCriteria: AppFilterCriteria}) {
+export function useFilteredQuestions ({ filterCriteria }: { filterCriteria?: AppFilterCriteria }) {
   const { data,  ...rest} = useQuestions()
 
   const questions = useMemo(()=>{

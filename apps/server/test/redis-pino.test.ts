@@ -1,10 +1,4 @@
 import { describe, it, expect, beforeEach, afterEach, vi } from "vitest";
-import {
-  defaultTBQNParams,
-  fetchTBQNcontent,
-  getTBQNQuestions,
-} from "../src/scraper";
-import { materialMap } from "@/scraper/scraper";
 import redis, { redisSubClient } from "@/redis";
 import { logger } from "@/logger"; // Import Pino logger
 

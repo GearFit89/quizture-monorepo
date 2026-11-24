@@ -86,7 +86,7 @@ const getGitCommits = () => {
       stdio: ['pipe', 'pipe', 'ignore'],
     }).trim();
 
-    return output ? output : '* No commits recorded today yet.';
+    return output || '* No commits recorded today yet.';
   } catch {
     return '* (Not inside a Git repository or Git unavailable)';
   }

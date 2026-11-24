@@ -1,6 +1,4 @@
 
-import { useMemo } from "react";
-import { useContent, useLanguage } from "@/hooks";
 import { ContentContext } from "@/context";
 
 

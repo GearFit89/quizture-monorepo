@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction, useCallback, useContext, useMemo, useState } from "react";
-import { BookRange, type QuizMode } from "@bq/shared/types";
+import { type QuizMode } from "@bq/shared/types";
 import type {
   DifficultyLevel,
   AppFilterCriteria,
@@ -7,7 +7,7 @@ import type {
 } from "@bq/shared/types";
 import { QuizSetupContext } from "@/context";
 import { useSetupContent } from "@/hooks"
-import { getChapters, BIBLE_BOOKS, getBookRange } from "@bq/shared/utils";
+import { getBookRange } from "@bq/shared/utils";
 
 export interface QuizSetupData<Mode_T> {
   id: string;
