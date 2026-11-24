@@ -83,9 +83,40 @@ export interface SetupContent {
    }
 
 }
+export interface RecallContent {
+   title: string;
+   subtitle: string;
+   progress: string;
+   questionLabel: string;
+   answerLabel: string;
+   answerPlaceholder: string;
+   wordBankLabel: string;
+   clearButton: string;
+   submitButton: string;
+   nextButton: string;
+   finishButton: string;
+   correctTitle: string;
+   correctMessage: string;
+   incorrectTitle: string;
+   incorrectMessage: string;
+   reviewTitle: string;
+   reviewSubtitle: string;
+   reviewScore: string;
+   reviewPercent: string;
+   reviewCorrectLabel: string;
+   reviewIncorrectLabel: string;
+   reviewYourAnswer: string;
+   reviewCorrectAnswer: string;
+   reviewNoAnswer: string;
+   retryButton: string;
+   loading: string;
+   errorLoading: string;
+   empty: string;
+}
 export interface Content {
     practicePage: PracticeContent;
     setup: SetupContent;
+    recall: RecallContent;
    
 
 }
