@@ -1,6 +1,5 @@
-import { useContext, useMemo } from "react";
+import { useMemo } from "react";
 import type { Content } from "@/lib/content/types";
-import { ContentContext } from "@/context";
 import contentJson from "@/lib/content";
 import { useState } from "react";
 export interface ContentContextValue {

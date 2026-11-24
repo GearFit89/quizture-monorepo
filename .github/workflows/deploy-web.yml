@@ -1,0 +1,42 @@
+---
+name: Deploy web
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-web
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check EXPO_TOKEN
+        env:
+          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+        run: |
+          if [ -z "$EXPO_TOKEN" ]; then
+            echo "::error::Add an EXPO_TOKEN repository secret to deploy."
+            exit 1
+          fi
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Set up Node and dependencies
+        uses: ./.github/actions/setup
+      - name: Set up EAS
+        uses: expo/expo-github-action@v8
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+      - name: Export web build
+        run: npm run build:web
+      - name: Deploy to EAS Hosting
+        working-directory: apps/expo-app
+        run: eas deploy --prod --non-interactive

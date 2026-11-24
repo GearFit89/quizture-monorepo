@@ -3,9 +3,7 @@ import { useQuizSetup, useSetupContent, useStyleTarget } from "@/hooks";
 import { useRouter } from "expo-router";
 import { Button } from "@/components/ui/button";
 import { Text } from "@/components/ui/text";
-import { View } from "lucide-react-native";
 import { AnyStyle } from "@/lib/styles";
-import { useState } from "react";
 import { theme } from "@/lib/theme";
 
 export default function QuizStartButton() {

@@ -1,4 +1,3 @@
-import content from "@/lib/content";
 import type { Content } from "@/lib/content/types";
 import { useCallback, useMemo, useState } from "react";
 

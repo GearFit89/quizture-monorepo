@@ -31,7 +31,7 @@ export function multiFilter<T extends Record<string, any> >(
   if (!items || !criteria) return;
   return items.filter((item) => {
     return Object.keys(criteria).every((key) => {
-      if (item[key] == undefined) { 
+      if (item[key] == null) { 
         // If the key doesn't exist on the item skip it, based on the shouldInclude option
         return shoulIncludeMissingKeys
       }

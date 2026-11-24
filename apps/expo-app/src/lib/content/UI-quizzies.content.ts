@@ -1,5 +1,4 @@
 
-import { Button } from "@/components/ui/button";
 import type { IconKey } from "../icons";
 import type { QuizKey, QuizMode } from "@bq/shared/types";
 

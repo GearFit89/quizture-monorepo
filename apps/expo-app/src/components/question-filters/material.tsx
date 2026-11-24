@@ -9,7 +9,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "../ui/accordion";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { useSetupContent } from "@/hooks";
 
 import { BibleKey } from "@bq/shared/types";

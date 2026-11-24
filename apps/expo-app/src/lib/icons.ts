@@ -28,7 +28,6 @@ import {
   Lock, 
   LogOut, 
   Filter,
-  UserCircle2,
 } from 'lucide-react-native';
 
 export const Icons = {
