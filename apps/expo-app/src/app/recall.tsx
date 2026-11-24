@@ -6,7 +6,7 @@ import { RecallQuiz } from "@/components/recall";
 import { useStyleTarget } from "@/hooks";
 import { useRecallContent } from "@/hooks/recall.hook";
 import { useQuestions } from "@/hooks/use-questions";
-import { createQuizQuestions } from "@/lib/recall/recall";
+import { createQuizQuestions, parseRecallCount } from "@/lib/recall/recall";
 
 const DEFAULT_RECALL_LENGTH = 10;
 
@@ -21,7 +21,7 @@ export default function RecallPage() {
     [data],
   );
   const quizQuestions = useMemo(
-    () => createQuizQuestions(questions, Number(count) || DEFAULT_RECALL_LENGTH),
+    () => createQuizQuestions(questions, parseRecallCount(count, DEFAULT_RECALL_LENGTH)),
     [questions, count],
   );
 

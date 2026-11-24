@@ -9,6 +9,7 @@ import {
   formatContent,
   isRecallCorrect,
   normalizeWord,
+  parseRecallCount,
   pickDistractorCount,
   pickDistractors,
   splitWords,
@@ -114,6 +115,15 @@ describe("summary and quiz creation", () => {
     expect(created).toHaveLength(2);
     expect(created.map((q) => q.quizIndex)).toEqual([0, 1]);
     expect(created.every((q) => q.ansType === "recall")).toBe(true);
+  });
+
+  it("parses recall counts and falls back for invalid values", () => {
+    expect(parseRecallCount("5", 10)).toBe(5);
+    expect(parseRecallCount(undefined, 10)).toBe(10);
+    expect(parseRecallCount("-1", 10)).toBe(10);
+    expect(parseRecallCount("0", 10)).toBe(10);
+    expect(parseRecallCount("0.5", 10)).toBe(10);
+    expect(parseRecallCount("abc", 10)).toBe(10);
   });
 
   it("formats content templates", () => {

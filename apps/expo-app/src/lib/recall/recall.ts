@@ -144,6 +144,11 @@ export function summarizeResults(results: RecallResult[]): RecallSummary {
   };
 }
 
+export function parseRecallCount(value: string | undefined, fallback: number): number {
+  const parsed = Number(value);
+  return Number.isInteger(parsed) && parsed > 0 ? parsed : fallback;
+}
+
 export function createQuizQuestions(
   questions: Pick<AppQuestion, "id" | "type">[],
   count: number,
