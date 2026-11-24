@@ -62,16 +62,23 @@ export function pickDistractors(
   questionTexts: string[],
   count: number,
   random: RandomFn = Math.random,
+  fallbackTexts: string[] = [],
 ): string[] {
   const excluded = new Set(answerWords.map(normalizeWord));
-  const pool = new Map<string, string>();
-  for (const text of questionTexts) {
-    for (const word of splitWords(text)) {
-      const key = normalizeWord(word);
-      if (key && !excluded.has(key) && !pool.has(key)) pool.set(key, word);
+  const collect = (texts: string[]) => {
+    const pool = new Map<string, string>();
+    for (const text of texts) {
+      for (const word of splitWords(text)) {
+        const key = normalizeWord(word);
+        if (key && !excluded.has(key) && !pool.has(key)) pool.set(key, word);
+      }
     }
-  }
-  return shuffle([...pool.values()], random).slice(0, count);
+    for (const key of pool.keys()) excluded.add(key);
+    return [...pool.values()];
+  };
+  const picked = shuffle(collect(questionTexts), random).slice(0, count);
+  if (picked.length >= count || fallbackTexts.length === 0) return picked;
+  return [...picked, ...shuffle(collect(fallbackTexts), random).slice(0, count - picked.length)];
 }
 
 export function buildBlocks(
@@ -114,6 +121,7 @@ export function buildRecallItems(
     );
 
   const questionTexts = resolved.map((entry) => entry.data.question);
+  const fallbackTexts = questions.flatMap((question) => (question.question ? [question.question] : []));
 
   return resolved.map(({ quizQuestion, data }) => {
     const answerWords = splitWords(data.answer);
@@ -122,6 +130,7 @@ export function buildRecallItems(
       questionTexts,
       pickDistractorCount(random),
       random,
+      fallbackTexts,
     );
     return {
       quizQuestion,

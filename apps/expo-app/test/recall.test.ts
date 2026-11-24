@@ -67,6 +67,23 @@ describe("distractors", () => {
   });
 });
 
+describe("short quizzes", () => {
+  it("tops up distractors from the fallback bank when quiz questions run short", () => {
+    const picked = pickDistractors(["five"], ["Who made five talents?"], 4, seeded(5), [
+      "In what do we constantly mention you?",
+    ]);
+    expect(picked).toHaveLength(4);
+    expect(new Set(picked.map(normalizeWord)).size).toBe(4);
+    expect(picked.map(normalizeWord)).not.toContain("five");
+  });
+
+  it("gives one-question quizzes at least the minimum distractors", () => {
+    const quiz: QuizQuestion[] = [{ id: 3, ansType: "recall", questType: "question", quizIndex: 0 }];
+    const [item] = buildRecallItems(quiz, questions, seeded(9));
+    expect(item.blocks.filter((b) => b.isDistractor).length).toBeGreaterThanOrEqual(MIN_DISTRACTORS);
+  });
+});
+
 describe("blocks and checking", () => {
   it("includes every answer word plus distractors", () => {
     const blocks = buildBlocks(["and", "and"], ["x", "y"], seeded(2));
