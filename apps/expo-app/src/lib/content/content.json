@@ -105,5 +105,35 @@
         "title": "Quiz Setup Error",
         "message": "Please select at least 20 questions."
       }
+  },
+  "recall": {
+    "title": "Recall",
+    "subtitle": "Build each answer from the word blocks.",
+    "progress": "Question {current} of {total}",
+    "questionLabel": "Question",
+    "answerLabel": "Your answer",
+    "answerPlaceholder": "Tap words below to build your answer",
+    "wordBankLabel": "Word bank",
+    "clearButton": "Clear",
+    "submitButton": "Check answer",
+    "nextButton": "Next question",
+    "finishButton": "See review",
+    "correctTitle": "Correct!",
+    "correctMessage": "Great recall. Keep it up!",
+    "incorrectTitle": "Not quite",
+    "incorrectMessage": "Here is the correct answer:",
+    "reviewTitle": "Review",
+    "reviewSubtitle": "See how you did on each question.",
+    "reviewScore": "{correct} of {total} correct",
+    "reviewPercent": "{percent}%",
+    "reviewCorrectLabel": "Correct",
+    "reviewIncorrectLabel": "Incorrect",
+    "reviewYourAnswer": "Your answer",
+    "reviewCorrectAnswer": "Correct answer",
+    "reviewNoAnswer": "(no answer)",
+    "retryButton": "Try again",
+    "loading": "Loading questions...",
+    "errorLoading": "Questions could not be loaded.",
+    "empty": "No questions are available for recall."
   }
 }
