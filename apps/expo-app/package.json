@@ -11,7 +11,9 @@
     "ios": "EXPO_ROUTER_APP_ROOT=src/app expo run:ios",
     "web": "EXPO_ROUTER_APP_ROOT=src/app NODE_ENV=development expo start --web",
     "test": "vitest",
-    "test:run": "vitest"
+    "test:run": "vitest run --passWithNoTests",
+    "typecheck": "tsc --noEmit",
+    "build:web": "EXPO_ROUTER_APP_ROOT=src/app expo export --platform web --output-dir dist"
   },
   "dependencies": {
     "@bq/shared": "*",

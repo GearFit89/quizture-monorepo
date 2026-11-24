@@ -14,7 +14,10 @@
     "web": "npm run web --workspace=apps/expo-app",
     "server": "npm run dev --workspace=apps/server",
     "server:web": "concurrently \"npm run web\" \"npm run server\"",
-    "test": "npm run test --workspace=apps/server",
+    "test": "npm run test:run",
+    "test:run": "npm run test:run --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "build:web": "npm run build:web --workspace=apps/expo-app",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
